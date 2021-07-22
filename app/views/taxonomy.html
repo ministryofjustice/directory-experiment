@@ -1,0 +1,124 @@
+
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+
+  <!-- https://service-manual.nhs.uk/design-system/components/card -->
+  <link rel="stylesheet" href="https://service-manual.nhs.uk/css/main.css">
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/taxonomy">Taxonomy</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">Help with a legal problem</h1>
+<p class="govuk-body-l">
+  If you have a problem, you may need legal advice to resolve it.
+  You can get advice from a solicitor but you should be aware that
+  <a href="https://www.gov.uk/legal-aid">legal aid</a> is not always free.
+  There may be other organisations who can give you free advice.
+</p>
+
+<ul class="nhsuk-grid-row nhsuk-card-group">
+  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <img class="nhsuk-card__img" src="https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg" alt="">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+          <a class="nhsuk-card__link" href="/housing">Housing & Homelessness</a>
+        </h2>
+        <p class="nhsuk-card__description">Includes Renting, repossession, disrepair</p>
+      </div>
+    </div>
+  </li>
+
+  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <img class="nhsuk-card__img" src="https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg" alt="">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+          <a class="nhsuk-card__link" href="https://www.gov.uk/crime-justice-and-law">Crime and fines</a>
+        </h2>
+        <p class="nhsuk-card__description">Includes Renting, repossession, disrepair</p>
+      </div>
+    </div>
+  </li>
+
+  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <img class="nhsuk-card__img" src="https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg" alt="">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+          <a class="nhsuk-card__link" href="https://www.gov.uk/money">Money</a>
+        </h2>
+        <p class="nhsuk-card__description">Includes Renting, repossession, disrepair</p>
+      </div>
+    </div>
+  </li>
+
+  <!-- another trio -->
+
+
+  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <img class="nhsuk-card__img" src="https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg" alt="">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+          <a class="nhsuk-card__link" href="#">Housing & Homelessness</a>
+        </h2>
+        <p class="nhsuk-card__description">Includes Renting, repossession, disrepair</p>
+      </div>
+    </div>
+  </li>
+
+  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <img class="nhsuk-card__img" src="https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg" alt="">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+          <a class="nhsuk-card__link" href="https://www.gov.uk/crime-justice-and-law">Crime and fines</a>
+        </h2>
+        <p class="nhsuk-card__description">Includes Renting, repossession, disrepair</p>
+      </div>
+    </div>
+  </li>
+
+  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <img class="nhsuk-card__img" src="https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg" alt="">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+          <a class="nhsuk-card__link" href="https://www.gov.uk/money">Money</a>
+        </h2>
+        <p class="nhsuk-card__description">Includes Renting, repossession, disrepair</p>
+      </div>
+    </div>
+  </li>
+</ul>
+
+
+{% endblock %}
