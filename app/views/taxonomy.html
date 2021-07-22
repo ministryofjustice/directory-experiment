@@ -3,12 +3,11 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Start page example
+  Legal help directory
 {% endblock %}
 
 {% block header %}
-  <!-- Blank header with no service name for the start page -->
-  {{ govukHeader() }}
+{{ govukHeader({homepageUrl: "/", serviceName: serviceName, serviceUrl: "/", containerClasses: "govuk-width-container" }) }}
 
   <!-- https://service-manual.nhs.uk/design-system/components/card -->
   <link rel="stylesheet" href="https://service-manual.nhs.uk/css/main.css">
@@ -21,7 +20,7 @@
         <a class="govuk-breadcrumbs__link" href="/">Home</a>
       </li>
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/taxonomy">Taxonomy</a>
+        <a class="govuk-breadcrumbs__link" href="/taxonomy">Legal help directory</a>
       </li>
     </ol>
   </div>
@@ -57,7 +56,7 @@
       <img class="nhsuk-card__img" src="https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg" alt="">
       <div class="nhsuk-card__content">
         <h2 class="nhsuk-card__heading nhsuk-heading-m">
-          <a class="nhsuk-card__link" href="https://www.gov.uk/crime-justice-and-law">Crime and fines</a>
+          <a class="nhsuk-card__link" target="_blank" href="https://www.gov.uk/crime-justice-and-law">Crime and fines</a>
         </h2>
         <p class="nhsuk-card__description">Includes Renting, repossession, disrepair</p>
       </div>
@@ -70,7 +69,7 @@
       <img class="nhsuk-card__img" src="https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg" alt="">
       <div class="nhsuk-card__content">
         <h2 class="nhsuk-card__heading nhsuk-heading-m">
-          <a class="nhsuk-card__link" href="https://www.gov.uk/money">Money</a>
+          <a class="nhsuk-card__link" target="_blank" href="https://www.gov.uk/money">Money</a>
         </h2>
         <p class="nhsuk-card__description">Includes Renting, repossession, disrepair</p>
       </div>
@@ -86,7 +85,7 @@
       <img class="nhsuk-card__img" src="https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg" alt="">
       <div class="nhsuk-card__content">
         <h2 class="nhsuk-card__heading nhsuk-heading-m">
-          <a class="nhsuk-card__link" href="#">Housing & Homelessness</a>
+          <a class="nhsuk-card__link" target="_blank" href="#">Housing & Homelessness</a>
         </h2>
         <p class="nhsuk-card__description">Includes Renting, repossession, disrepair</p>
       </div>
@@ -99,7 +98,7 @@
       <img class="nhsuk-card__img" src="https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg" alt="">
       <div class="nhsuk-card__content">
         <h2 class="nhsuk-card__heading nhsuk-heading-m">
-          <a class="nhsuk-card__link" href="https://www.gov.uk/crime-justice-and-law">Crime and fines</a>
+          <a class="nhsuk-card__link" target="_blank" ref="https://www.gov.uk/crime-justice-and-law">Crime and fines</a>
         </h2>
         <p class="nhsuk-card__description">Includes Renting, repossession, disrepair</p>
       </div>
@@ -112,7 +111,7 @@
       <img class="nhsuk-card__img" src="https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg" alt="">
       <div class="nhsuk-card__content">
         <h2 class="nhsuk-card__heading nhsuk-heading-m">
-          <a class="nhsuk-card__link" href="https://www.gov.uk/money">Money</a>
+          <a class="nhsuk-card__link" target="_blank" href="https://www.gov.uk/money">Money</a>
         </h2>
         <p class="nhsuk-card__description">Includes Renting, repossession, disrepair</p>
       </div>
