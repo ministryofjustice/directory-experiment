@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Legal help directory
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({homepageUrl: "/", serviceName: serviceName, serviceUrl: "/", containerClasses: "govuk-width-container" }) }}
+
+  <!-- https://service-manual.nhs.uk/design-system/components/card -->
+  <link rel="stylesheet" href="https://service-manual.nhs.uk/css/main.css">
+  <script src="https://service-manual.nhs.uk/js/main.min.js" defer=""></script>
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/v2/taxonomy">Legal help directory</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+block
+{% endblock %}
