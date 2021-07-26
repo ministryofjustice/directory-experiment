@@ -8,8 +8,11 @@
 {{ govukHeader({homepageUrl: "/", serviceName: serviceName, serviceUrl: "/", containerClasses: "govuk-width-container" }) }}
 
   <!-- https://service-manual.nhs.uk/design-system/components/card -->
-  <link rel="stylesheet" href="https://service-manual.nhs.uk/css/main.css">
-  <script src="https://service-manual.nhs.uk/js/main.min.js" defer=""></script>
+  <!-- <link rel="stylesheet" href="https://service-manual.nhs.uk/css/main.css"> -->
+  <!-- <script src="https://service-manual.nhs.uk/js/main.min.js" defer=""></script> -->
+
+<!-- https://designsystem.gov.scot -->
+  <link rel="stylesheet" href="https://designsystem.gov.scot/assets/css/patternlib.css?1626678968">
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,10 +24,86 @@
       <li class="govuk-breadcrumbs__list-item">
         <a class="govuk-breadcrumbs__link" href="/v2/taxonomy">Legal help directory</a>
       </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/v2/housing">Housing</a>
+      </li>
     </ol>
   </div>
 {% endblock %}
 
 {% block content %}
-block
+<h1 class="govuk-heading-xl">Homelessness</h1>
+<p class="govuk-body-l">
+  Are you in danger of losing your home? What are your rights to stay where you are living or you have nowhere to live.
+</p>
+
+  <nav aria-label="Category navigation">
+    <ol class="ds_category-list">
+        <li class="ds_category-item">
+            <h2 class="ds_category-item__title">
+                <a target="_blank" href="https://england.shelter.org.uk/housing_advice/homelessness/what_is_homelessness" class="ds_category-item__link">
+                    What does it mean being homeless?
+                </a>
+            </h2>
+
+            <p class="ds_category-item__summary">
+                You may be homeless if you're sleeping rough, don't have rights to stay where you are or you live in unsuitable housing.
+            </p>
+        </li>
+
+        <li class="ds_category-item">
+            <h2 class="ds_category-item__title">
+                <a target="_blank" href="https://web.archive.org/web/20081219015325/http://england.shelter.org.uk/get_advice/advice_topics/finding_a_place_to_live/emergency_accommodation" class="ds_category-item__link">
+                    Emergency accommodation
+                </a>
+            </h2>
+
+            <p class="ds_category-item__summary">
+                If you need a place for tonight, there are a number of different options, although it may be difficult to get a place.
+            </p>
+        </li>
+
+        <li class="ds_category-item">
+            <h2 class="ds_category-item__title">
+                <a target="_blank" href="https://www.gov.uk/if-youre-homeless-at-risk-of-homelessness" class="ds_category-item__link">Help if you’re homeless or about to become homeless</a>
+            </h2>
+
+            <p class="ds_category-item__summary">
+                Guidance if you are legally homeless or are about to become one.
+            </p>
+        </li>
+
+        <li class="ds_category-item">
+            <h2 class="ds_category-item__title">
+                <a target="_blank" href="https://www.citizensadvice.org.uk/housing/homelessness/applying-for-homeless-help/check-if-you-can-apply-for-homeless-help/" class="ds_category-item__link">Check if you can apply for homeless help</a>
+            </h2>
+
+            <p class="ds_category-item__summary">
+              Guidance to apply for homeless help.
+            </p>
+        </li>
+
+        <li class="ds_category-item">
+            <h2 class="ds_category-item__title">
+                <a target="_blank" href="https://www.gov.uk/homelessness-help-from-council" class="ds_category-item__link">Help from your council if you’re homeless or at risk of homelessness</a>
+            </h2>
+
+            <p class="ds_category-item__summary">
+                Get help and advice from the local council if you’re homeless or about to lose your home.
+            </p>
+        </li>
+
+        <li class="ds_category-item">
+            <h2 class="ds_category-item__title">
+                <a target="_blank" href="https://www.google.com/search?q=Housing+Aid+Centre&client=safari&rls=en&source=lnt&tbs=li:1&sa=X&ved=2ahUKEwjjg8m31vbxAhVzRRUIHWWHCHsQpwV6BAgBECs&biw=1920&bih=1089" class="ds_category-item__link">
+                  Housing Aid Centres
+                </a>
+            </h2>
+
+            <p class="ds_category-item__summary">
+                A list of housing aid centres.
+            </p>
+        </li>
+    </ol>
+</nav>
 {% endblock %}
