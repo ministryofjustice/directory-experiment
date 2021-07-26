@@ -8,8 +8,10 @@
 {{ govukHeader({homepageUrl: "/", serviceName: serviceName, serviceUrl: "/", containerClasses: "govuk-width-container" }) }}
 
   <!-- https://service-manual.nhs.uk/design-system/components/card -->
-  <link rel="stylesheet" href="https://service-manual.nhs.uk/css/main.css">
-  <script src="https://service-manual.nhs.uk/js/main.min.js" defer=""></script>
+  <!-- <link rel="stylesheet" href="https://service-manual.nhs.uk/css/main.css">
+  <script src="https://service-manual.nhs.uk/js/main.min.js" defer=""></script> -->
+
+  <link rel="stylesheet" href="https://designsystem.gov.scot/assets/css/patternlib.css?1626678968">
 {% endblock %}
 
 {% block beforeContent %}
@@ -29,5 +31,48 @@
 {% endblock %}
 
 {% block content %}
-block
+<h1 class="govuk-heading-xl">Neighbour disputes</h1>
+<p class="govuk-body-l">
+  What you can do if you are having disagreements with your neighbours, including boundary and hedge disputes, or problems with noise and trespass.
+</p>
+
+<nav aria-label="Category navigation">
+  <ol class="ds_category-list">
+      <li class="ds_category-item">
+          <h2 class="ds_category-item__title">
+              <a target="_blank" href="https://www.gov.uk/how-to-resolve-neighbour-disputes" class="ds_category-item__link">
+                Resolving neighbour disputes
+              </a>
+          </h2>
+
+          <p class="ds_category-item__summary">
+            Guidance page about resolving neighbour disputes
+          </p>
+      </li>
+
+      <li class="ds_category-item">
+          <h2 class="ds_category-item__title">
+              <a target="_blank" href="https://england.shelter.org.uk/professional_resources/legal/housing_conditions/nuisance_and_asb/neighbour_disputes" class="ds_category-item__link">
+                Neighbour disputes
+              </a>
+          </h2>
+
+          <p class="ds_category-item__summary">
+            Shelter guidance page neighbourhood dispute
+          </p>
+      </li>
+
+      <li class="ds_category-item">
+          <h2 class="ds_category-item__title">
+              <a target="_blank" href="https://england.shelter.org.uk/professional_resources/legal/housing_conditions/nuisance_and_asb" class="ds_category-item__link">
+                Nuisance, noise and antisocial behaviour
+              </a>
+          </h2>
+
+          <p class="ds_category-item__summary">
+            Shelter guidance page to deal with nuisance, noise and antisocial behaviour (ASB).
+          </p>
+      </li>
+    </ol>
+</nav>
 {% endblock %}
