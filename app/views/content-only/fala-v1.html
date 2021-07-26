@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Find legal advice and support
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Crime, justice and the law",
+        href: "#"
+      },
+      {
+        text: "Your rights and the law",
+        href: "#"
+      }
+    ]
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Find legal advice and support</h1>
+    <p class="govuk-body">You may need legal advice to resolve your problem. You can get advice from a solicitor but their support is not always free, so do look for other options and organisations who offer free advice.</p>
+    <p class="govuk-body"><a class="govuk-link" href="x">How the legal system works</a></p>
+    
+    <h2 class="govuk-heading-l">Get advice early</h2>
+    <p class="govuk-body">If you start dealing with your problem early, you may be able to resolve it more cheaply and easily than going to court. The longer you leave it, the worse it may become and it could end up costing you much more.</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Category one</li>
+      <li>Category two</li>
+      <li>Category three</li>
+    </ul>
+    <p class="govuk-body"><a class="govuk-link" href="x">A link to David's landing page</a></p>
+
+    <h2 class="govuk-heading-l">Free advice and support</h2>
+    <p class="govuk-body">You can get free legal advice and support from many different government departments, charities and professional advisors. Getting free help usually depends on: </p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>The problem type</li>
+      <li>How far its progressed</li>
+      <li>Your financial situation</li>
+    </ul>
+    <h3 class="govuk-heading-m">Legal aid</h3>
+    <p class="govuk-body">You may be eligible for legal aid, depending on your financial circumstances and the type of case you have.</p>
+    <p class="govuk-body"><a class="govuk-link" href="x">Check if you qualify</a></p>
+    <p class="govuk-body">If you can’t get Legal Aid, there are other options where you can get support at a reduced cost or even for free.</p>  
+    <p class="govuk-body"><a class="govuk-link" href="x">Link</a>
+
+    <h2 class="govuk-heading-l">Find a legal advisor</h2>
+    <p class="govuk-body">Can help with a variety of legal things, including mediation.</p>
+    <h3 class="govuk-heading-m">Legal advisor or solicitor</h3>
+    <p class="govuk-body">A solicitor can help with...</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a class="govuk-link" href="x">The Law Society</a> if you live in England or Wales</li>
+      <li><a class="govuk-link" href="x">The Law Society</a> of Scotland</li>
+      <li><a class="govuk-link" href="x">The Law Society</a> of Northern Ireland</li>
+    </ul>
+    <h3 class="govuk-heading-m">Barristers</h3>
+    <p class="govuk-body">A barrister can help with...</p>
+    <p class="govuk-body">Find a barrister (known as an ‘advocate’ in Scotland) in your area through:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a class="govuk-link" href="x">The Bar Council</a> if you live in England or Wales</li>
+      <li><a class="govuk-link" href="x">The Faculty of Advocates</a> if you live in Scotland</li>
+      <li><a class="govuk-link" href="x">The Bar</a> of Northern Ireland</li>
+    </ul>
+    <p class="govuk-body">You may be able to <a class="govuk-link" href="https://www.barcouncil.org.uk/bar-council-services/for-the-public/direct-access-portal.html">see a barrister without seeing a solicitor first</a> if you live in England or Wales.</p>
+
+    <h2 class="govuk-heading-l">Mediation</h2>
+    <p class="govuk-body">Most people who choose mediation services rather than going to court are more satisfied with the outcome and they often cost much less time and money.</p>
+    <p class="govuk-body">List of mediation service categories, e.g. CAIT’s parent page...</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Thing one</li>
+      <li>Thing two</li>
+      <li>Thing three</li>
+    </ul>
+
+    <h2 class="govuk-heading-l">Going to court</h2>
+    <p class="govuk-body">How it works and representing yourself</p>
+  </div>
+</div>
+{% endblock %}

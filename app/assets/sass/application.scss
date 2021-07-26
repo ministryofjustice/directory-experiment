@@ -1,0 +1,68 @@
+// global styles for <a> and <p> tags
+$govuk-global-styles: true;
+$govuk-new-link-styles: true;
+
+// We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework.
+$govuk-assets-path: '/govuk/assets/';
+
+// Import GOV.UK Frontend and any extension styles if extensions have been configured
+@import "lib/extensions/extensions";
+
+// Patterns that aren't in Frontend
+@import "patterns/step-by-step-header";
+@import "patterns/step-by-step-nav";
+@import "patterns/step-by-step-related";
+@import "patterns/task-list";
+@import "patterns/related-items";
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+
+// Related content
+
+.gem-c-related-navigation {
+    color: #0b0c0c;
+    border-top: 2px solid #1d70b8;
+    margin-bottom: 30px;
+}
+.gem-c-related-navigation__main-heading {
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+@media (min-width: 40.0625em) {
+    .gem-c-related-navigation__main-heading {
+        font-size: 19px;
+        line-height: 1.3157894737;
+    }
+}
+.gem-c-related-navigation__nav-section {
+    margin-bottom: 30px;
+}
+.gem-c-related-navigation__link-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-bottom: 1.25em;
+}
+.gem-c-related-navigation__link {
+    list-style-type: none;
+    margin-top: 15px;
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.45;
+}
+@media (min-width: 40.0625em) {
+    .gem-c-related-navigation__link {
+        font-size: 16px;
+        line-height: 1.45;
+    }
+}

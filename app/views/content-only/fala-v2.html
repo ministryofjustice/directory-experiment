@@ -1,0 +1,166 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Find legal advice and support
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Crime, justice and the law",
+        href: "#"
+      },
+      {
+        text: "Your rights and the law",
+        href: "#"
+      }
+    ]
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Find legal advice and support</h1>
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-body">You may need legal advice to resolve your problem. You can get advice from a solicitor but their support is not always free, so do look for other options and organisations who offer free advice.</p>
+    <p class="govuk-body"><a class="govuk-link" href="x">How the legal system works</a></p>
+
+    <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+              Get advice early
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+          <p class="govuk-body">If you start dealing with your problem early, you may be able to resolve it more cheaply and easily than going to court. The longer you leave it, the worse it may become and it could end up costing you much more.</p>
+        </div>
+      </div>
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+              Free advice and support
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+          <p class="govuk-body">You can get free legal advice and support from many different government departments, charities and professional advisors. Getting free help usually depends on: </p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>the problem type</li>
+            <li>How far its progressed</li>
+            <li>Your financial situation</li>
+          </ul>
+          <h3 class="govuk-heading-m">Legal aid</h3>
+          <p class="govuk-body">You may be eligible for legal aid, depending on your financial circumstances and the type of case you have.</p>
+          <p class="govuk-body"><a class="govuk-link" href="x">Check if you qualify</a></p>
+          <p class="govuk-body">If you can’t get Legal Aid, there are other options where you can get support at a reduced cost or even for free.</p>  
+          <p class="govuk-body"><a class="govuk-link" href="x">Link</a>
+        </div>
+      </div>
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+              Types of legal problems
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+          <p class="govuk-body">You can get free legal advice and support from many different government departments, charities and professional advisors. Getting free help usually depends on: </p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Thing one</li>
+            <li>Thing two</li>
+            <li>Thing three</li>
+          </ul>
+        </div>
+      </div>
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+              Find a legal advisor
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+          <p class="govuk-body">Can help with a variety of legal things, including mediation.</p>
+          <h3 class="govuk-heading-m">Legal advisor or solicitor</h3>
+          <p class="govuk-body">A solicitor can help with...</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a class="govuk-link" href="x">The Law Society</a> if you live in England or Wales</li>
+            <li><a class="govuk-link" href="x">The Law Society</a> of Scotland</li>
+            <li><a class="govuk-link" href="x">The Law Society</a> of Northern Ireland</li>
+          </ul>
+          <h3 class="govuk-heading-m">Barristers</h3>
+          <p class="govuk-body">A barrister can help with...</p>
+          <p class="govuk-body">Find a barrister (known as an ‘advocate’ in Scotland) in your area through:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a class="govuk-link" href="x">The Bar Council</a> if you live in England or Wales</li>
+            <li><a class="govuk-link" href="x">The Faculty of Advocates</a> if you live in Scotland</li>
+            <li><a class="govuk-link" href="x">The Bar</a> of Northern Ireland</li>
+          </ul>
+          <p class="govuk-body">You may be able to <a class="govuk-link" href="https://www.barcouncil.org.uk/bar-council-services/for-the-public/direct-access-portal.html">see a barrister without seeing a solicitor first</a> if you live in England or Wales.</p>
+        </div>
+      </div>
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+              Mediation
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+          <p class="govuk-body">Most people who choose mediation services rather than going to court are more satisfied with the outcome and they often cost much less time and money.</p>
+          <p class="govuk-body">List of mediation service categories, e.g. CAIT’s parent page...</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Thing one</li>
+            <li>Thing two</li>
+            <li>Thing three</li>
+          </ul>
+        </div>
+      </div>
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+              Going to court
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+          <p class="govuk-body">How it works and representing yourself</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <div class="gem-c-contextual-sidebar">
+      <div class="gem-c-related-navigation">
+          <h2 id="related-nav-related_items-1f71ab6a" class="gem-c-related-navigation__main-heading" >
+            Related content
+          </h2>
+          <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="related-nav-related_items-1f71ab6a">
+            <ul class="gem-c-related-navigation__link-list" data-module="gem-track-click">
+              <li class="gem-c-related-navigation__link"><a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="x">Civil Legal Advice (CLA)</a></li>
+              <li class="gem-c-related-navigation__link"><a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="x">Legal Aid</a></li>
+              <li class="gem-c-related-navigation__link"><a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="x">Complain about a legal advisor</a></li>
+            </ul>
+          </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
