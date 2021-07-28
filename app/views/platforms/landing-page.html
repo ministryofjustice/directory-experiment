@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Find legal advice and support
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Crime, justice and the law",
+        href: "#"
+      },
+      {
+        text: "Your rights and the law",
+        href: "#"
+      }
+    ]
+}) }}
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}
