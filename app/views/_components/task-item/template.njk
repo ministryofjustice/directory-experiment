@@ -1,0 +1,58 @@
+<ol class="app-task-list {%- if params.classes %} {{ params.classes }}{% endif %}">
+{% for item in params.items %}
+  {% if item %}
+    <li class="app-task-list__item{%- if item.classes %} {{ item.classes }}{% endif %}">
+      <div class="app-task-list__content">
+        <div class="app-task-list__task-name">
+        {% if item.href %}
+          <a class="govuk-link--no-visited-state" href="{{ item.href }}"{% if item.completed %} aria-describedby="{{ item.id }}-tag"{% endif %}>{{ item.text | safe }}</a>
+        {% else %}
+          {{ item.text | safe }}
+        {% endif %}
+        {% if item.hint %}
+          <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-margin-top-1">{{ item.hint | safe }}</span>
+        {% endif %}
+        </div>
+      {% if item.tag %}
+        <strong class="govuk-tag{% if item.tag.classes %} {{ item.tag.classes }}{% endif %}" id="{{ item.id }}-tag">{{ item.tag.text }}</strong>
+      {% endif %}
+      </div>
+    {% if item.content %}
+      <div class="app-task-list__content">
+        {{ item.content }}
+      </div>
+    {% endif %}
+  {% endif %}
+  </li>
+{% endfor %}
+</ol>
+
+                
+<div class="task-item">
+    <div class="govuk-grid-column-two-thirds">
+        <h3 class="govuk-heading-m">
+            Don't sign the resignation letter
+        </h3>
+        <p class="govuk-body"><a class="govuk-link" href="./more-about-this-task">More about this task</a></p>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        {{ govukCheckboxes({
+            idPrefix: "task-one",
+            name: "task-one",
+            classes: "govuk-checkboxes--small",
+            fieldset: {
+            legend: {
+                isPageHeading: false,
+                classes: "govuk-fieldset__legend--m"
+                }
+            },
+                items: [
+                {
+                    value: "mark as done",
+                    text: "mark as done",
+                    classes: "govuk-!-margin-top-5"
+                }
+                ]
+        }) }}
+    </div>
+</div>

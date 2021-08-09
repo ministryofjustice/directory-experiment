@@ -1,0 +1,131 @@
+{% extends "layout.html" %}
+
+{% set serviceName = "Legal action plan" %}
+
+{% block pageTitle %}
+  Find legal advice and support
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        {{ govukTextarea({
+        name: "more-detail",
+        id: "more-detail",
+        label: {
+            text: "Request follow up advice",
+            classes: "govuk-label--xl",
+            isPageHeading: true
+        },
+        hint: {
+            text: "Be specific with what you need help with now."
+        }
+        }) }}
+
+        <p class="govuk-body">By sending this message you are giving permission for an advisor to have access to you rprevious advice for a week.</p>
+
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+
+        {% set emailHtml %}
+
+        {{ govukInput({
+        id: "contact-by-email",
+        name: "contact-by-email",
+        type: "email",
+        autocomplete: "email",
+        spellcheck: false,
+        classes: "govuk-!-width-one-third",
+        label: {
+            text: "Email address"
+        }
+        }) }}
+
+        {% endset -%}
+
+        {% set phoneHtml %}
+
+        {{ govukInput({
+        id: "contact-by-phone",
+        name: "contact-by-phone",
+        type: "tel",
+        autocomplete: "tel",
+        classes: "govuk-!-width-one-third",
+        label: {
+            text: "Phone number"
+        }
+        }) }}
+        
+        {% endset -%}
+
+        {{ govukRadios({
+        idPrefix: "contact",
+        name: "contact",
+        fieldset: {
+            legend: {
+            text: "How would you prefer to be contacted?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+            }
+        },
+        hint: {
+            text: "Select one option."
+        },
+        items: [
+            {
+            value: "email",
+            text: "Email",
+            conditional: {
+                html: emailHtml
+            }
+            },
+            {
+            value: "phone",
+            text: "Phone",
+            conditional: {
+                html: phoneHtml
+            }
+            }
+        ]
+        }) }}
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+        classes: "govuk-radios",
+        idPrefix: "access-file",
+        name: "access-file",
+        fieldset: {
+            legend: {
+            text: "Can the adviser access your case file?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+            }
+        },
+        hint: {
+            text: "he advisor will be able to see the advice you were given as well as any notes you have made, or files you have uploaded."
+        },
+        items: [
+            {
+            value: "yes",
+            text: "Yes"
+            },
+            {
+            value: "no",
+            text: "No"
+            }
+        ]
+        }) }}
+
+        {{ govukButton({
+            text: "Send",
+            href: "./contact-an-advisor-sent"
+        }) }}
+    </div>
+</div>
+{% endblock %}

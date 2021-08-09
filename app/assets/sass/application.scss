@@ -14,6 +14,7 @@ $govuk-assets-path: '/govuk/assets/';
 @import "patterns/step-by-step-related";
 @import "patterns/task-list";
 @import "patterns/related-items";
+@import "patterns/legal-action-plan";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
@@ -65,4 +66,10 @@ $govuk-assets-path: '/govuk/assets/';
         font-size: 16px;
         line-height: 1.45;
     }
+}
+
+// no padding on containers
+.no-pad {
+    padding:0 !important;
+    margin:0;
 }
