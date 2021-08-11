@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% set serviceName = "Legal action plan" %}
+
+{% block pageTitle %}
+  Find legal advice and support
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        {{ govukTextarea({
+          name: "more-detail",
+          id: "more-detail",
+          label: {
+            text: "Add a note",
+            classes: "govuk-label--l",
+            isPageHeading: true
+          },
+          hint: {
+            text: "Include things like this and that."
+          }
+        }) }}    
+        {{ govukButton({
+            text: "Add",
+            classes: "govuk-button",
+            href: "./home"
+        }) }}
+    </div>
+</div>
+{% endblock %}

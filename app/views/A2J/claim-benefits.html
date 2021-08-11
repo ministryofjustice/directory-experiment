@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% set serviceName = "Legal action plan" %}
+
+{% block pageTitle %}
+  Find legal advice and support
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+    text: "Back",
+    href: "./home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Consider making a claim for benefits</h1>
+        <p class="govuk-body">You should try other ways to address the problem if possible.</p>
+        <h2 class="govuk-heading-m">
+            Links:
+        </h2>
+        <p class="govuk-body"><a class="govuk-link" href="https://www.citizensadvice.org.uk/benefits/benefits-introduction/what-benefits-can-i-get/">Claim benefits</a></p>
+        {{ govukButton({
+            text: "Continue",
+            href: "./home"
+          }) }}
+    </div>
+</div>
+{% endblock %}

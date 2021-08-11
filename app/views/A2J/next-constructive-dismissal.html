@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% set serviceName = "Legal action plan" %}
+
+{% block pageTitle %}
+  Find legal advice and support
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+    text: "Back",
+    href: "./home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Make a claim for constructive dismissal if you resign</h1>
+        <p class="govuk-body">Constructive dismissal can be difficult to prove so you may need more help and advice with this option.</p>
+        <p class="govuk-body">Constructive dismissal can be on the grounds of bullying and harassment or a breaking of mutual trust and confidence.</p>
+        <h2 class="govuk-heading-l">Bullying and harrassment</h2>
+        <p class="govuk-body">There's an implied term in all contracts that an emplouer should take all reasonable steps to make sure their employees can do their job without being bullied or harassed.</p>
+        <p class="govuk-body">Bullying is a behaviour that makes you feel intimidated or offended. Examples include:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Being treated unfairly</li>
+            <li>Being regularly undermined</li>
+            <li>Having malicious rumours spread about them</li>
+        </ul>
+        <h2 class="govuk-heading-l">Breakdown of mutual trust and confidence</h2>
+        <p class="govuk-body">A tribunal is likely to view a breakdown of mutual trust as a breach of contract. The kinds of actions that could lead to this inlcude threatening behaviour. </p>
+        <p class="govuk-body">The employer's actions don't need to be deliberate to be classed as a fundamental breach. An employment tribunal will look at whether the employer behaved in a way that way likely to seriously undermine trust and confidence.</p>
+        <h2 class="govuk-heading-l">Actions</h2>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Write a formal letter of grievance</li>
+            <li>Contact ACAS to work with your employer to solve the problem</li>
+            <li>Book an appointment with an adviser if you want to make an employment tribunal claim</li>
+        </ul>
+        
+        {{ govukButton({
+            text: "Select this option",
+            href: "./home"
+          }) }}
+        <h2 class="govuk-heading-m">
+            Links:
+        </h2>
+        <p class="govuk-body"><a class="govuk-link" href="https://www.citizensadvice.org.uk/work/leaving-a-job/dismissal/claiming-constructive-dismissal/">Claiming constructive dismissal</a></p>
+        <p class="govuk-body"><a class="govuk-link" href="https://www.citizensadvice.org.uk/work/problems-at-work/complaint-about-a-problem-at-work-grievance-letter-checklist/">Grievance letter checklist</a></p>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% set serviceName = "Legal action plan" %}
+
+{% block pageTitle %}
+  Find legal advice and support
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+    text: "Back",
+    href: "./home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Try other ways to resolve issues with your employer</h1>
+        <p class="govuk-body">You should try other ways to address the problem if possible.</p>
+        <h2 class="govuk-heading-m">
+            Links:
+        </h2>
+        <p class="govuk-body"><a class="govuk-link" href="https://www.citizensadvice.org.uk/work/problems-at-work/dealing-with-a-problem-at-work/">Dealing with problems at work</a></p>
+    </div>
+</div>
+{% endblock %}
