@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 
 {% set serviceName = "Legal action plan" %}
+{% set nextConstructive = "true" %}
 
 {% block pageTitle %}
   Find legal advice and support
@@ -36,11 +37,13 @@
             <li>Contact ACAS to work with your employer to solve the problem</li>
             <li>Book an appointment with an adviser if you want to make an employment tribunal claim</li>
         </ul>
-        
-        {{ govukButton({
-            text: "Select this option",
-            href: "./home"
-          }) }}
+        <form class="" id="" action="./home" accept-charset="UTF-8" method="post">
+            {{ govukButton({
+                text: "Select this option",
+                element: "input",
+                name: "next-constructive"
+            }) }}
+        </form>
         <h2 class="govuk-heading-m">
             Links:
         </h2>
