@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% set serviceName = "" %}
+{% set pageTitle = "Find legal help and support" %}
+{% set useGlobalBar = true %}
+
+{% block pageTitle %}
+  Find legal advice and support - GOV.UK
+{% endblock %}
+
+{% block beforeContent%}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="gem-c-title govuk-!-margin-top-8 govuk-!-margin-bottom-8">
+            <h1 class="gem-c-title__text govuk-heading-xl">
+                {{ pageTitle }}
+            </h1>
+          </div>
+          <a class="gem-c-skip-link govuk-skip-link govuk-!-display-none-print" href="#guide-contents">Skip to contents of guide</a>
+          
+          <aside class="part-navigation-container">
+              <nav class="gem-c-contents-list" aria-label="pages in this guide" role="complementary">
+                  <h2 class="gem-c-contents-list__title">
+                      Contents
+                  </h2>
+                  <ol class="gem-c-contents-list__list">
+                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active" aria-current="true">
+                        Get advice early                        
+                    </li>
+                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                      <a class="gem-c-contents-list__link govuk-link" href="./free-advice-and-support">Free advice and support</a>               
+                    </li>
+                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                      <a class="gem-c-contents-list__link govuk-link" href="./find-a-legal-advisor">Find a legal advisor</a>               
+                    </li>
+                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                      <a class="gem-c-contents-list__link govuk-link" href="./resolve-problems-outside-of-court">Resolve problems outside of court</a>               
+                    </li>
+                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                      <a class="gem-c-contents-list__link govuk-link" href="./going-to-court">Going to court</a>
+                    </li>
+                </ol>
+              </nav>
+          </aside>
+    </div>
+{% endblock%}
+
+{% block content %}
+
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="part-title">
+            Get advice early
+        </h1>
+        <div class="gem-c-govspeak govuk-govuspeak dectrion-ltr disable-youtube">
+            <p class="govuk-body">If you start dealing with your problem early, you may be able to resolve it more cheaply and easily than going to court. The longer you leave it, the worse it may become and it could end up costing you much more.</p>
+            <h3 class="govuk-heading-m">Types of legal problems</h3>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="x">Benefits and tax credits</a></li>
+              <li><a class="govuk-link" href="x">Communications and media</a></li>
+              <li><a class="govuk-link" href="x">Consumer affairs</a></li>
+              <li><a class="govuk-link" href="x">Debt, money and tax</a></li>
+              <li><a class="govuk-link" href="x">Education and training</a></li>
+              <li><a class="govuk-link" href="x">Employment</a></li>
+              <li><a class="govuk-link" href="x">Environment and the countryside</a></li>
+              <li><a class="govuk-link" href="x">Family and personal</a></li>
+              <li><a class="govuk-link" href="x">Government, law and rights</a></li>
+              <li><a class="govuk-link" href="x">Health and social care</a></li>
+              <li><a class="govuk-link" href="x">Housing and homelessness</a></li>
+              <li><a class="govuk-link" href="x">Immigration and nationality</a></li>
+              <li><a class="govuk-link" href="x">Police and crime</a></li>
+              <li><a class="govuk-link" href="x">Travel, transport and leisure</a></li>
+            </ul>
+        </div>
+            {{ paginationNext('./free-advice-and-support', 'Free advice and support') }}
+        </div>
+
+</div>
+{% endblock %}

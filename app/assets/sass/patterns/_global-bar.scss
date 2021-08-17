@@ -1,0 +1,349 @@
+
+.global-bar {
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    background-color: #0b0c0c;
+    border-top: 10px solid #1d70b8;
+    border-bottom: 1px solid #fff;
+    //display: none
+}
+
+@media print {
+    .global-bar {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .global-bar {
+        font-size:19px;
+        line-height: 1.3157894737
+    }
+}
+
+@media print {
+    .global-bar {
+        font-size: 14pt;
+        line-height: 1.15
+    }
+}
+
+.show-global-bar .global-bar {
+    display: block
+}
+
+.global-bar .govuk-link,.global-bar .govuk-link:link {
+    color: #fff
+}
+
+.global-bar .govuk-link:visited,.global-bar .govuk-link:link:visited {
+    color: #fff
+}
+
+.global-bar .govuk-link:focus,.global-bar .govuk-link:link:focus {
+    color: #0b0c0c
+}
+
+.global-bar-message {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 20px 0
+}
+
+.global-bar-title {
+    font-weight: 700;
+    margin-right: 10px;
+    margin-bottom: 5px
+}
+
+.global-bar-title:only-child {
+    margin: 0
+}
+
+.global-bar-title,.global-bar-text {
+    color: #fff
+}
+
+.global-bar-title+.global-bar-covid-wrapper,.global-bar-text+.global-bar-covid-wrapper {
+    margin-top: 10px
+}
+
+.global-bar-title__nowrap {
+    white-space: nowrap
+}
+
+.global-bar-dismiss-wrapper {
+    margin-top: 20px
+}
+
+.global-bar__dismiss {
+    display: none
+}
+
+.global-bar__dismiss--show {
+    display: inline-block
+}
+
+.gem-c-govspeak .global-bar__heading {
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    margin-top: 0;
+    margin-bottom: 5px
+}
+
+@media print {
+    .gem-c-govspeak .global-bar__heading {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-govspeak .global-bar__heading {
+        font-size:19px;
+        line-height: 1.3157894737
+    }
+}
+
+@media print {
+    .gem-c-govspeak .global-bar__heading {
+        font-size: 14pt;
+        line-height: 1.15
+    }
+}
+
+.gem-c-govspeak .global-bar__list {
+    margin-top: 0
+}
+
+.global-bar__list {
+    margin-top: 0
+}
+
+.global-bar-additional {
+    display: none;
+    padding: 20px 0;
+    background-color: #262828
+}
+
+.global-bar-additional__text {
+    position: relative
+}
+
+.global-bar-additional__text p:last-child {
+    margin-bottom: 0
+}
+
+.global-bar-additional__text-govspeak {
+    color: #fff
+}
+
+.global-bar-additional--show {
+    display: block
+}
+
+
+#global-cookie-message.gem-c-cookie-banner .gem-c-cookie-banner__message,#global-cookie-message.gem-c-cookie-banner .gem-c-cookie-banner__confirmation {
+    margin-bottom: -10px
+}
+
+.gem-c-action-link {
+    display: table
+}
+
+.gem-c-action-link:before {
+    content: "";
+    display: table-cell;
+    width: 60px;
+    height: 45px;
+    background: url(https://www.gov.uk/assets/static/govuk_publishing_components/action-link-arrow-f03d44e13c1da83fb61b8c21bf05656f12c6b45b7e33938f3a3fd2b7aa5467a6.png);
+    background: url(https://www.gov.uk/assets/static/govuk_publishing_components/action-link-arrow-af86a11f723d53bbd5d6e69f6d940f4c7b889b039913a98005db11fcba8fdce1.svg),linear-gradient(transparent, transparent);
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    background-size: 45px auto
+}
+
+@media (max-width: 40.0525em) {
+    .gem-c-action-link {
+        max-width:410px
+    }
+}
+
+.gem-c-action-link__contents-wrapper {
+    display: table-cell;
+    vertical-align: middle
+}
+
+.gem-c-action-link__link-wrapper {
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.3;
+    display: table-cell;
+    vertical-align: middle
+}
+
+@media print {
+    .gem-c-action-link__link-wrapper {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-action-link__link-wrapper {
+        font-size:19px;
+        line-height: 1.3
+    }
+}
+
+@media print {
+    .gem-c-action-link__link-wrapper {
+        font-size: 14pt;
+        line-height: 1.3
+    }
+}
+
+.gem-c-action-link__link {
+    color: inherit
+}
+
+.gem-c-action-link__link:focus {
+    text-decoration: none;
+    color: #0b0c0c
+}
+
+.gem-c-action-link__nowrap-text {
+    white-space: nowrap
+}
+
+.gem-c-action-link--with-subtext {
+    max-width: none
+}
+
+.gem-c-action-link--with-subtext .gem-c-action-link__link-wrapper,.gem-c-action-link--with-subtext .gem-c-action-link__subtext-wrapper {
+    display: block
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-action-link--with-subtext .gem-c-action-link__link-wrapper,.gem-c-action-link--with-subtext .gem-c-action-link__subtext-wrapper {
+        display:table-cell;
+        vertical-align: middle
+    }
+}
+
+.gem-c-action-link--mobile-subtext .gem-c-action-link__subtext-wrapper {
+    display: block
+}
+
+.gem-c-action-link--mobile-subtext .gem-c-action-link__subtext {
+    padding: 0
+}
+
+.gem-c-action-link--mobile-subtext .gem-c-action-link__subtext:before {
+    display: none
+}
+
+.gem-c-action-link__subtext {
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    display: block;
+    font-weight: normal;
+    color: inherit
+}
+
+@media print {
+    .gem-c-action-link__subtext {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-action-link__subtext {
+        font-size:19px;
+        line-height: 1.3157894737
+    }
+}
+
+@media print {
+    .gem-c-action-link__subtext {
+        font-size: 14pt;
+        line-height: 1.15
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-action-link__subtext {
+        position:relative;
+        padding-left: 20px
+    }
+
+    .gem-c-action-link__subtext:before {
+        content: "";
+        position: absolute;
+        top: 10%;
+        left: 10px;
+        width: 10px;
+        height: 80%;
+        border-left: solid 1px #0b0c0c
+    }
+}
+
+.gem-c-action-link--simple:before {
+    width: 30px;
+    height: 30px;
+    background: url(https://www.gov.uk/assets/static/govuk_publishing_components/action-link-arrow--simple-f835aeb28f0cd79f8e5fef6dc3ea7a7ed9b18021307407a089b8e7d913394985.png);
+    background: url(https://www.gov.uk/assets/static/govuk_publishing_components/action-link-arrow--simple-e2d682f26616684ee3575cf98ebeb00f2f12136f1033b86c0454b2aec5264fb8.svg),linear-gradient(transparent, transparent);
+    background-repeat: no-repeat;
+    background-size: 25px auto;
+    background-position: 0 2px
+}
+
+.gem-c-action-link--simple-light:before {
+    width: 30px;
+    height: 30px;
+    background: url(https://www.gov.uk/assets/static/govuk_publishing_components/action-link-arrow--simple-light-d813942af697ea743815779c294579acb7ffda4f903d8197582cc60638be8f60.png);
+    background: url(https://www.gov.uk/assets/static/govuk_publishing_components/action-link-arrow--simple-light-404cfd5992e74d48ac785545369ce0368ef54590a692afa37b1b50035b13a0e8.svg),linear-gradient(transparent, transparent);
+    background-repeat: no-repeat;
+    background-size: 25px auto;
+    background-position: 0 2px
+}
+
+.gem-c-action-link--dark-icon:before {
+    background: url(https://www.gov.uk/assets/static/govuk_publishing_components/action-link-arrow--dark-4cee5b4d02aca76b337e01239da928971f983162c4ed7bf5790ffb6224a7cc5d.png);
+    background: url(https://www.gov.uk/assets/static/govuk_publishing_components/action-link-arrow--dark-10605f4789013a507e50cf1cb80fe28e89f09220d9d6bb659737f2a9bae94562.svg),linear-gradient(transparent, transparent)
+}
+
+.gem-c-action-link--dark-icon,.gem-c-action-link--small-icon {
+    max-width: none
+}
+
+@media (max-width: 40.0525em) {
+    .gem-c-action-link--dark-icon,.gem-c-action-link--small-icon {
+        margin-bottom:10px
+    }
+}
+
+.gem-c-action-link--dark-icon:before,.gem-c-action-link--small-icon:before {
+    height: 30px;
+    width: 35px;
+    background-repeat: no-repeat;
+    background-size: 25px auto;
+    background-position: 0 2px
+}
+
+.gem-c-action-link--transparent-icon:before {
+    background-image: url(https://www.gov.uk/assets/static/govuk_publishing_components/action-link-arrow--transparent-bec06cc283979226b8f511bb8ab9f76acba7ef2496cfd75f9feeecc7dc33cdb3.svg)
+}

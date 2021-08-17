@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% set serviceName = "" %}
+{% set pageTitle = "Find legal help and support" %}
+{% set useGlobalBar = true %}
+
+{% block pageTitle %}
+  Find legal advice and support - GOV.UK
+{% endblock %}
+
+{% block beforeContent%}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="gem-c-title govuk-!-margin-top-8 govuk-!-margin-bottom-8">
+            <h1 class="gem-c-title__text govuk-heading-xl">
+              {{ pageTitle }}
+            </h1>
+          </div>
+          <a class="gem-c-skip-link govuk-skip-link govuk-!-display-none-print" href="#guide-contents">Skip to contents of guide</a>
+          
+          <aside class="part-navigation-container">
+              <nav class="gem-c-contents-list" aria-label="pages in this guide" role="complementary">
+                  <h2 class="gem-c-contents-list__title">
+                      Contents
+                  </h2>
+                  <ol class="gem-c-contents-list__list">
+                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed" aria-current="true">
+                      <a class="gem-c-contents-list__link govuk-link" href="./find-legal-help-and-support">Get advice early</a>                        
+                    </li>
+                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active">
+                      Free advice and support  
+                    </li>
+                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                      <a class="gem-c-contents-list__link govuk-link" href="./find-a-legal-advisor">Find a legal advisor</a>               
+                    </li>
+                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                      <a class="gem-c-contents-list__link govuk-link" href="./resolve-problems-outside-of-court">Resolve problems outside of court</a>               
+                    </li>
+                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                      <a class="gem-c-contents-list__link govuk-link" href="./going-to-court">Going to court</a>
+                    </li>
+                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <a class="gem-c-contents-list__link govuk-link" href="./representing-yourself-at-court">Representing yourself at court</a>
+                    </li>
+                </ol>
+              </nav>
+          </aside>
+    </div>
+{% endblock%}
+
+{% block content %}
+
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="part-title">
+            Free advice and support
+        </h1>
+        <div class="gem-c-govspeak govuk-govuspeak dectrion-ltr disable-youtube">
+          <p class="govuk-body">You can get free legal advice and support from many different government departments, charities and professional advisors. Getting free help usually depends on:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>the problem type</li>
+            <li>how far it has progressed</li>
+            <li>your financial situation</li>
+          </ul>
+          <h3 class="govuk-heading-m">Legal aid</h3>
+          <p class="govuk-body">You may be eligible for legal aid, depending on your financial circumstances and the type of case you have.</p>
+          <p class="govuk-body"><a class="govuk-link" href="x">Check if you qualify</a></p>
+          <p class="govuk-body">If you can’t get Legal Aid, there are other options where you can get support at a reduced cost or even for free.</p>  
+          <h3 class="govuk-heading-m">Other advice and support</h3>
+          <p class="govuk-body">If you can’t get Legal Aid, there are other options where you can get support at a reduced cost or even for free.</p>
+          <p class="govuk-body"><a class="govuk-link" href="x">Find other support organisations</a></p>
+        </div>
+            {{ paginationFull('./find-legal-help-and-support', 'Get advice early', './find-a-legal-advisor', 'Find a legal advisor') }}
+        </div>
+
+</div>
+{% endblock %}

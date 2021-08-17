@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% set serviceName = "Legal action plan" %}
+
+{% block pageTitle %}
+  Find legal advice and support
+{% endblock %}
+
+{% block beforeContent %}
+    {{ govukBackLink({
+        text: "Back",
+        href: "./home"
+    }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Don't sign the resignation letter</h1>
+        <p class="govuk-body">You should continue to work as this protects your income. This means you should not sign the resignation letter or do anything else that signals your intention to leave, e.g. returning company equipment.</p>
+        <p class="govuk-body">If your employer has told you they'll dimiss you if you don't resign, this counts as a dismissal. If they're treating you badling in order to make you resign, it could be constructive dismissal.</p>
+        <p class="govuk-body">As you don't have a written contract, you would only need to give one week's notice although your employer indicted you would get two weeks. Normally, constructive dismissal requires a resignation. Working your notice period may be detrimental to your claim. </p>
+        {{ govukButton({
+            text: "Continue",
+            href: "./home"
+          }) }}
+        <h3 class="govuk-heading-m">
+            Links:
+        </h3>
+        <p class="govuk-body"><a class="govuk-link" href="https://www.citizensadvice.org.uk/work/leaving-a-job/resigning/your-notice-period-when-resigning/">Citizens advice</a></p>
+        <p class="govuk-body"><a class="govuk-link" href="https://www.citizensadvice.org.uk/work/leaving-a-job/resigning/deciding-whether-to-resign">Citizens advice</a></p>
+    </div>
+</div>
+{% endblock %}

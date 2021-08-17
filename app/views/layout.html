@@ -33,6 +33,9 @@
 
 {% from "_components/task-item/macro.njk" import taskItem %}
 {% from "_components/task-item-extended/macro.njk" import taskItemExtended %}
+{% from "_components/pagination-full/macro.njk" import paginationFull %}
+{% from "_components/pagination-next/macro.njk" import paginationNext %}
+{% from "_components/pagination-previous/macro.njk" import paginationPrevious %}
 
 {% block head %}
   {% include "includes/head.html" %}
@@ -51,6 +54,14 @@
     containerClasses: "govuk-width-container"
   }) }}
 {% endblock %}
+
+{% if useGlobalBar %}
+  {% block globalBar %}
+
+    {% include "includes/global_banner.html" %}
+
+  {% endblock %}
+{% endif %}
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
 

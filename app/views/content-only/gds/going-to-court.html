@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% set serviceName = "" %}
+{% set pageTitle = "Find legal help and support" %}
+{% set useGlobalBar = true %}
+
+{% block pageTitle %}
+  Find legal advice and support - GOV.UK
+{% endblock %}
+
+{% block beforeContent%}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="gem-c-title govuk-!-margin-top-8 govuk-!-margin-bottom-8">
+            <h1 class="gem-c-title__text govuk-heading-xl">
+              {{ pageTitle }}
+            </h1>
+          </div>
+          <a class="gem-c-skip-link govuk-skip-link govuk-!-display-none-print" href="#guide-contents">Skip to contents of guide</a>
+          
+          <aside class="part-navigation-container">
+              <nav class="gem-c-contents-list" aria-label="pages in this guide" role="complementary">
+                  <h2 class="gem-c-contents-list__title">
+                      Contents
+                  </h2>
+                  <ol class="gem-c-contents-list__list">
+                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed" aria-current="true">
+                      <a class="gem-c-contents-list__link govuk-link" href="./find-legal-help-and-support">Get advice early</a>                        
+                    </li>
+                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <a class="gem-c-contents-list__link govuk-link" href="./free-advice-and-support">Free advice and support</a>
+                    </li>
+                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <a class="gem-c-contents-list__link govuk-link" href="./find-a-legal-advisor">Find a legal advisor</a>              
+                    </li>
+                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <a class="gem-c-contents-list__link govuk-link" href="./find-a-legal-advisor">Resolve problems outside of court</a>              
+                    </li>
+                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active">
+                        Going to court
+                    </li>
+                </ol>
+              </nav>
+          </aside>
+    </div>
+{% endblock%}
+
+{% block content %}
+
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="part-title">
+            Going to court
+        </h1>
+        <div class="gem-c-govspeak govuk-govuspeak dectrion-ltr disable-youtube">
+            <p class="govuk-body">You may need to go to court if you have not been able to resolve your problem by other means.</p>
+            <p class="govuk-body">Here are some guides about going to court:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="https://www.advicenow.org.uk/guides/going-civil-court">Going to civil court</a></li>
+              <li><a class="govuk-link" href="https://www.gov.uk/government/publications/going-to-a-criminal-court-support-for-defendants">Going to criminal court</a></li>
+              <li><a class="govuk-link" href="https://www.judiciary.uk/you-and-the-judiciary/going-to-court/">Learn about the different UK courts</a></li>
+            </ul>
+            <h3 class="govuk-heading-m">Representing yourself in court</h3>
+            <p class="govuk-body">You have the right to speak for yourself in court without a solicitor or other legal professional.</p>
+            <p class="govuk-body">You should prepare thoroughly if you choose to do this, to ensure the best possible outcome.</p>
+            <p class="govuk-body"><a class="govuk-link" href="https://www.gov.uk/represent-yourself-in-court">Learn about representing yourself in court (GOV.UK)</a></p>
+            <p class="govuk-body">Here are some helpful guides created by other trusted organisations:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link" href="https://www.advicenow.org.uk/content/going-court-or-tribunal">Going to court or tribunal (Advicenow)</a></li>
+              <li><a class="govuk-link" href="https://www.citizensadvice.org.uk/law-and-courts/legal-system/going-to-court-without-a-solicitor-or-barrister/">Going to court without a solicitor (Citizens Adivce)</a></li>
+              <li><a class="govuk-link" href="https://www.legalchoices.org.uk/legal-choices/got-a-legal-issue/courts/i-want-to-represent-myself-in-court">I want to represent myself in court (Legal Choices)</a></li>
+            </ul>
+        </div>
+            {{ paginationPrevious('./resolve-problems-outside-of-court', 'Resolve problems outside of court') }}
+        </div>
+
+</div>
+{% endblock %}

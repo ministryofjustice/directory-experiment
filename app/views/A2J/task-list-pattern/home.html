@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+
+{% set serviceName = "Legal action plan" %}
+
+{% block pageTitle %}
+  Your legal action plan
+{% endblock %}
+
+{% block beforeContent %}
+    {{ govukBackLink({
+        text: "Back",
+        href: "./you-told-us"
+    }) }}
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Your legal action plan</h1>
+        <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Actions incomplete</h2>
+        <p class="govuk-body">You have completed 0 out of 8 sections.</p>
+        <!-- Now section -->
+        <ol class="app-task-list">
+          <li>
+            <h2 class="app-task-list__section">
+              <span class="app-task-list__section-number">
+                1.
+              </span>
+              Now
+            </h2>
+            <ul class="app-task-list__items">
+              <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                  <a href="./resignation-letter" aria-describedby="eligability-status">Do not sign the resignation letter</a>
+                </span>
+                <strong class="govuk-tag govuk-tag--grey app-task-list__tag">
+                  Not started
+                </strong>
+              </li>
+              <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                  <a href="./try-other-ways" aria-describedby="read-declaration-status">Try other ways to reslove issues with your employer</a>
+                </span>
+                <strong class="govuk-tag govuk-tag--grey app-task-list__tag">
+                  Not started
+                </strong>
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <!-- Next section -->
+        <ol class="app-task-list">
+          <li>
+            <h2 class="app-task-list__section">
+              <span class="app-task-list__section-number">
+                2.
+              </span>
+              Next
+            </h2>
+            <ul class="app-task-list__items">
+              <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                  <a href="./select-an-option" aria-describedby="eligability-status">Choose what to do next</a>
+                </span>
+                <strong class="govuk-tag govuk-tag--grey app-task-list__tag">
+                  Not started
+                </strong>
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <!-- Take it further section -->
+        <ol class="app-task-list">
+          <li>
+            <h2 class="app-task-list__section">
+              <span class="app-task-list__section-number">
+                3.
+              </span>
+              If you need to take it further
+            </h2>
+            <ul class="app-task-list__items">
+              <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                  <a href="#" aria-describedby="eligability-status">Make a claim for benefits</a>
+                </span>
+                <strong class="govuk-tag govuk-tag--grey app-task-list__tag">
+                  Not started
+                </strong>
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <!-- Contact section -->
+        <ol class="app-task-list">
+          <li>
+            <h2 class="app-task-list__section">
+              <span class="app-task-list__section-number">
+                4.
+              </span>Help
+            </h2>
+            <ul class="app-task-list__items">
+              <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                  <a href="#" aria-describedby="eligability-status">Contact an advisor</a>
+                </span>
+                <strong class="govuk-tag govuk-tag--grey app-task-list__tag">
+                  Not started
+                </strong>
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+{% endblock %}
