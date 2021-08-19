@@ -55,13 +55,7 @@
   }) }}
 {% endblock %}
 
-{% if useGlobalBar %}
-  {% block globalBar %}
 
-    {% include "includes/global_banner.html" %}
-
-  {% endblock %}
-{% endif %}
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
 

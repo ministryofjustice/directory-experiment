@@ -2,13 +2,14 @@
 
 {% set serviceName = "" %}
 {% set pageTitle = "Find legal help and support" %}
-{% set useGlobalBar = true %}
 
 {% block pageTitle %}
   Find legal advice and support - GOV.UK
 {% endblock %}
 
-{% block beforeContent%}
+
+{% block beforeContent %}
+
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <div class="gem-c-title govuk-!-margin-top-8 govuk-!-margin-bottom-8">
@@ -25,10 +26,10 @@
                   </h2>
                   <ol class="gem-c-contents-list__list">
                     <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed" aria-current="true">
-                      <a class="gem-c-contents-list__link govuk-link" href="./find-legal-help-and-support">Get advice early</a>                        
+                      <a class="gem-c-contents-list__link govuk-link" href="./find-legal-help-and-support">Dealing with problems early</a>                        
                     </li>
                     <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-                        <a class="gem-c-contents-list__link govuk-link" href="./free-advice-and-support">Free advice and support</a>
+                        <a class="gem-c-contents-list__link govuk-link" href="./free-advice-and-support">Affordable advice and support</a>
                     </li>
                     <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active">
                       Find a legal advisor              
@@ -43,7 +44,9 @@
               </nav>
           </aside>
     </div>
-{% endblock%}
+{% endblock %}
+
+
 
 {% block content %}
 
@@ -53,30 +56,21 @@
         </h1>
         <div class="gem-c-govspeak govuk-govuspeak dectrion-ltr disable-youtube">
             <p class="govuk-body">Legal advisors can help with a wide variety of legal problems, depending on what they specialise in.</p>
-            <h3 class="govuk-heading-m">Legal advisor or solicitor</h3>
-            <p class="govuk-body">A solicitor can help with:</p>
-            <ol class="govuk-list govuk-list--number">
+            <h2 class="govuk-heading-m">Solicitors</h2>
+            <p class="govuk-body">You can get advice from a solicitor, but their support is not always free. A solicitor can help with:</p>
+            <ul class="govuk-list govuk-list--bullet">
               <li>Contentious legal work – resolving disputes between two or more parties, usually in a court or tribunal.</li>
               <li>Non-contentious legal work – dealing with the legal aspects of a client's business or personal matter, for example managing a company merger, or making a will.</li>
-            </ol>  
-            <p class="govuk-body">Find a solicitor through:</p>
-            <ul class="govuk-list govuk-list--bullet">
-              <li><a class="govuk-link" href="x">The Law Society</a> if you live in England or Wales</li>
-              <li><a class="govuk-link" href="x">The Law Society of Scotland</a></li>
-              <li><a class="govuk-link" href="x">The Law Society of Northern Ireland</a></li>
             </ul>
-            <h3 class="govuk-heading-m">Barristers</h3>
+            <p class="govuk-body">Find a solicitor through <a class="govuk-link" href="https://solicitors.lawsociety.org.uk/?Pro=True">The Law Society</a> if you live in England or Wales</p>
+            <h2 class="govuk-heading-m">Barristers</h2>
             <p class="govuk-body">A barrister can help you with many legal issues, for example, by providing advice on your legal rights, drafting legal documents for you and representing you in a court or tribunal.</p>
-            <p class="govuk-body">Find a barrister (known as an ‘advocate’ in Scotland) in your area through:</p>
-            <ul class="govuk-list govuk-list--bullet">
-              <li><a class="govuk-link" href="x">The Bar Council</a> if you live in England or Wales</li>
-              <li><a class="govuk-link" href="x">The Faculty of Advocates</a> if you live in Scotland</li>
-              <li><a class="govuk-link" href="x">The Bar of Northern Ireland</a></li>
-            </ul>
+            <p class="govuk-body"><a class="govuk-link" href="https://www.directaccessportal.co.uk/search/1/barrister">Find a barrister in your area through the Bar Council</a> if you live in England or Wales.</p>
             <p class="govuk-body">You may be able to <a class="govuk-link" href="https://www.barcouncil.org.uk/bar-council-services/for-the-public/direct-access-portal.html">see a barrister without seeing a solicitor first</a> if you live in England or Wales.</p>
-        </div>
+          </div>
             {{ paginationFull('./free-advice-and-support', 'Free advice and support','./resolve-problems-outside-of-court','Resolve probelms outside of court') }}
-        </div>
+            <!-- {% include "includes/print-this-page.html" %} -->
+        </div> 
 
 </div>
 {% endblock %}

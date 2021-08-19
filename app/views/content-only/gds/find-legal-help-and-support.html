@@ -8,7 +8,7 @@
   Find legal advice and support - GOV.UK
 {% endblock %}
 
-{% block beforeContent%}
+{% block beforeContent %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <div class="gem-c-title govuk-!-margin-top-8 govuk-!-margin-bottom-8">
@@ -25,10 +25,10 @@
                   </h2>
                   <ol class="gem-c-contents-list__list">
                     <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active" aria-current="true">
-                        Get advice early                        
+                        Dealing with problems early                        
                     </li>
                     <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-                      <a class="gem-c-contents-list__link govuk-link" href="./free-advice-and-support">Free advice and support</a>               
+                      <a class="gem-c-contents-list__link govuk-link" href="./free-advice-and-support">Affordable advice and support</a>               
                     </li>
                     <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
                       <a class="gem-c-contents-list__link govuk-link" href="./find-a-legal-advisor">Find a legal advisor</a>               
@@ -43,17 +43,30 @@
               </nav>
           </aside>
     </div>
-{% endblock%}
+{% endblock %}
 
 {% block content %}
 
     <div class="govuk-grid-column-two-thirds">
         <h1 class="part-title">
-            Get advice early
+            Dealing with problems early 
         </h1>
         <div class="gem-c-govspeak govuk-govuspeak dectrion-ltr disable-youtube">
-            <p class="govuk-body">If you start dealing with your problem early, you may be able to resolve it more cheaply and easily than going to court. The longer you leave it, the worse it may become and it could end up costing you much more.</p>
-            <h3 class="govuk-heading-m">Types of legal problems</h3>
+            <p class="govuk-body">If you start dealing with your problem early, you may be able to resolve it more easily and cheaply than going to court. </p>
+            <p class="govuk-body">You could save yourself a lot of time and money by doing your own research and looking at all the options available to you. The longer you leave it, the worse it may become.</p>
+            <h2 class="govuk-heading-m">Types of legal problems</h2>
+            <p class="govuk-body">There are many different kinds of legal problems and they all need to be handled in specific ways.</p>
+            <p class="govuk-body"><a class="govuk-link" href="">Find out more about these and how they all need to be handled in specific ways</a>.</p>
+            <p class="govuk-body">These are the types of problems covered by this guide:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Benefits</li>
+              <li>Debt, money and tax</li>
+              <li>Employment</li>
+              <li>Housing and homelessness</li>
+            </ul>
+            <p class="govuk-body"><a class="govuk-link" href="x">Search all advice on gov.uk and other organisations</a></p>
+
+            <!-- hidden for testing
             <ul class="govuk-list govuk-list--bullet">
               <li><a class="govuk-link" href="x">Benefits and tax credits</a></li>
               <li><a class="govuk-link" href="x">Communications and media</a></li>
@@ -70,6 +83,7 @@
               <li><a class="govuk-link" href="x">Police and crime</a></li>
               <li><a class="govuk-link" href="x">Travel, transport and leisure</a></li>
             </ul>
+            -->
         </div>
         {{ paginationNext('./free-advice-and-support', 'Free advice and support') }}    
     </div>

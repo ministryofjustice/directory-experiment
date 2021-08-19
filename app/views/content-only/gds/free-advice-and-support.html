@@ -8,7 +8,7 @@
   Find legal advice and support - GOV.UK
 {% endblock %}
 
-{% block beforeContent%}
+{% block beforeContent %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <div class="gem-c-title govuk-!-margin-top-8 govuk-!-margin-bottom-8">
@@ -25,10 +25,10 @@
                   </h2>
                   <ol class="gem-c-contents-list__list">
                     <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed" aria-current="true">
-                      <a class="gem-c-contents-list__link govuk-link" href="./find-legal-help-and-support">Get advice early</a>                        
+                      <a class="gem-c-contents-list__link govuk-link" href="./find-legal-help-and-support">Dealing with problems early</a>                        
                     </li>
                     <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active">
-                      Free advice and support  
+                      Affordable advice and support  
                     </li>
                     <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
                       <a class="gem-c-contents-list__link govuk-link" href="./find-a-legal-advisor">Find a legal advisor</a>               
@@ -43,28 +43,27 @@
               </nav>
           </aside>
     </div>
-{% endblock%}
+{% endblock %}
 
 {% block content %}
 
     <div class="govuk-grid-column-two-thirds">
         <h1 class="part-title">
-            Free advice and support
+            Affordable advice and support
         </h1>
         <div class="gem-c-govspeak govuk-govuspeak dectrion-ltr disable-youtube">
-          <p class="govuk-body">You can get free legal advice and support from many different government departments, charities and professional advisors. Getting free help usually depends on:</p>
+          <p class="govuk-body">You can get affordable legal advice and support from many different government departments, charities and professional advisers.</p>
+          <p class="govuk-body">Getting lower-cost help usually depends on:</p>
           <ul class="govuk-list govuk-list--bullet">
             <li>the problem type</li>
             <li>how far it has progressed</li>
             <li>your financial situation</li>
           </ul>
-          <h3 class="govuk-heading-m">Legal aid</h3>
+          <h2 class="govuk-heading-m">Legal aid</h2>
           <p class="govuk-body">You may be eligible for legal aid, depending on your financial circumstances and the type of case you have.</p>
-          <p class="govuk-body"><a class="govuk-link" href="x">Check if you qualify</a></p>
-          <p class="govuk-body">If you can’t get Legal Aid, there are other options where you can get support at a reduced cost or even for free.</p>  
-          <h3 class="govuk-heading-m">Other advice and support</h3>
+          <p class="govuk-body"><a class="govuk-link" href="https://www.gov.uk/legal-aid">Check if you qualify for legal aid</a></p>
+          <h2 class="govuk-heading-m">Other advice and support</h2>
           <p class="govuk-body">If you can’t get Legal Aid, there are other options where you can get support at a reduced cost or even for free.</p>
-          <p class="govuk-body"><a class="govuk-link" href="x">Find other support organisations</a></p>
         </div>
             {{ paginationFull('./find-legal-help-and-support', 'Get advice early', './find-a-legal-advisor', 'Find a legal advisor') }}
         </div>
