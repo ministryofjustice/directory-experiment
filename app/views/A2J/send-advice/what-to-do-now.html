@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+
+{% set serviceName = "Legal action plan" %}
+
+{% block pageTitle %}
+  Find legal advice and support
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+    text: "Back",
+    href: "./home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Send advice
+        </h1>
+    </div>
+    <section id="what-to-do-now">
+        <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-l govuk-!-margin-bottom-4">
+                What to do now
+                <span class="govuk-caption-m govuk-!-margin-top-2">What priority tasks the client must do now</span>
+            </h2>
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+            {{ govukRadios({
+                classes: "govuk-radios--small",
+                idPrefix: "is-there-more-than-one-option-for-the-client-to-choose-from",
+                name: "is-there-more-than-one-option-for-the-client-to-choose-from",
+                fieldset: {
+                    legend: {
+                    text: "Is there more than one option for the cleint to choose from?",
+                    isPageHeading: false,
+                    classes: "govuk-fieldset__legend--s"
+                }
+            },
+            items: [
+                {
+                value: "yes",
+                text: "Yes, there are multiple options"
+                },
+                {
+                value: "no",
+                text: "No, there is no need to choose an option"
+                }
+            ]
+            }) }}
+        </div>
+            <div class="govuk-grid-column-two-thirds">
+                <h3 class="govuk-heading-m">Option one</h3>
+                {{ govukInput({
+                    label: {
+                      text: "Option one title",
+                      classes: "govuk-label--s",
+                      isPageHeading: true
+                    },
+                    id: "option-one-title",
+                    name: "option-one-title"
+                  }) }}
+
+                  {{ govukTextarea({
+                    name: "option-one-description",
+                    id: "option-one-description",
+                    label: {
+                        text: "Option one description",
+                        classes: "govuk-label--s",
+                        isPageHeading: false
+                    },
+                    hint: {
+                        text: "Enter more detail if needed"
+                    }
+                    }) }}
+                    <h4 class="govuk-heading-s">Option one tasks</h4>
+                    {{ govukInput({
+                        label: {
+                          html: '<span class="govuk-visually-hidden">Task one</span>'
+                        },
+                        id: "option-one-task-one",
+                        name: "option-one-task-one"
+                      }) }}
+                      {{ govukInput({
+                        label: {
+                          html: '<span class="govuk-visually-hidden">Task two</span>'
+                        },
+                        id: "option-two-task-two",
+                        name: "option-two-task-two"
+                      }) }}
+                    <h3 class="govuk-heading-s">
+                        Option one links
+                        <span class="govuk-caption-m govuk-!-margin-top-2">Include links to information, tools and templates. Leave blank if not needed.</span>
+                    </h3>
+                    <p class="govuk-body"><a class="govuk-link govuk-link--no-visit-state" href="#">Enter link</a></p>
+                    <p class="govuk-body"><a class="govuk-link govuk-link--no-visit-state" href="#">Enter link</a></p>
+                    <p class="govuk-body"><a class="govuk-link govuk-link--no-visit-state" href="#">+ link</a></p>
+            </div>
+            <div class="govuk-grid-column-full">
+                    {{ govukButton({
+                        text: "Add more priority tasks",
+                        classes: "govuk-button--secondary"
+                      }) }}
+            </div>
+        </section>
+        <div class="govuk-grid-column-two-thirds">
+            <form action="./take-it-further">
+                {{ govukButton({
+                    text: "Save and continue"
+                }) }}
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,165 @@
+{% extends "layout.html" %}
+
+{% set serviceName = "Legal action plan" %}
+
+{% block pageTitle %}
+  Find legal advice and support
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+    text: "Back",
+    href: "./home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Send advice
+        </h1>
+    </div>
+    <section id="what-to-do-now">
+        <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-l govuk-!-margin-bottom-4">
+                What to do now
+                <span class="govuk-caption-m govuk-!-margin-top-2">What priority tasks the client must do now</span>
+            </h2>
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+            {{ govukInput({
+                label: {
+                    text: "Task one title",
+                    classes: "govuk-label--s",
+                    isPageHeading: true
+                },
+                id: "task-one-title",
+                name: "task-one-title"
+                }) }}
+
+                {{ govukTextarea({
+                name: "task-one-description",
+                id: "task-one-description",
+                    label: {
+                        text: "Task one description",
+                        classes: "govuk-label--s",
+                        isPageHeading: false
+                    },
+                    hint: {
+                        text: "Focus on the actions to take now"
+                    }
+                }) }}
+                
+                <h3 class="govuk-heading-s">
+                    Task one links
+                    <span class="govuk-caption-m govuk-!-margin-top-2">Include links to information, tools and templates. Leave blank if not needed.</span>
+                </h3>
+                <p class="govuk-body"><a class="govuk-link govuk-link--no-visit-state" href="#">Enter link</a></p>
+                <p class="govuk-body"><a class="govuk-link govuk-link--no-visit-state" href="#">Enter link</a></p>
+                <p class="govuk-body"><a class="govuk-link govuk-link--no-visit-state" href="#">+ link</a></p>
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+                    {{ govukInput({
+                        label: {
+                          text: "Task two title",
+                          classes: "govuk-label--s",
+                          isPageHeading: true
+                        },
+                        id: "task-two-title",
+                        name: "task-two-title"
+                      }) }}
+
+                      {{ govukTextarea({
+                        name: "task-two-description",
+                        id: "task-two-description",
+                        label: {
+                            text: "Task two description",
+                            classes: "govuk-label--s",
+                            isPageHeading: false
+                        },
+                        hint: {
+                            text: "Focus on the actions to take now"
+                        }
+                        }) }}
+                        <h3 class="govuk-heading-s">
+                            Task two links
+                            <span class="govuk-caption-m govuk-!-margin-top-2">Include links to information, tools and templates. Leave blank if not needed.</span>
+                        </h3>
+                        <p class="govuk-body"><a class="govuk-link govuk-link--no-visit-state" href="#">Enter link</a></p>
+                        <p class="govuk-body"><a class="govuk-link govuk-link--no-visit-state" href="#">Enter link</a></p>
+                        <p class="govuk-body"><a class="govuk-link govuk-link--no-visit-state" href="#">+ link</a></p>
+        </div>
+        <div class="govuk-grid-column-full">
+                    {{ govukButton({
+                        text: "Add more priority tasks",
+                        classes: "govuk-button--secondary"
+                      }) }}
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+
+                <h3 class="govuk-heading-m">Option two</h3>
+
+                {{ govukInput({
+                    label: {
+                      text: "Option two title",
+                      classes: "govuk-label--s",
+                      isPageHeading: true
+                    },
+                    id: "option-two-title",
+                    name: "option-two-title"
+                  }) }}
+
+                  {{ govukTextarea({
+                    name: "option-two-description",
+                    id: "option-two-description",
+                    label: {
+                        text: "Option two description",
+                        classes: "govuk-label--s",
+                        isPageHeading: false
+                    },
+                    hint: {
+                        text: "Enter more detail if needed"
+                    }
+                    }) }}
+                    <h4 class="govuk-heading-s">Option two tasks</h4>
+                    {{ govukInput({
+                        label: {
+                          html: '<span class="govuk-visually-hidden">Task two</span>'
+                        },
+                        id: "option-two-task-two",
+                        name: "option-two-task-two"
+                      }) }}
+                      {{ govukInput({
+                        label: {
+                          html: '<span class="govuk-visually-hidden">Task two</span>'
+                        },
+                        id: "option-two-task-two",
+                        name: "option-two-task-two"
+                      }) }}
+                    <h3 class="govuk-heading-s">
+                        Option two links
+                        <span class="govuk-caption-m govuk-!-margin-top-2">Include links to information, tools and templates. Leave blank if not needed.</span>
+                    </h3>
+                    <p class="govuk-body"><a class="govuk-link govuk-link--no-visit-state" href="#">Enter link</a></p>
+                    <p class="govuk-body"><a class="govuk-link govuk-link--no-visit-state" href="#">Enter link</a></p>
+                    <p class="govuk-body"><a class="govuk-link govuk-link--no-visit-state" href="#">+ link</a></p>
+        </div>
+
+        <div class="govuk-grid-column-full">
+                {{ govukButton({
+                    text: "Add more options",
+                    classes: "govuk-button--secondary"
+                  }) }}
+        </div>
+    </section>
+        <div class="govuk-grid-column-two-thirds">
+            <form action="./what-to-do-now">
+                {{ govukButton({
+                    text: "Save and continue"
+                }) }}
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

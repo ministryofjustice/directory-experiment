@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% set serviceName = "Legal action plan" %}
+
+{% block pageTitle %}
+  Find legal advice and support
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">
+            Send advice
+        </h1>
+        <section id="select-areas-of-law">
+            <h2 class="govuk-heading-m">
+                Areas of law advice covers
+                <span class="govuk-caption-m govuk-!-margin-top-2">Add up to three a maximum of 3</span>
+            </h2>
+        </section>
+        <section id="summary">
+            <h2 class="govuk-heading-m">
+                Short summary of what you talked about
+            </h2>
+    
+            {{ govukTextarea({
+            name: "more-detail",
+            id: "more-detail",
+            label: {
+                text: "Can you provide more detail?",
+                classes: "govuk-label--m",
+                isPageHeading: false
+            },
+            hint: {
+                text: "Key points only. Only fill in what you need. Keep it short and in bullets"
+            }
+            }) }}
+        </section>
+        <form action="./what-to-do-next">
+            {{ govukButton({
+                text: "Save and continue"
+              }) }}
+        </form>
+    </div>
+</div>
+{% endblock %}

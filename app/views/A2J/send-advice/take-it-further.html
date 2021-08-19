@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% set serviceName = "Legal action plan" %}
+
+{% block pageTitle %}
+  Find legal advice and support
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+    text: "Back",
+    href: "./home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Send advice
+        </h1>
+    </div>
+    <section id="what-to-do-now">
+        <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-l govuk-!-margin-bottom-4">
+                What to do if they need to take it further
+            </h2>
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+                {{ govukTextarea({
+                    name: "take-it-further",
+                    id: "take-it-further",
+                    label: {
+                        text: "What may the client need to consider?",
+                        classes: "govuk-label--s",
+                        isPageHeading: false
+                    }
+                    }) }}
+
+                    <h3 class="govuk-heading-s">Add more information</h3>
+
+                    {{ govukInput({
+                        label: {
+                          html: '<span class="govuk-visually-hidden">Add more information</span>'
+                        },
+                        id: "add-more-information-one",
+                        name: "add-more-information-one"
+                      }) }}
+                      {{ govukInput({
+                        label: {
+                          html: '<span class="govuk-visually-hidden">Add more information</span>'
+                        },
+                        id: "dd-more-information-two",
+                        name: "dd-more-information-two"
+                      }) }}
+
+                      <h3 class="govuk-heading-s">
+                        Option two links
+                        <span class="govuk-caption-m govuk-!-margin-top-2">Include links to information, tools and templates. Leave blank if not needed.</span>
+                    </h3>
+                    <p class="govuk-body"><a class="govuk-link govuk-link--no-visit-state" href="#">Enter link</a></p>
+                    <p class="govuk-body"><a class="govuk-link govuk-link--no-visit-state" href="#">Enter link</a></p>
+                    <p class="govuk-body"><a class="govuk-link govuk-link--no-visit-state" href="#">+ link</a></p>
+
+                    {{ govukButton({
+                        text: "Add more options",
+                        classes: "govuk-button--secondary"
+                      }) }}
+            </div>
+        </section>
+        <div class="govuk-grid-column-two-thirds">
+            <form action="./sent">
+                {{ govukButton({
+                    text: "Save and continue"
+                }) }}
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
