@@ -48,16 +48,13 @@
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-l">Now</h2>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
         <section id="now">
-            <div class="govuk-grid-column-two-thirds">
-                <h2 class="govuk-heading-l">Now</h2>
-            </div>
             <div class="task-item">
-                <div class="govuk-grid-column-two-thirds">
-                    {{ taskItem('Do not sign the resignation letter', './dont-sign-info', 'See more about this task') }}
-                    
-                </div>
-                <div class="govuk-grid-column-one-third">
+                {{ taskItem('Do not sign the resignation letter', './dont-sign-info', 'See more about this task') }}
+
                     {{ govukCheckboxes({
                         idPrefix: "task-one",
                             name: "task-one",
@@ -76,10 +73,47 @@
                                 }
                             ]
                         }) }}
+                    <div class="task-item__share">
+                        <div class="govuk-button-group">
+                                {{ govukButton({
+                                    classes: "govuk-button--secondary",
+                                    text: "Share",
+                                    href: "#"
+                                    }) }}
+                                
+                                    {{ govukButton({
+                                    text: "Note",
+                                    classes: "govuk-button--secondary",
+                                    href: "./note"
+                                }) }}
+                        </div>    
+                    </div>
+                </div>
+            <div class="task-item">
+                {{ taskItem('Try other ways to reslove issues with your employer', './try-other-ways-info', 'See more about this task') }}
+            </div>
+            <div class="task-item__checkbox">
+                {{ govukCheckboxes({
+                    idPrefix: "task-one",
+                        name: "task-one",
+                        classes: "govuk-checkboxes--small",
+                        fieldset: {
+                            legend: {
+                            isPageHeading: false,
+                            classes: "govuk-fieldset__legend--m"
+                            }
+                        },
+                        items: [
+                            {
+                            value: "mark as done",
+                            text: "mark as done",
+                            classes: "govuk-!-margin-top-5"
+                            }
+                        ]
+                    }) }}
                 </div>
                 <div class="task-item__share">
-                    <div class="govuk-grid-column-full">
-                        <div class="govuk-button-group">
+                    <div class="govuk-button-group">
                             {{ govukButton({
                                 classes: "govuk-button--secondary",
                                 text: "Share",
@@ -91,97 +125,92 @@
                                 classes: "govuk-button--secondary",
                                 href: "./note"
                             }) }}
-                        </div>    
                     </div>
                 </div>
             </div>
-            {{ taskItem('Try other ways to reslove issues with your employer', './try-other-ways-info', 'See more about this task') }}
-            <div class="task-item__share">
-                <div class="govuk-grid-column-full">
-                    <div class="govuk-button-group">
-                        {{ govukButton({
-                            classes: "govuk-button--secondary",
-                            text: "Share",
-                            href: "#"
-                            }) }}
-                        
-                            {{ govukButton({
-                            text: "Note",
-                            classes: "govuk-button--secondary",
-                            href: "./note"
-                        }) }}
-                    </div>    
+        </section>
+    </div>
+</div>
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <section id="next">
+                <h2 class="govuk-heading-l">Next</h2> 
+                <p class="govuk-body">There is more than one option to choose from.</p>
+                <div class="task-item">
+                    {{ taskItemExtended('Make a claim for constructive dimissal if you resigned', 'You could make a claim for constructive dismissal to an employment tribunal if you resign because of a fundamental breach of your contract. Your employer may have breached an implied term in your contract.', './next-constructive-dismissal', 'See more about this option') }}
                 </div>
+                <div class="task-list__checkbox">
+                {{ govukCheckboxes({
+                    idPrefix: "next-task-one",
+                    name: "task-one",
+                    classes: "govuk-checkboxes--small",
+                    fieldset: {
+                        legend: {
+                        isPageHeading: false,
+                        classes: "govuk-fieldset__legend--m"
+                        }
+                    },
+                    items: [
+                        {
+                        value: "mark as done",
+                        text: "mark as done",
+                        classes: "govuk-!-margin-top-5"
+                        }
+                    ]
+                }) }}
+                </div>
+                <div class="task-list__divider">
+                    <p class="govuk-body">Or</p>
+                </div>
+                <div class="task-list-item">
+                    {{ taskItemExtended('Make a claim for unfair dimissal if you did not resign', 'If you did not resign or you were told to resign or be dismissed, your employer dismissed you, you may have a claim for unfair dismissal.', './next-unfair-dismissal', 'See more about this option') }}
+
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-l">
+                If you need to take it further
+            </h2>
+            <div class="task-item">
+                {{ taskItem('Consider making a claim for benefits', './claim-benefits', 'See more about this task') }}
+                
+                {{ govukCheckboxes({
+                    idPrefix: "next-task-two",
+                    name: "futher-task-one",
+                    classes: "govuk-checkboxes--small",
+                    fieldset: {
+                        legend: {
+                        isPageHeading: false,
+                        classes: "govuk-fieldset__legend--m"
+                        }
+                    },
+                    items: [
+                        {
+                        value: "mark as done",
+                        text: "mark as done",
+                        classes: "govuk-!-margin-top-5"
+                        }
+                    ]
+                    
+                }) }}
             </div>
-        </section>
+        </div>
     </div>
-</div>
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-        <section id="next">
-            <h2 class="govuk-heading-l">Next</h2> 
-            <p class="govuk-body">There is more than one option to choose from.</p>
-            {{ taskItemExtended('Make a claim for constructive dimissal if you resigned', 'You could make a claim for constructive dismissal to an employment tribunal if you resign because of a fundamental breach of your contract. Your employer may have breached an implied term in your contract.', './next-constructive-dismissal', 'See more about this option') }}
-            {{ govukCheckboxes({
-                idPrefix: "next-task-one",
-                name: "task-one",
-                classes: "govuk-checkboxes--small",
-                fieldset: {
-                    legend: {
-                    isPageHeading: false,
-                    classes: "govuk-fieldset__legend--m"
-                    }
-                },
-                items: [
-                    {
-                    value: "mark as done",
-                    text: "mark as done",
-                    classes: "govuk-!-margin-top-5"
-                    }
-                ]
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-l">
+                Need more help?
+            </h2>
+            {{ govukButton({
+                text: "Contact an advisor",
+                href: "./contact-an-advisor"
             }) }}
-            <p class="govuk-body">Or</p>
-            {{ taskItemExtended('Make a claim for unfair dimissal if you did not resign', 'If you did not resign or you were told to resign or be dismissed, your employer dismissed you, you may have a claim for unfair dismissal.', './next-unfair-dismissal', 'See more about this option') }}
-
-        </section>
-    </div>
-</div>
-
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-l">
-            If you need to take it further
-        </h2>
-        {{ taskItem('Consider making a claim for benefits', './claim-benefits', 'See more about this task') }}
-        {{ govukCheckboxes({
-            idPrefix: "next-task-two",
-            name: "futher-task-one",
-            classes: "govuk-checkboxes--small",
-            fieldset: {
-                legend: {
-                isPageHeading: false,
-                classes: "govuk-fieldset__legend--m"
-                }
-            },
-            items: [
-                {
-                value: "mark as done",
-                text: "mark as done",
-                classes: "govuk-!-margin-top-5"
-                }
-            ]
-        }) }}
-    </div>
-</div>
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-l">
-            Need more help?
-        </h2>
-        {{ govukButton({
-            text: "Contact an advisor",
-            href: "./contact-an-advisor"
-          }) }}
+        </div>
     </div>
 </div>
 {% endblock %}
