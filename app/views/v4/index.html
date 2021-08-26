@@ -1,0 +1,122 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Legal help directory
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({homepageUrl: "/", serviceName: serviceName, serviceUrl: "/", containerClasses: "govuk-width-container" }) }}
+
+  <!-- https://service-manual.nhs.uk/design-system/components/card -->
+  <link rel="stylesheet" href="https://service-manual.nhs.uk/css/main.css">
+  <script src="https://service-manual.nhs.uk/js/main.min.js" defer=""></script>
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/v2/taxonomy">Legal help directory</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">Help with a legal problem</h1>
+<p class="govuk-body-l">
+  If you have a problem, you may need legal advice to resolve it.
+  You can get advice from a solicitor but you should be aware that
+  <a href="https://www.gov.uk/legal-aid">legal aid</a> is not always free.
+  There may be other organisations who can give you free advice.
+</p>
+
+<ul class="nhsuk-grid-row nhsuk-card-group">
+  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <img class="nhsuk-card__img" src="/public/images/housing.jpg" alt="">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+          <a class="nhsuk-card__link" href="/v2/housing">Housing & Homelessness</a>
+        </h2>
+        <p class="nhsuk-card__description">Includes renting, repossession, disrepair...</p>
+      </div>
+    </div>
+  </li>
+
+  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <img class="nhsuk-card__img" src="/public/images/crime-fines.jpg" alt="">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+          <a class="nhsuk-card__link" target="_blank" href="https://www.gov.uk/crime-justice-and-law">Crime and fines</a>
+        </h2>
+        <p class="nhsuk-card__description">Includes dealing with the police, victim support...</p>
+      </div>
+    </div>
+  </li>
+
+  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <img class="nhsuk-card__img" src="/public/images/money.jpg" alt="">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+          <a class="nhsuk-card__link" target="_blank" href="https://www.gov.uk/money">Money</a>
+        </h2>
+        <p class="nhsuk-card__description">Includes taxes, debt, credit cards...</p>
+      </div>
+    </div>
+  </li>
+
+  <!-- another trio -->
+
+
+  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <img class="nhsuk-card__img" src="/public/images/employment.jpg" alt="">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+          <a class="nhsuk-card__link" target="_blank" href="https://www.gov.uk/work">Employment</a>
+        </h2>
+        <p class="nhsuk-card__description">Includes redundancy, discrimination, unfair dismissal...</p>
+      </div>
+    </div>
+  </li>
+
+  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <img class="nhsuk-card__img" src="https://assets.nhs.uk/prod/images/A_0218_exercise-main_FKW1X7.width-690.jpg" alt="">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+          <a class="nhsuk-card__link" href="#">Health & social care</a>
+        </h2>
+        <p class="nhsuk-card__description">Includes mental health, community care, medical accidents...</p>
+      </div>
+    </div>
+  </li>
+
+  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <img class="nhsuk-card__img" src="/public/images/family.jpg" alt="">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+          <a class="nhsuk-card__link" href="https://www.gov.uk/search/all?level_one_taxon=4794066e-e3cc-425e-8cc4-e7ff3edb4c39&order=relevance">Search GOV.UK</a>
+        </h2>
+        <p class="nhsuk-card__description">Search within GOV.UK for advice and support.</p>
+      </div>
+    </div>
+  </li>
+</ul>
+
+
+{% endblock %}
