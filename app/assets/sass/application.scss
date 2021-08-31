@@ -16,14 +16,21 @@ $govuk-assets-path: '/govuk/assets/';
 @import "patterns/related-items";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+@import "patterns/new-task-list";
 @import "patterns/legal-action-plan";
 @import "patterns/global-bar";
 @import "patterns/pagination";
 @import "patterns/contents-guide";
 @import "patterns/print-link";
 
+// Components
+@import "components/progress-bar";
 
 
+.app-progress-bar {
+    width:100%;
+    height:20px;
+}
 
 // Related content
 

@@ -25,6 +25,34 @@
         </h3>
         <p class="govuk-body"><a class="govuk-link" href="https://www.citizensadvice.org.uk/work/leaving-a-job/resigning/your-notice-period-when-resigning/">Citizens advice</a></p>
         <p class="govuk-body"><a class="govuk-link" href="https://www.citizensadvice.org.uk/work/leaving-a-job/resigning/deciding-whether-to-resign">Citizens advice</a></p>
+        <form action="./home" id="resignation-letter">
+            {{ govukRadios({
+                classes: "govuk-radios--small",
+                idPrefix: "resignation-letter",
+                name: "resignation-letter",
+                fieldset: {
+                    legend: {
+                    text: "Have you completed this section?",
+                    isPageHeading: false,
+                    classes: "govuk-fieldset__legend--s"
+                    }
+                },
+                items: [
+                    {
+                    value: "yes",
+                    text: "Yes, I've completed this section"
+                    },
+                    {
+                    value: "no",
+                    text: "No, I'll come back later"
+                    }
+                ]
+                }) }}
+      
+                {{ govukButton({
+                    text: "Continue"    
+                  }) }}
+        </form>
     </div>
 </div>
 {% endblock %}

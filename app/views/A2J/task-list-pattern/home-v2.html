@@ -1,0 +1,226 @@
+{% extends "layout.html" %}
+
+{% set serviceName = "Legal action plan" %}
+
+## task list tag 
+{% set startedTaskTag = "govuk-tag--grey app-task-list__tag" %}
+{% set doneTaskTag = "app-task-list__tag" %}
+{% set notTaskTag = "govuk-tag--red app-task-list__tag" %}
+{% set preferTaskTag = "govuk-tag--grey app-task-list__tag" %}
+
+{% block pageTitle %}
+  Your legal action plan
+{% endblock %}
+
+{% block beforeContent %}
+    {{ govukBackLink({
+        text: "Back",
+        href: "../you-told-us"
+    }) }}
+    <style>
+        .done {
+            display: inline-block;
+            margin:10px 0 0;
+        }
+        .done__pictures {
+            display: inline-block;
+        }
+        .done__notes {
+            display:inline-block;
+        }
+        .done__assistance {
+            display: block;
+        }
+        .app-task-list__description {
+            display: inline-block;
+            margin-top:10px;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Your legal action plan</h1>
+        <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Actions incomplete</h2>
+        <p class="govuk-body">You have completed 0 out of 8 sections.</p>
+        <!-- Now section -->
+        <ol class="app-task-list">
+          <li>
+            <h2 class="app-task-list__section">
+              <span class="app-task-list__section-number">
+                1.
+              </span>
+              Your tasks
+            </h2>
+            <ul class="app-task-list__items">
+              <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                  <a href="./resignation-letter" aria-describedby="eligability-status">Do not sign the resignation letter</a>
+                </span>
+                {% if data['resignation-mark-as'] == "started" %}
+                    <strong class="govuk-tag {{startedTaskTag}}">
+                        Started
+                    </strong>
+
+                    {% elif data['resignation-mark-as'] == "done" %}
+                    <strong class="govuk-tag  {{doneTaskTag}}">
+                        Completed
+                    </strong>
+
+                    {% elif data['resignation-mark-as'] == "not doing this" %}
+                    <strong class="govuk-tag govuk-tag--red app-task-list__tag">
+                        Not doing this
+                    </strong>
+
+                    {% elif data['resignation-mark-as'] == "prefer not to say" %}
+                    <strong class="govuk-tag {{preferTaskTag}}">
+                        Prefer not to say
+                    </strong>
+
+                    {% else %}
+                    <strong class="govuk-tag {{notTaskTag}}">
+                        Not started
+                    </strong>
+                {% endif %}
+                {% if data['resignation-mark-as'] == "done" %}
+                <div class="done">
+                    <div class="done__pictures">
+                        <p class="govuk-body">[3] pictures</p>
+                    </div>
+                    <div class="done__notes">
+                        <p class="govuk-body">[2] notes</p>
+                    </div>
+                    <div class="done__assistance">
+                        <p class="govuk-body">Assistance requested on 01/01/2021.</p>
+                    </div>
+                </div>
+                {% endif %}
+              </li>
+              <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                  <a href="./try-other-ways" aria-describedby="read-declaration-status">Try other ways to resolve issues with your employer</a>
+                </span>
+                {% if data['try-other-mark-as'] == "started" %}
+                <strong class="govuk-tag {{startedTaskTag}}">
+                    Started
+                </strong>
+
+                {% elif data['try-other-mark-as'] == "done" %}
+                <strong class="govuk-tag  {{doneTaskTag}}">
+                    Completed
+                </strong>
+
+                {% elif data['try-other-mark-as'] == "not doing this" %}
+                <strong class="govuk-tag govuk-tag--red app-task-list__tag">
+                    Not doing this
+                </strong>
+
+                {% elif data['try-other-mark-as'] == "prefer not to say" %}
+                <strong class="govuk-tag {{preferTaskTag}}">
+                    Prefer not to say
+                </strong>
+
+                {% else %}
+                <strong class="govuk-tag {{notTaskTag}}">
+                    Not started
+                </strong>
+            {% endif %}
+            {% if data['try-other-mark-as'] == "done" %}
+            <div class="done">
+                <div class="done__pictures">
+                    <p class="govuk-body">[3] pictures</p>
+                </div>
+                <div class="done__notes">
+                    <p class="govuk-body">[2] notes</p>
+                </div>
+                <div class="done__assistance">
+                    <p class="govuk-body">Assistance requested on 01/01/2021.</p>
+                </div>
+            </div>
+            {% endif %}
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <!-- Next section -->
+        <ol class="app-task-list">
+            <li>
+                <h2 class="app-task-list__section">
+                    <span class="app-task-list__section-number">
+                        2.
+                    </span>
+                    Next
+                </h2>
+                {{ govukInsetText({
+                text: "You need to choose which option is relevant to you."
+                }) }}
+                <ul class="app-task-list__items">
+                    <li class="app-task-list__item">
+                        <span class="app-task-list__task-name">
+                            <a href="./constructive-dismissal-resign" aria-describedby="eligability-status">You could make a claim for constructive dismissal if you resigned</a>
+                        </span>
+                        <div class="app-task-list__description">
+                            <p class="govuk-body">You could make a claim for constructive dismissal to an employment tribunal if you resign because of a fundamental breach of your contract. Your employer may have breached an implied term of your contract.</p>
+                        </div>
+                    </li>
+                    <li class="app-task-list__item">
+                        Or
+                    </li>
+                    <li class="app-task-list__item">
+                        <span class="app-task-list__task-name">
+                            <a href="./claim-unfair-dismissal" aria-describedby="eligability-status">Make a claim for unfair dismissal if you did not resign</a>
+                        </span>
+                        <div class="app-task-list__description">
+                            <p class="govuk-body">If you did not resign or you were told to resign or be dismissed, your employer dismissed you, you may have a claim for unfair dismissal.</p>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <!-- Take it further section -->
+        <ol class="app-task-list">
+            <li>
+                <h2 class="app-task-list__section">
+                    <span class="app-task-list__section-number">
+                      3.
+                    </span>
+                    If you need to take it further
+                </h2>
+                <ul class="app-task-list__items">
+                    <li class="app-task-list__item">
+                        <span class="app-task-list__task-name">
+                          <a href="./claim-benefits" aria-describedby="eligability-status">Make a claim for benefits</a>
+                        </span>
+                        <strong class="govuk-tag govuk-tag--grey app-task-list__tag">
+                           Not started
+                        </strong>
+                    </li>
+                </ul>
+            </li>
+         </ol>
+        <!-- Contact section -->
+        <ol class="app-task-list">
+            <li>
+                <h2 class="app-task-list__section">
+                    <span class="app-task-list__section-number">
+                      4.
+                    </span>Help
+                </h2>
+                <ul class="app-task-list__items">
+                    <li class="app-task-list__item">
+                        <span class="app-task-list__task-name">
+                        <a href="#" aria-describedby="eligability-status">Contact an advisor</a>
+                        </span>
+                        <strong class="govuk-tag govuk-tag--grey app-task-list__tag">
+                            Not started
+                        </strong>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+      </div>
+    </div>
+
+{% endblock %}

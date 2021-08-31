@@ -9,7 +9,7 @@
 {% block beforeContent %}
     {{ govukBackLink({
         text: "Back",
-        href: "./you-told-us"
+        href: "../you-told-us"
     }) }}
 {% endblock %}
 
@@ -34,17 +34,29 @@
                 <span class="app-task-list__task-name">
                   <a href="./resignation-letter" aria-describedby="eligability-status">Do not sign the resignation letter</a>
                 </span>
+                {% if data['resignation-letter-completed'] == "yes" %}
+                <strong class="govuk-tag app-task-list__tag">
+                  Completed
+                 </strong>  
+                {% else %}
                 <strong class="govuk-tag govuk-tag--grey app-task-list__tag">
                   Not started
                 </strong>
+                {% endif %}
               </li>
               <li class="app-task-list__item">
                 <span class="app-task-list__task-name">
                   <a href="./try-other-ways" aria-describedby="read-declaration-status">Try other ways to reslove issues with your employer</a>
                 </span>
-                <strong class="govuk-tag govuk-tag--grey app-task-list__tag">
-                  Not started
+                {% if data['resolve-issues-completed'] == "yes" %}
+                <strong class="govuk-tag app-task-list__tag">
+                  Completed
+                 </strong>  
+                {% else %}
+                <strong class="govuk-tag govuk-tag--light-blue app-task-list__tag">
+                  In progress
                 </strong>
+                {% endif %}
               </li>
             </ul>
           </li>
@@ -82,11 +94,17 @@
             <ul class="app-task-list__items">
               <li class="app-task-list__item">
                 <span class="app-task-list__task-name">
-                  <a href="#" aria-describedby="eligability-status">Make a claim for benefits</a>
+                  <a href="./claim-benefits" aria-describedby="eligability-status">Make a claim for benefits</a>
                 </span>
+                {% if data['benefits-completed'] == "yes" %}
+                <strong class="govuk-tag app-task-list__tag">
+                  Completed
+                 </strong>  
+                {% else %}
                 <strong class="govuk-tag govuk-tag--grey app-task-list__tag">
                   Not started
                 </strong>
+                {% endif %}
               </li>
             </ul>
           </li>

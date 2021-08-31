@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% set serviceName = "Legal action plan" %}
+
+{% block pageTitle %}
+  Find legal advice and support
+{% endblock %}
+
+{% block beforeContent %}
+    {{ govukBackLink({
+        text: "Back",
+        href: "./resignation-letter"
+    }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form action="">
+        {{ govukTextarea({
+          name: "more-detail",
+          id: "more-detail",
+          label: {
+            text: "Add a note",
+            classes: "govuk-label--l",
+            isPageHeading: true
+          },
+          hint: {
+            text: "Include things like this and that."
+          }
+        }) }}    
+    </form>
+        <h2 class="govuk-heading-m">Your notes for this task</h2>
+        <p class="govuk-body"><span class="govuk-hint">Note added on [date].</p>
+            <p class="govuk-body"><a class="govuk-link" href="#">Edit</a> or <a class="govuk-link" href="#">Delete</a> this note</p>
+
+        {{ govukButton({
+            text: "Save and continue",
+            classes: "govuk-button",
+            href: "./resignation-letter"
+        }) }}
+    </div>
+</div>
+{% endblock %}

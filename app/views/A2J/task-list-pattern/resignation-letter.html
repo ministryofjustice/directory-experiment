@@ -9,7 +9,7 @@
 {% block beforeContent %}
     {{ govukBackLink({
         text: "Back",
-        href: "./home"
+        href: "./home-v2"
     }) }}
 {% endblock %}
 
@@ -20,15 +20,62 @@
         <p class="govuk-body">You should continue to work as this protects your income. This means you should not sign the resignation letter or do anything else that signals your intention to leave, e.g. returning company equipment.</p>
         <p class="govuk-body">If your employer has told you they'll dimiss you if you don't resign, this counts as a dismissal. If they're treating you badling in order to make you resign, it could be constructive dismissal.</p>
         <p class="govuk-body">As you don't have a written contract, you would only need to give one week's notice although your employer indicted you would get two weeks. Normally, constructive dismissal requires a resignation. Working your notice period may be detrimental to your claim. </p>
+
+        <h2 class="govuk-heading-m">Upload your photos</h2>
+        <p class="govuk-body">You can add photos or documents to your case if you think they'll help an adviser.</p>
         {{ govukButton({
-            text: "Continue",
-            href: "./home"
+          classes: "govuk-button--secondary",
+          text: "Upload your photos",
+          href: "./resignation-upload"    
+        }) }}
+
+        <h2 class="govuk-heading-m">Notes</h2>
+        <p class="govuk-body">You can add notes to this task if you have any extra you'd like to add.</p>
+          {{ govukButton({
+            text: "Add or view your notes",
+            classes: "govuk-button--secondary",
+            href: "./resignation-note"
           }) }}
-        <h3 class="govuk-heading-m">
-            Links:
-        </h3>
-        <p class="govuk-body"><a class="govuk-link" href="https://www.citizensadvice.org.uk/work/leaving-a-job/resigning/your-notice-period-when-resigning/">Citizens advice</a></p>
-        <p class="govuk-body"><a class="govuk-link" href="https://www.citizensadvice.org.uk/work/leaving-a-job/resigning/deciding-whether-to-resign">Citizens advice</a></p>
+          
+          <form action="./home-v2" id="resignation-letter-complete-form" accept-charset="UTF-8" method="post">
+            {{ govukRadios({
+              classes: "govuk-radios--small",
+              idPrefix: "mark-as",
+              name: "resignation-mark-as",
+              fieldset: {
+                legend: {
+                  text: "Mark as",
+                  isPageHeading: false,
+                  classes: "govuk-fieldset__legend--m"
+                }
+              },
+              items: [
+                {
+                  value: "started",
+                  text: "Started"
+                },
+                {
+                  value: "done",
+                  text: "Done"
+                },
+                {
+                  value: "not doing this",
+                  text: "Not doing this"
+                },
+                {
+                  value: "prefer not to say",
+                  text: "Prefer not to say"
+                }
+              ]
+            }) }}
+            {{ govukButton({
+                text: "Continue"    
+              }) }}
+            </form>
+
+          <h2 class="govuk-heading-m">Need assistance</h2>
+          <p class="govuk-body">You can <a class="govuk-link" href="#">requested an adviser to contact you</a> if you need more help.</p>
+
     </div>
 </div>
 {% endblock %}
