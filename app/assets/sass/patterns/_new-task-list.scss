@@ -1,3 +1,23 @@
-.app-section {
-    border:2px solid blue;
+.done {
+    display: inline-block;
+    margin:10px 0 0;
+}
+.done__pictures {
+    display: inline-block;
+}
+.done__notes {
+    display:inline-block;
+}
+.done__assistance {
+    display: block;
+}
+.app-task-list__description {
+    display: inline-block;
+    margin-top:10px;
+}
+.app-task-list__item--no-border-bottom {
+    border-bottom:none;
+}
+.app-task-list__item--no-border-top {
+    border-top: 1px solid white !important;
 }

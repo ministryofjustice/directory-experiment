@@ -10,7 +10,7 @@
 {% block beforeContent %}
 {{ govukBackLink({
     text: "Back",
-    href: "./home"
+    href: "./home-v2"
   }) }}
 {% endblock %}
 
@@ -21,7 +21,7 @@
         <p class="govuk-body">Constructive dismissal can be difficult to prove so you may need more help and advice with this option.</p>
         <p class="govuk-body">Constructive dismissal can be on the grounds of bullying and harassment or a breaking of mutual trust and confidence.</p>
         <h2 class="govuk-heading-l">Bullying and harrassment</h2>
-        <p class="govuk-body">There's an implied term in all contracts that an emplouer should take all reasonable steps to make sure their employees can do their job without being bullied or harassed.</p>
+        <p class="govuk-body">There's an implied term in all contracts that an employer should take all reasonable steps to make sure their employees can do their job without being bullied or harassed.</p>
         <p class="govuk-body">Bullying is a behaviour that makes you feel intimidated or offended. Examples include:</p>
         <ul class="govuk-list govuk-list--bullet">
             <li>Being treated unfairly</li>
@@ -37,19 +37,36 @@
             <li>Contact ACAS to work with your employer to solve the problem</li>
             <li>Book an appointment with an adviser if you want to make an employment tribunal claim</li>
         </ul>
-        <form class="" id="" action="./home-v2" accept-charset="UTF-8" method="post">
-            {{ govukButton({
-                text: "Select this option",
-                element: "input",
-                name: "next-constructive"
+        <form action="/option-one-route" id="resignation-letter-complete-form" accept-charset="UTF-8" method="post">
+            {{ govukRadios({
+              classes: "govuk-radios--small",
+              idPrefix: "option-one",
+              name: "option-one",
+              fieldset: {
+                legend: {
+                  text: "Choose an option",
+                  isPageHeading: false,
+                  classes: "govuk-fieldset__legend--l"
+                }
+              },
+              items: [
+                {
+                  value: "choose this option",
+                  text: "Choose this option"
+                },
+                {
+                  divider: "or"
+                },
+                {
+                  value: "read the next option",
+                  text: "Read the next option"
+                }
+              ]
             }) }}
-            <p class="govuk-body">Or</p>
             {{ govukButton({
-                text: "Choose the next one",
-                element: "input",
-                name: "next-constructive-option-two"
+                text: "Continue"    
             }) }}
-        </form>
+          </form>
         <h2 class="govuk-heading-m">
             Links:
         </h2>

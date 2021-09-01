@@ -15,3 +15,26 @@ module.exports = router
 //      res.redirect('/prototype-2/start-page')
 //    }
 //  })
+
+
+router.post('/option-one-route', function (req, res) {
+
+   let optionOneRoute = req.session.data['option-one']
+  
+    if (optionOneRoute === 'read the next option') {
+     res.redirect('A2J/task-list-pattern/claim-unfair-dismissal')
+    }  else {
+      res.redirect('A2J/task-list-pattern/home-v2')
+    }
+  })
+
+router.post('/option-two-route', function (req, res) {
+
+   let optionTwoRoute = req.session.data['option-two']
+  
+    if (optionTwoRoute === 'return to the previous option') {
+     res.redirect('A2J/task-list-pattern/constructive-dismissal-resign')
+    }  else {
+      res.redirect('A2J/task-list-pattern/home-v2')
+    }
+  }) 

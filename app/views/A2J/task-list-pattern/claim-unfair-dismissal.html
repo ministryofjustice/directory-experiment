@@ -9,7 +9,7 @@
 {% block beforeContent %}
 {{ govukBackLink({
     text: "Back",
-    href: "./home"
+    href: "./home-v2"
   }) }}
 {% endblock %}
 
@@ -25,11 +25,36 @@
             <li>Contact ACAS to work with your employer to solve the problem</li>
             <li>Book an appointment with an advisor if you want to make an employment tribunal claim</li>
         </ul>
-        {{ govukButton({
-            text: "Select",
-            classes: "govuk-button",
-            href: "./home-v2"
-            }) }}
+        <form action="/option-two-route" id="resignation-letter-complete-form" accept-charset="UTF-8" method="post">
+          {{ govukRadios({
+            classes: "govuk-radios--small",
+            idPrefix: "option-two",
+            name: "option-two",
+            fieldset: {
+              legend: {
+                text: "Choose an option",
+                isPageHeading: false,
+                classes: "govuk-fieldset__legend--l"
+              }
+            },
+            items: [
+              {
+                value: "choose this option",
+                text: "Choose this option"
+              },
+              {
+                divider: "or"
+              },
+              {
+                value: "return to the previous option",
+                text: "Return to the previous option"
+              }
+            ]
+          }) }}
+          {{ govukButton({
+              text: "Continue"    
+          }) }}
+        </form>
         <h3 class="govuk-heading-m">
             Links:
         </h3>
