@@ -18,7 +18,8 @@
     <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">Try other ways to resolve issues with your employer</h1>
         <p class="govuk-body">You should try other ways to address the problem if possible.</p>
-
+        {{ uploadField('./test') }}
+        {{ notesField('false') }}
         <form action="./home-v2" id="resignation-letter-complete-form" accept-charset="UTF-8" method="post">
           {{ govukRadios({
             classes: "govuk-radios--small",

@@ -1,0 +1,9 @@
+<h2 class="govuk-heading-m">Notes</h2>
+<p class="govuk-body">You can add notes to this task if you have any extra you'd like to add.</p>
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+    text: "Add or view your notes",
+    classes: "govuk-button--secondary",
+    href: "{{noteLink}}"
+}) }}

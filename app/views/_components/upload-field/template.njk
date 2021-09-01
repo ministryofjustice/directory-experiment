@@ -1,0 +1,9 @@
+<h2 class="govuk-heading-m">Upload your photos</h2>
+<p class="govuk-body">You can add photos or documents to your case if you think they'll help an adviser.</p>
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+    classes: "govuk-button--secondary",
+    text: "Upload your photos",
+    href: "{{ uploadUrl }}"    
+}) }}
