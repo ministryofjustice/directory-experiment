@@ -27,17 +27,17 @@
         <h1 class="govuk-heading-xl">Your legal action plan</h1>
         <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Actions incomplete</h2>
         {% if data['try-other-mark-as'] == "done" and data['resignation-mark-as'] == "done" %}
-        <p class="govuk-body">You have completed 2 out of 8 sections.</p>
+        <p class="govuk-body">You have completed 2 out of 4 sections.</p>
         {% elif data['resignation-mark-as'] == "done" %}
-        <p class="govuk-body">You have completed 1 out of 8 sections.</p>
+        <p class="govuk-body">You have completed 1 out of 4 sections.</p>
         {% elif data['try-other-mark-as'] == "done" %}
-        <p class="govuk-body">You have completed 1 out of 8 sections.</p>
+        <p class="govuk-body">You have completed 1 out of 4 sections.</p>
         {% else %}
-        <p class="govuk-body">You have completed 0 out of 8 sections.</p>
+        <p class="govuk-body">You have completed 0 out of 4 sections.</p>
         {% endif %}
-
+        <p class="govuk-body"><a class="govuk-link" href="#">View your completed tasks</a></p>
         <!-- Now section -->
-        <ol class="app-task-list">
+        <ol class="app-task-list govuk-!-margin-top-8">
           <li>
             <h2 class="app-task-list__section">
               <span class="app-task-list__section-number">
@@ -138,6 +138,7 @@
                     </span>
                     Next
                 </h2>
+                {% if data['constructive-dismissal'] != "yes" or data['unfair-dismissal'] != "yes" %}
                 {{ govukInsetText({
                 text: "You need to choose which option is relevant to you."
                 }) }}
@@ -161,9 +162,11 @@
                             <p class="govuk-body">If you did not resign or you were told to resign or be dismissed, your employer dismissed you, you may have a claim for unfair dismissal.</p>
                         </div>
                     </li>
-                    {% if data['option-one'] == "choose this option" %}
+                {% endif %}
+                {% if data['constructuctive-dismissal'] == "yes" %}
+                <ul class="app-task-list__items">
                     <li class="app-task-list__item">
-                        <h3 clas=="govuk-heading-s">Make a claim for constructive dismissal</h3>
+                        <h3 class="govuk-heading-s">Make a claim for constructive dismissal</h3>
                         <span class="app-task-list__task-name">
                             <a href="./" aria-describedby="eligability-status">Write a formal letter of grievance</a>
                         </span>
@@ -187,8 +190,10 @@
                             Not started
                         </strong>
                     </li>
-                    {% endif %}
-                    {% if data['option-two'] == "choose this option" %}
+                </ul>
+                {% endif %}
+                {% if data['unfair-dismissal'] == "yes" %}
+                <ul class="app-task-list__items">
                     <li class="app-task-list__item">
                         <h3 clas=="govuk-heading-s">Make a claim for unfair dismissal</h3>
                         <span class="app-task-list__task-name">
@@ -214,8 +219,8 @@
                             Not started
                         </strong>
                     </li>
-                    {% endif %}
                 </ul>
+                {% endif %}
             </li>
         </ol>
         <!-- Take it further section -->
@@ -239,26 +244,13 @@
                 </ul>
             </li>
          </ol>
-        <!-- Contact section -->
-        <ol class="app-task-list">
-            <li>
-                <h2 class="app-task-list__section">
-                    <span class="app-task-list__section-number">
-                      4.
-                    </span>Help
-                </h2>
-                <ul class="app-task-list__items">
-                    <li class="app-task-list__item">
-                        <span class="app-task-list__task-name">
-                        <a href="#" aria-describedby="eligability-status">Contact an advisor</a>
-                        </span>
-                        <strong class="govuk-tag govuk-tag--grey app-task-list__tag">
-                            Not started
-                        </strong>
-                    </li>
-                </ul>
-            </li>
-        </ol>
+      </div>
+      <!-- Help section -->
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">
+            Contact an adviser
+        </h2>
+        <p class="govuk-body">You can <a class="govuk-link" href="./contact-an-adviser">contact an adviser</a> if you need further assistance.</p>
       </div>
     </div>
 

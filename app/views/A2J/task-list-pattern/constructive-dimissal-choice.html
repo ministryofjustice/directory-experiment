@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% set serviceName = "Legal action plan" %}
+{% set nextConstructive = "true" %}
+
+{% block pageTitle %}
+  Find legal advice and support
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+    text: "Back",
+    href: "./home-v2"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form action="/constructive-dismissal-route" id="resignation-letter-complete-form" accept-charset="UTF-8" method="post">
+            {{ govukRadios({
+              classes: "govuk-radios--small",
+              idPrefix: "constructive-dismissal",
+              name: "constructive-dismissal",
+              fieldset: {
+                legend: {
+                  text: "Are you sure you want to choose this option?",
+                  isPageHeading: true,
+                  classes: "govuk-fieldset__legend--l"
+                }
+              },
+              items: [
+                {
+                  value: "yes",
+                  text: "Yes"
+                },
+                {
+                  value: "no",
+                  text: "No"
+                }
+              ]
+            }) }}
+            {{ govukButton({
+                text: "Continue"    
+            }) }}
+        </form>
+    </div>
+</div>
+{% endblock %}
