@@ -32,13 +32,13 @@
         <div class="govuk-tabs" data-module="govuk-tabs">
             <ul class="govuk-tabs__list">
                 <li class="govuk-tabs__list-item govuk-list-items--selected">
-                    <a class="govuk-tabs__tab" href="#">Your tasks</a>
+                    <a class="govuk-tabs__tab" href="#your-tasks">Your tasks</a>
                 </li>
                 <li class="govuk-tabs__list-item">
-                    <a class="govuk-tabs__tab" href="#completed-tasks">Completed tasks</a>
+                    <a class="govuk-tabs__tab" href="#completed-task">Completed tasks</a>
                 </li>
             </ul>
-            <div class="govuk-tabs__panel id="your-tasks">
+            <div class="govuk-tabs__panel" id="your-tasks">
                 <p class="govuk-body">Keep track of what you do by marking tasks as complete. You can also add notes and photos for reference.</p>
                 <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Actions incomplete</h2>
                 {% if data['try-other-mark-as'] == "done" and data['resignation-mark-as'] == "done" %}
@@ -50,7 +50,6 @@
                 {% else %}
                 <p class="govuk-body">You have completed no tasks yet.</p>
                 {% endif %}
-                <p class="govuk-body"><a class="govuk-link" href="#">View your completed tasks</a></p>
                 <!-- Now section -->
                 <ol class="app-task-list govuk-!-margin-top-8 no-padding-left">
                 <li>
