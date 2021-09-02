@@ -23,148 +23,168 @@
 
 {% block content %}
 
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-            <h1 class="govuk-heading-xl">Your legal action plan</h1>
-      </div>
-      <div class="govuk-grid-column-two-thirds">
-        <p class="govuk-body">Keep track of what you do by marking tasks as complete. You can also add notes and photos for reference.</p>
-        <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Actions incomplete</h2>
-        {% if data['try-other-mark-as'] == "done" and data['resignation-mark-as'] == "done" %}
-        <p class="govuk-body">You have completed 2 out of 4 sections.</p>
-        {% elif data['resignation-mark-as'] == "done" %}
-        <p class="govuk-body">You have completed 1 out of 4 sections.</p>
-        {% elif data['try-other-mark-as'] == "done" %}
-        <p class="govuk-body">You have completed 1 out of 4 sections.</p>
-        {% else %}
-        <p class="govuk-body">You have completed no tasks yet.</p>
-        {% endif %}
-        <p class="govuk-body"><a class="govuk-link" href="#">View your completed tasks</a></p>
-        <!-- Now section -->
-        <ol class="app-task-list govuk-!-margin-top-8 no-padding-left">
-          <li>
-            <h2 class="app-task-list__section">
-              Your tasks
-            </h2>
-            <ul class="app-task-list__items no-padding-left">
-              <li class="app-task-list__item">
-                <span class="app-task-list__task-name">
-                  <a href="./resignation-letter" aria-describedby="eligability-status">Do not sign the resignation letter</a>
-                </span>
-                {% if data['resignation-mark-as'] == "started" %}
-                    <strong class="govuk-tag {{startedTaskTag}}">
-                        Started
-                    </strong>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">Your legal action plan</h1>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
 
-                    {% elif data['resignation-mark-as'] == "done" %}
-                    <strong class="govuk-tag  {{doneTaskTag}}">
-                        Completed
-                    </strong>
-
-                    {% elif data['resignation-mark-as'] == "not doing this" %}
-                    <strong class="govuk-tag govuk-tag--red app-task-list__tag">
-                        Not doing this
-                    </strong>
-
-                    {% elif data['resignation-mark-as'] == "prefer not to say" %}
-                    <strong class="govuk-tag {{preferTaskTag}}">
-                        Prefer not to say
-                    </strong>
-
-                    {% else %}
-                    <strong class="govuk-tag {{notStartedTaskTag}}">
-                        Not started
-                    </strong>
-                {% endif %}
-                {% if data['resignation-mark-as'] == "done" %}
-                <div class="done">
-                    <div class="done__pictures">
-                        <p class="govuk-body">[3] pictures</p>
-                    </div>
-                    <div class="done__notes">
-                        <p class="govuk-body">[2] notes</p>
-                    </div>
-                </div>
-                {% endif %}
-              </li>
-              <li class="app-task-list__item">
-                <span class="app-task-list__task-name">
-                  <a href="./try-other-ways" aria-describedby="read-declaration-status">Try other ways to resolve issues with your employer</a>
-                </span>
-                {% if data['try-other-mark-as'] == "started" %}
-                <strong class="govuk-tag {{startedTaskTag}}">
-                    Started
-                </strong>
-
-                {% elif data['try-other-mark-as'] == "done" %}
-                <strong class="govuk-tag  {{doneTaskTag}}">
-                    Completed
-                </strong>
-
-                {% elif data['try-other-mark-as'] == "not doing this" %}
-                <strong class="govuk-tag govuk-tag--red app-task-list__tag">
-                    Not doing this
-                </strong>
-
-                {% elif data['try-other-mark-as'] == "prefer not to say" %}
-                <strong class="govuk-tag {{preferTaskTag}}">
-                    Prefer not to say
-                </strong>
-
-                {% else %}
-                <strong class="govuk-tag {{startedTaskTag}}">
-                    Not started
-                </strong>
-            {% endif %}
-            {% if data['try-other-mark-as'] == "done" %}
-            <div class="done">
-                <div class="done__pictures">
-                    <p class="govuk-body">[3] pictures</p>
-                </div>
-                <div class="done__notes">
-                    <p class="govuk-body">[2] notes</p>
-                </div>
-            </div>
-            {% endif %}
-              </li>
-              <li class="app-task-list__item">
-                <span class="app-task-list__task-name">
-                    <a href="./constructive-dismissal" aria-describedby="eligability-status">You could make a claim for constructive dismissal if you resigned</a>
-                </span>
-                {% if data['resignation-mark-as'] == "not relevant" %}
-                <strong class="govuk-tag {{notTaskTag}}">
-                    Not relevant
-                </strong>
-                {% endif %}
-            </li>
-            <li class="app-task-list__item">
-                <span class="app-task-list__task-name">
-                    <a href="./claim-unfair-dismissal" aria-describedby="eligability-status">Make a claim for unfair dismissal if you did not resign</a>
-                </span>
-            </li>
+        <div class="govuk-tabs" data-module="govuk-tabs">
+            <ul class="govuk-tabs__list">
+                <li class="govuk-tabs__list-item govuk-list-items--selected">
+                    <a class="govuk-tabs__tab" href="#">Your tasks</a>
+                </li>
+                <li class="govuk-tabs__list-item">
+                    <a class="govuk-tabs__tab" href="#completed-tasks">Completed tasks</a>
+                </li>
             </ul>
-          </li>
-        </ol>
-        
-        <!-- Take it further section -->
-        <ol class="app-task-list">
-            <li>
-                <h2 class="app-task-list__section">
-                    Other things to consider
-                </h2>
-                <ul class="app-task-list__items no-padding-left">
+            <div class="govuk-tabs__panel id="your-tasks">
+                <p class="govuk-body">Keep track of what you do by marking tasks as complete. You can also add notes and photos for reference.</p>
+                <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Actions incomplete</h2>
+                {% if data['try-other-mark-as'] == "done" and data['resignation-mark-as'] == "done" %}
+                <p class="govuk-body">You have completed 2 tasks.</p>
+                {% elif data['resignation-mark-as'] == "done" %}
+                <p class="govuk-body">You have completed 1 task.</p>
+                {% elif data['try-other-mark-as'] == "done" %}
+                <p class="govuk-body">You have completed 1 task.</p>
+                {% else %}
+                <p class="govuk-body">You have completed no tasks yet.</p>
+                {% endif %}
+                <p class="govuk-body"><a class="govuk-link" href="#">View your completed tasks</a></p>
+                <!-- Now section -->
+                <ol class="app-task-list govuk-!-margin-top-8 no-padding-left">
+                <li>
+                    <h2 class="app-task-list__section">
+                    Your tasks
+                    </h2>
+                    <ul class="app-task-list__items no-padding-left">
                     <li class="app-task-list__item">
                         <span class="app-task-list__task-name">
-                          <a href="./claim-benefits" aria-describedby="eligability-status">Make a claim for benefits</a>
+                        <a href="./resignation-letter" aria-describedby="eligability-status">Do not sign the resignation letter</a>
                         </span>
-                        <strong class="govuk-tag govuk-tag--grey app-task-list__tag">
-                           Not started
-                        </strong>
+                        {% if data['resignation-mark-as'] == "started" %}
+                            <strong class="govuk-tag {{startedTaskTag}}">
+                                Started
+                            </strong>
+
+                            {% elif data['resignation-mark-as'] == "done" %}
+                            <strong class="govuk-tag  {{doneTaskTag}}">
+                                Completed
+                            </strong>
+
+                            {% elif data['resignation-mark-as'] == "does not apply" %}
+                            <strong class="govuk-tag govuk-tag--red app-task-list__tag">
+                                Does not apply
+                            </strong>
+
+                            {% else %}
+                            <strong class="govuk-tag {{notStartedTaskTag}}">
+                                Not started
+                            </strong>
+                        {% endif %}
+                        {% if data['resignation-mark-as'] == "done" %}
+                        <div class="done">
+                            <div class="done__pictures">
+                                <p class="govuk-body">[3] pictures</p>
+                            </div>
+                            <div class="done__notes">
+                                <p class="govuk-body">[2] notes</p>
+                            </div>
+                        </div>
+                        {% endif %}
                     </li>
-                </ul>
-            </li>
-         </ol>
-      </div>
+                    <li class="app-task-list__item">
+                        <span class="app-task-list__task-name">
+                        <a href="./try-other-ways" aria-describedby="read-declaration-status">Try other ways to resolve issues with your employer</a>
+                        </span>
+                        {% if data['try-other-mark-as'] == "started" %}
+                        <strong class="govuk-tag {{startedTaskTag}}">
+                            Started
+                        </strong>
+
+                        {% elif data['try-other-mark-as'] == "done" %}
+                        <strong class="govuk-tag  {{doneTaskTag}}">
+                            Completed
+                        </strong>
+
+                        {% elif data['try-other-mark-as'] == "does not apply" %}
+                        <strong class="govuk-tag govuk-tag--red app-task-list__tag">
+                            Does not apply
+                        </strong>
+
+                        {% else %}
+                        <strong class="govuk-tag {{startedTaskTag}}">
+                            Not started
+                        </strong>
+                    {% endif %}
+                    {% if data['try-other-mark-as'] == "done" %}
+                    <div class="done">
+                        <div class="done__pictures">
+                            <p class="govuk-body">[3] pictures</p>
+                        </div>
+                        <div class="done__notes">
+                            <p class="govuk-body">[2] notes</p>
+                        </div>
+                    </div>
+                    {% endif %}
+                    </li>
+                    <li class="app-task-list__item">
+                        <span class="app-task-list__task-name">
+                            <a href="./constructive-dismissal" aria-describedby="eligability-status">You could make a claim for constructive dismissal if you resigned</a>
+                        </span>
+                        {% if data['resignation-mark-as'] == "does not apply" %}
+                        <strong class="govuk-tag {{notTaskTag}}">
+                            Does not apply
+                        </strong>
+                        {% endif %}
+                    </li>
+                    <li class="app-task-list__item">
+                        <span class="app-task-list__task-name">
+                            <a href="./claim-unfair-dismissal" aria-describedby="eligability-status">Make a claim for unfair dismissal if you did not resign</a>
+                        </span>
+                    </li>
+                    </ul>
+                </li>
+                </ol>
+                
+                <!-- Take it further section -->
+                <ol class="app-task-list">
+                    <li>
+                        <h2 class="app-task-list__section">
+                            Other things to consider
+                        </h2>
+                        <ul class="app-task-list__items no-padding-left">
+                            <li class="app-task-list__item">
+                                <span class="app-task-list__task-name">
+                                <a href="./claim-benefits" aria-describedby="eligability-status">Make a claim for benefits</a>
+                                </span>
+                                <strong class="govuk-tag govuk-tag--grey app-task-list__tag">
+                                Not started
+                                </strong>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="completed-task">
+                <h2 class="govuk-heading-l">Completed tasks</h2>
+                <ol class="app-task-list">
+                    <li>
+                        <ul class="app-task-list__items no-padding-left">
+                            <li class="app-task-list__item">
+                                <span class="app-task-list__task-name">
+                                <a href="./claim-benefits" aria-describedby="eligability-status">Make a claim for benefits</a>
+                                </span>
+                                <strong class="govuk-tag app-task-list__tag">
+                                Completed
+                                </strong>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>  
     </div>
+</div>
 
 {% endblock %}

@@ -16,17 +16,14 @@
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
+        <h1 class="govuk-heading-xl">Ask for follow up help</h1>
         {{ govukTextarea({
-        name: "more-detail",
-        id: "more-detail",
+        name: "ask-for-help",
+        id: "ask-for-help",
         label: {
-            text: "Request follow up advice",
+            text: "What do you need help with?",
             classes: "govuk-label--xl",
-            isPageHeading: true
-        },
-        hint: {
-            text: "Be specific with what you need help with now."
+            isPageHeading: false
         }
         }) }}
 
