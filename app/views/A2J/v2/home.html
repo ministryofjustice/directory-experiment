@@ -28,6 +28,7 @@
             <h1 class="govuk-heading-xl">Your legal action plan</h1>
       </div>
       <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body">Keep track of what you do by marking tasks as complete. You can also add notes and photos for reference.</p>
         <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Actions incomplete</h2>
         {% if data['try-other-mark-as'] == "done" and data['resignation-mark-as'] == "done" %}
         <p class="govuk-body">You have completed 2 out of 4 sections.</p>
@@ -36,7 +37,7 @@
         {% elif data['try-other-mark-as'] == "done" %}
         <p class="govuk-body">You have completed 1 out of 4 sections.</p>
         {% else %}
-        <p class="govuk-body">You have completed 0 out of 4 sections.</p>
+        <p class="govuk-body">You have completed no tasks yet.</p>
         {% endif %}
         <p class="govuk-body"><a class="govuk-link" href="#">View your completed tasks</a></p>
         <!-- Now section -->
@@ -149,7 +150,7 @@
         <ol class="app-task-list">
             <li>
                 <h2 class="app-task-list__section">
-                    If you need to take it further
+                    Other things to consider
                 </h2>
                 <ul class="app-task-list__items no-padding-left">
                     <li class="app-task-list__item">

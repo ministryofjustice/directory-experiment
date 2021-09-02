@@ -35,12 +35,17 @@
         <h2 class="govuk-heading-l">Breakdown of mutual trust and confidence</h2>
         <p class="govuk-body">A tribunal is likely to view a breakdown of mutual trust as a breach of contract. The kinds of actions that could lead to this inlcude threatening behaviour. </p>
         <p class="govuk-body">The employer's actions don't need to be deliberate to be classed as a fundamental breach. An employment tribunal will look at whether the employer behaved in a way that way likely to seriously undermine trust and confidence.</p>
-        <h2 class="govuk-heading-l">Actions</h2>
-        <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-8">
+        <h2 class="govuk-heading-l">You need to</h2>
+        <ul class="govuk-list govuk-list--bullet">
             <li>Write a formal letter of grievance</li>
             <li>Contact ACAS to work with your employer to solve the problem</li>
             <li>Book an appointment with an adviser if you want to make an employment tribunal claim</li>
         </ul>
+        <h2 class="govuk-heading-l">
+            Get more information
+        </h2>
+        <p class="govuk-body"><a class="govuk-link" href="https://www.citizensadvice.org.uk/work/leaving-a-job/dismissal/claiming-constructive-dismissal/">Claiming constructive dismissal</a></p>
+        <p class="govuk-body"><a class="govuk-link" href="https://www.citizensadvice.org.uk/work/problems-at-work/complaint-about-a-problem-at-work-grievance-letter-checklist/">Grievance letter checklist</a></p>
         <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
         <form action="./home" id="resignation-letter-complete-form" accept-charset="UTF-8" method="post">
@@ -50,7 +55,7 @@
               name: "resignation-mark-as",
               fieldset: {
                 legend: {
-                  text: "Mark as",
+                  text: "Have you done this task?",
                   isPageHeading: false,
                   classes: "govuk-fieldset__legend--m"
                 }
@@ -62,7 +67,7 @@
                 },
                 {
                   value: "done",
-                  text: "Done"
+                  text: "Completed"
                 },
                 {
                   value: "not doing this",
@@ -85,29 +90,27 @@
                 text: "Continue"    
               }) }}
           </form>
-        <h2 class="govuk-heading-m">
-            Links:
-        </h2>
-        <p class="govuk-body"><a class="govuk-link" href="https://www.citizensadvice.org.uk/work/leaving-a-job/dismissal/claiming-constructive-dismissal/">Claiming constructive dismissal</a></p>
-        <p class="govuk-body"><a class="govuk-link" href="https://www.citizensadvice.org.uk/work/problems-at-work/complaint-about-a-problem-at-work-grievance-letter-checklist/">Grievance letter checklist</a></p>
     </div>
     <div class="govuk-grid-column-one-third">
         <div class="app-related-items">
-            <h2 class="govuk-heading-m">Upload your photos</h2>
-            <p class="govuk-body">You can add photos or documents to your case if you think they'll help an adviser.</p>
+            <h2 class="govuk-heading-m">Upload documents</h2>
+            <p class="govuk-body">Add photos or documents for your reference. An adviser will be able to view your documents too.</p>
             {{ govukButton({
               classes: "govuk-button--secondary",
-              text: "Upload your photos",
+              text: "Upload documents",
               href: "./resignation-upload"    
             }) }}
     
-            <h2 class="govuk-heading-m">Notes</h2>
-            <p class="govuk-body">You can add notes to this task if you have any extra you'd like to add.</p>
+            <h2 class="govuk-heading-m">Add notes</h2>
+            <p class="govuk-body">Record things you do and people you speak to. Your adviser will be able to view any notes you add.</p>
               {{ govukButton({
-                text: "Add or view your notes",
+                text: "Add note",
                 classes: "govuk-button--secondary",
                 href: "./resignation-note"
               }) }}
+
+            <h2 class="govuk-heading-m">Add notes</h2>
+            <p class="govuk-body">You can <a class="govuk-link" href="#"> contact the advice organisation that set up this plan</a> for you for more help.</p>
         </div>
     </div>
 </div>
