@@ -9,6 +9,12 @@
 {% set notTaskTag = "govuk-tag--red app-task-list__tag" %}
 {% set preferTaskTag = "govuk-tag--grey app-task-list__tag" %}
 
+
+<style>
+    .no-padding-left {
+        padding-left:0 !important;
+    }
+</style>
 {% block pageTitle %}
   Your legal action plan
 {% endblock %}
@@ -24,8 +30,10 @@
 {% block content %}
 
     <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <h1 class="govuk-heading-xl">Your legal action plan</h1>
+      </div>
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Your legal action plan</h1>
         <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Actions incomplete</h2>
         {% if data['try-other-mark-as'] == "done" and data['resignation-mark-as'] == "done" %}
         <p class="govuk-body">You have completed 2 out of 4 sections.</p>
@@ -43,7 +51,7 @@
             <h2 class="app-task-list__section">
               Your tasks
             </h2>
-            <ul class="app-task-list__items">
+            <ul class="app-task-list__items no-padding-left">
               <li class="app-task-list__item">
                 <span class="app-task-list__task-name">
                   <a href="./resignation-letter" aria-describedby="eligability-status">Do not sign the resignation letter</a>
@@ -126,19 +134,18 @@
               </li>
               <li class="app-task-list__item">
                 <span class="app-task-list__task-name">
-                    <a href="./constructive-dismissal-resign" aria-describedby="eligability-status">You could make a claim for constructive dismissal if you resigned</a>
+                    <a href="./constructive-dismissal" aria-describedby="eligability-status">You could make a claim for constructive dismissal if you resigned</a>
                 </span>
-                <div class="app-task-list__description">
-                    <p class="govuk-body">You could make a claim for constructive dismissal to an employment tribunal if you resign because of a fundamental breach of your contract. Your employer may have breached an implied term of your contract.</p>
-                </div>
+                {% if data['resignation-mark-as'] == "not relevant" %}
+                <strong class="govuk-tag {{notTaskTag}}">
+                    Not relevant
+                </strong>
+                {% endif %}
             </li>
             <li class="app-task-list__item">
                 <span class="app-task-list__task-name">
                     <a href="./claim-unfair-dismissal" aria-describedby="eligability-status">Make a claim for unfair dismissal if you did not resign</a>
                 </span>
-                <div class="app-task-list__description">
-                    <p class="govuk-body">If you did not resign or you were told to resign or be dismissed, your employer dismissed you, you may have a claim for unfair dismissal.</p>
-                </div>
             </li>
             </ul>
           </li>
@@ -165,13 +172,6 @@
                 </ul>
             </li>
          </ol>
-      </div>
-      <!-- Help section -->
-      <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-m">
-            Contact an adviser
-        </h2>
-        <p class="govuk-body">You can <a class="govuk-link" href="./contact-an-adviser">contact an adviser</a> if you need further assistance.</p>
       </div>
     </div>
 
