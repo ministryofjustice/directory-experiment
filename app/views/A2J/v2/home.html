@@ -41,9 +41,6 @@
         <ol class="app-task-list govuk-!-margin-top-8">
           <li>
             <h2 class="app-task-list__section">
-              <span class="app-task-list__section-number">
-                1.
-              </span>
               Your tasks
             </h2>
             <ul class="app-task-list__items">
@@ -127,104 +124,26 @@
             </div>
             {% endif %}
               </li>
+              <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                    <a href="./constructive-dismissal-resign" aria-describedby="eligability-status">You could make a claim for constructive dismissal if you resigned</a>
+                </span>
+                <div class="app-task-list__description">
+                    <p class="govuk-body">You could make a claim for constructive dismissal to an employment tribunal if you resign because of a fundamental breach of your contract. Your employer may have breached an implied term of your contract.</p>
+                </div>
+            </li>
+            <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                    <a href="./claim-unfair-dismissal" aria-describedby="eligability-status">Make a claim for unfair dismissal if you did not resign</a>
+                </span>
+                <div class="app-task-list__description">
+                    <p class="govuk-body">If you did not resign or you were told to resign or be dismissed, your employer dismissed you, you may have a claim for unfair dismissal.</p>
+                </div>
+            </li>
             </ul>
           </li>
         </ol>
-        <!-- Next section -->
-        <ol class="app-task-list">
-            <li>
-                <h2 class="app-task-list__section">
-                    <span class="app-task-list__section-number">
-                        2.
-                    </span>
-                    Next
-                </h2>
-                {% if data['constructive-dismissal'] != "yes" or data['unfair-dismissal'] != "yes" %}
-                {{ govukInsetText({
-                text: "You need to choose which option is relevant to you."
-                }) }}
-                <ul class="app-task-list__items">
-                    <li class="app-task-list__item app-task-list__item--no-border-bottom">
-                        <span class="app-task-list__task-name">
-                            <a href="./constructive-dismissal-resign" aria-describedby="eligability-status">You could make a claim for constructive dismissal if you resigned</a>
-                        </span>
-                        <div class="app-task-list__description">
-                            <p class="govuk-body">You could make a claim for constructive dismissal to an employment tribunal if you resign because of a fundamental breach of your contract. Your employer may have breached an implied term of your contract.</p>
-                        </div>
-                    </li>
-                    <li class="app-task-list__item app-task-list__item--no-border-bottom">
-                        <strong>Or</strong>
-                    </li>
-                    <li class="app-task-list__item govuk-!-margin-top-4">
-                        <span class="app-task-list__task-name">
-                            <a href="./claim-unfair-dismissal" aria-describedby="eligability-status">Make a claim for unfair dismissal if you did not resign</a>
-                        </span>
-                        <div class="app-task-list__description">
-                            <p class="govuk-body">If you did not resign or you were told to resign or be dismissed, your employer dismissed you, you may have a claim for unfair dismissal.</p>
-                        </div>
-                    </li>
-                </ul>
-                {% endif %}
-                {% if data['constructuctive-dismissal'] == "yes" %}
-                <ul class="app-task-list__items">
-                    <li class="app-task-list__item">
-                        <h3 class="govuk-heading-s">Make a claim for constructive dismissal</h3>
-                        <span class="app-task-list__task-name">
-                            <a href="./" aria-describedby="eligability-status">Write a formal letter of grievance</a>
-                        </span>
-                        <strong class="govuk-tag govuk-tag--grey app-task-list__tag">
-                            Not started
-                        </strong>
-                    </li>
-                    <li class="app-task-list__item">
-                        <span class="app-task-list__task-name">
-                            <a href="./" aria-describedby="eligability-status">Contact ACAS to work with your employer to solve the problem</a>
-                        </span>
-                        <strong class="govuk-tag govuk-tag--grey app-task-list__tag">
-                            Not started
-                        </strong>
-                    </li>
-                    <li class="app-task-list__item">
-                        <span class="app-task-list__task-name">
-                            <a href="./" aria-describedby="eligability-status">Book an appointment with an adviser if you want to make an employment tribunal claim</a>
-                        </span>
-                        <strong class="govuk-tag govuk-tag--grey app-task-list__tag">
-                            Not started
-                        </strong>
-                    </li>
-                </ul>
-                {% endif %}
-                {% if data['unfair-dismissal'] == "yes" %}
-                <ul class="app-task-list__items">
-                    <li class="app-task-list__item">
-                        <h3 clas=="govuk-heading-s">Make a claim for unfair dismissal</h3>
-                        <span class="app-task-list__task-name">
-                            <a href="./" aria-describedby="eligability-status">Write a formal letter of grievance</a>
-                        </span>
-                        <strong class="govuk-tag govuk-tag--grey app-task-list__tag">
-                            Not started
-                        </strong>
-                    </li>
-                    <li class="app-task-list__item">
-                        <span class="app-task-list__task-name">
-                            <a href="./" aria-describedby="eligability-status">Contact ACAS to work with your employer to solve the problem</a>
-                        </span>
-                        <strong class="govuk-tag govuk-tag--grey app-task-list__tag">
-                            Not started
-                        </strong>
-                    </li>
-                    <li class="app-task-list__item">
-                        <span class="app-task-list__task-name">
-                            <a href="./" aria-describedby="eligability-status">Book an appointment with an adviser if you want to make an employment tribunal claim</a>
-                        </span>
-                        <strong class="govuk-tag govuk-tag--grey app-task-list__tag">
-                            Not started
-                        </strong>
-                    </li>
-                </ul>
-                {% endif %}
-            </li>
-        </ol>
+        
         <!-- Take it further section -->
         <ol class="app-task-list">
             <li>
