@@ -127,16 +127,26 @@
                     </div>
                     {% endif %}
                     </li>
+                    {% if data['resignation-mark-as'] != "does not apply" %}
                     <li class="app-task-list__item">
                         <span class="app-task-list__task-name">
                             <a href="./constructive-dismissal" aria-describedby="eligability-status">You could make a claim for constructive dismissal if you resigned</a>
                         </span>
-                        {% if data['resignation-mark-as'] == "does not apply" %}
+                        {% if data['resignation-mark-as'] == "started" %}
+                        <strong class="govuk-tag {{startedTaskTag}}">
+                            Started
+                        </strong>
+                        {% elif data['resignation-mark-as'] == "done" %}
+                        <strong class="govuk-tag  {{doneTaskTag}}">
+                            Completed
+                        </strong>
+                        {% else %}
                         <strong class="govuk-tag {{notTaskTag}}">
                             Does not apply
                         </strong>
                         {% endif %}
                     </li>
+                    {% endif %}
                     <li class="app-task-list__item">
                         <span class="app-task-list__task-name">
                             <a href="./claim-unfair-dismissal" aria-describedby="eligability-status">Make a claim for unfair dismissal if you did not resign</a>
@@ -178,6 +188,16 @@
                                 Completed
                                 </strong>
                             </li>
+                            {% if data['resignation-mark-as'] == "does not apply" %}
+                            <li class="app-task-list__item">
+                                <span class="app-task-list__task-name">
+                                    <a href="./constructive-dismissal" aria-describedby="eligability-status">You could make a claim for constructive dismissal if you resigned</a>
+                                </span>
+                                <strong class="govuk-tag {{notTaskTag}}">
+                                    Does not apply
+                                </strong>
+                            </li>
+                            {% endif %}
                         </ul>
                     </li>
                 </ol>
