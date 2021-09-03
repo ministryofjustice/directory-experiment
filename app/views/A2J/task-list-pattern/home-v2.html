@@ -228,9 +228,31 @@
                         <span class="app-task-list__task-name">
                           <a href="./claim-benefits" aria-describedby="eligability-status">Make a claim for benefits</a>
                         </span>
-                        <strong class="govuk-tag govuk-tag--grey app-task-list__tag">
-                           Not started
+                        {% if data['claim-benefits'] == "started" %}
+                        <strong class="govuk-tag {{startedTaskTag}}">
+                            Started
                         </strong>
+        
+                        {% elif data['claim-benefits'] == "completed" %}
+                        <strong class="govuk-tag  {{doneTaskTag}}">
+                            Completed
+                        </strong>
+        
+                        {% else %}
+                        <strong class="govuk-tag {{notTaskTag}}">
+                            Does not apply
+                        </strong>
+                        {% endif %}
+                        {% if data['claim-benefits'] == "completed" %}
+                        <div class="done">
+                            <div class="done__pictures">
+                                <p class="govuk-body">[3] pictures</p>
+                            </div>
+                            <div class="done__notes">
+                                <p class="govuk-body">[2] notes</p>
+                            </div>
+                        </div>
+                        {% endif %}
                         <div class="app-task-list__description">
                             <p class="govuk-body">If you lose your income you may be entitled to benefits. </p>
                         </div>
