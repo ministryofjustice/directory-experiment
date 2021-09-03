@@ -1,10 +1,10 @@
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-<form action="./home-v2" id="{{ markAsFormID }}" accept-charset="UTF-8" method="post">
+<form action="./home-v2" id="{{ radioFormId }}" accept-charset="UTF-8" method="post">
     {% from "govuk/components/radios/macro.njk" import govukRadios %}
     {{ govukRadios({
         classes: "govuk-radios--small",
-        idPrefix: "{{ markAsID }}",
-        name: "{{ markAsName }}",
+        idPrefix: "{{ radioId }}",
+        name: "{{ radioName }}",
             fieldset: {
             legend: {
                 text: "Have you done this task?",

@@ -26,12 +26,44 @@
         <h2 class="govuk-heading-m">If you need more help with this task</h2>
         <p class="govuk-body">You can <a class="govuk-link" href="./contact-an-adviser/contact-an-adviser">contact the advice organisation that set up this plan</a> for you for more help.</p>
         
-        {{ uploadField('./resignation-upload')}}
+        {{ uploadField('./resignation-upload') }}
 
-        {{ notesField ('./resignation-notes')}}
+        {{ notesField ('./resignation-notes') }}
           
-        {{ markAs('resignation-letter-form', 'resignation-letter', 'resignation-letter')}}
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
+        <form action="./home-v2" id="resignation-letter-form" accept-charset="UTF-8" method="post">
+            {{ govukRadios({
+                classes: "govuk-radios--small",
+                idPrefix: "resignation-letter",
+                name: "resignation-letter",
+                    fieldset: {
+                    legend: {
+                        text: "Have you done this task?",
+                        isPageHeading: false,
+                        classes: "govuk-fieldset__legend--m"
+                    }
+                },
+                items: [
+                    {
+                        value: "started",
+                        text: "Started"
+                    },
+                    {
+                        value: "completed",
+                        text: "Completed"
+                    },
+                    {
+                        value: "does not apply",
+                        text: "Does not apply"
+                    }
+                ]
+            }) }}
+
+            {{ govukButton({
+                text: "Continue"    
+            }) }}
+        </form>
 
     </div>
 </div>

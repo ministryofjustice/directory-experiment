@@ -40,7 +40,40 @@
 
         {{ notesField ('./resignation-notes')}}
           
-        {{ markAs('unfair-dismissal-form', 'unfair-dismissal', 'unfair-dismissal')}}
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <form action="./home-v2" id="unfair-dismissal-form" accept-charset="UTF-8" method="post">
+            {{ govukRadios({
+                classes: "govuk-radios--small",
+                idPrefix: "unfair-dismissal",
+                name: "unfair-dismissal",
+                    fieldset: {
+                    legend: {
+                        text: "Have you done this task?",
+                        isPageHeading: false,
+                        classes: "govuk-fieldset__legend--m"
+                    }
+                },
+                items: [
+                    {
+                        value: "started",
+                        text: "Started"
+                    },
+                    {
+                        value: "completed",
+                        text: "Completed"
+                    },
+                    {
+                        value: "does not apply",
+                        text: "Does not apply"
+                    }
+                ]
+            }) }}
+
+            {{ govukButton({
+                text: "Continue"    
+            }) }}
+        </form>
     </div>
 </div>
 {% endblock %}

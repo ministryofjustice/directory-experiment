@@ -52,32 +52,22 @@
                 <span class="app-task-list__task-name">
                   <a href="./resignation-letter" aria-describedby="eligability-status">Do not sign the resignation letter</a>
                 </span>
-                {% if data['resignation-mark-as'] == "started" %}
+                {% if data['resignation-letter'] == "started" %}
                     <strong class="govuk-tag {{startedTaskTag}}">
                         Started
                     </strong>
 
-                    {% elif data['resignation-mark-as'] == "done" %}
+                    {% elif data['resignation-letter'] == "completed" %}
                     <strong class="govuk-tag  {{doneTaskTag}}">
                         Completed
                     </strong>
 
-                    {% elif data['resignation-mark-as'] == "not doing this" %}
-                    <strong class="govuk-tag govuk-tag--red app-task-list__tag">
-                        Not doing this
-                    </strong>
-
-                    {% elif data['resignation-mark-as'] == "prefer not to say" %}
-                    <strong class="govuk-tag {{preferTaskTag}}">
-                        Prefer not to say
-                    </strong>
-
                     {% else %}
-                    <strong class="govuk-tag {{notStartedTaskTag}}">
-                        Not started
+                    <strong class="govuk-tag {{notTaskTag}}">
+                        Does not apply
                     </strong>
                 {% endif %}
-                {% if data['resignation-mark-as'] == "done" %}
+                {% if data['resignation-letter'] == "completed" %}
                 <div class="done">
                     <div class="done__pictures">
                         <p class="govuk-body">[3] pictures</p>
@@ -95,24 +85,14 @@
                 <span class="app-task-list__task-name">
                   <a href="./try-other-ways" aria-describedby="read-declaration-status">Try other ways to resolve issues with your employer</a>
                 </span>
-                {% if data['try-other-mark-as'] == "started" %}
+                {% if data['try-other-ways'] == "started" %}
                 <strong class="govuk-tag {{startedTaskTag}}">
                     Started
                 </strong>
 
-                {% elif data['try-other-mark-as'] == "done" %}
+                {% elif data['try-other-ways'] == "completed" %}
                 <strong class="govuk-tag  {{doneTaskTag}}">
                     Completed
-                </strong>
-
-                {% elif data['try-other-mark-as'] == "not doing this" %}
-                <strong class="govuk-tag govuk-tag--red app-task-list__tag">
-                    Not doing this
-                </strong>
-
-                {% elif data['try-other-mark-as'] == "prefer not to say" %}
-                <strong class="govuk-tag {{preferTaskTag}}">
-                    Prefer not to say
                 </strong>
 
                 {% else %}
@@ -120,7 +100,7 @@
                     Not started
                 </strong>
                 {% endif %}
-                {% if data['try-other-mark-as'] == "done" %}
+                {% if data['try-other-ways'] == "completed" %}
                 <div class="done">
                     <div class="done__pictures">
                         <p class="govuk-body">[3] pictures</p>
@@ -146,7 +126,7 @@
                     </span>
                     Next
                 </h2>
-                {% if data['constructive-dismissal'] != "yes" or data['unfair-dismissal'] != "yes" %}
+                {% if data['constructive-dismissal'] != "completed" or data['constructive-dismissal'] != "does not apply" or data['unfair-dismissal'] != "completed" or data['unfair-dismissal'] != "does not apply" %}
                 {{ govukInsetText({
                 text: "You need to choose which option is relevant to you."
                 }) }}
@@ -174,7 +154,7 @@
                     </li>
                 </ul>
                 {% endif %}
-                {% if data['constructuctive-dismissal'] == "yes" %}
+                {% if data['constructuctive-dismissal'] == "completed" %}
                 <ul class="app-task-list__items">
                     <li class="app-task-list__item">
                         <h3 class="govuk-heading-s">Make a claim for constructive dismissal</h3>
@@ -203,7 +183,7 @@
                     </li>
                 </ul>
                 {% endif %}
-                {% if data['unfair-dismissal'] == "yes" %}
+                {% if data['unfair-dismissal'] == "completed" %}
                 <ul class="app-task-list__items">
                     <li class="app-task-list__item">
                         <h3 clas=="govuk-heading-s">Make a claim for unfair dismissal</h3>

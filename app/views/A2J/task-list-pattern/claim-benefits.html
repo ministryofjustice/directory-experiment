@@ -31,7 +31,40 @@
 
         {{ notesField ('./resignation-notes')}}
           
-        {{ markAs('claim-benefits-form', 'claim-benefits', 'claim-benefits')}}
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <form action="./home-v2" id="claim-benefits-form" accept-charset="UTF-8" method="post">
+            {{ govukRadios({
+                classes: "govuk-radios--small",
+                idPrefix: "claim-benefits",
+                name: "claim-benefits",
+                    fieldset: {
+                    legend: {
+                        text: "Have you done this task?",
+                        isPageHeading: false,
+                        classes: "govuk-fieldset__legend--m"
+                    }
+                },
+                items: [
+                    {
+                        value: "started",
+                        text: "Started"
+                    },
+                    {
+                        value: "completed",
+                        text: "Completed"
+                    },
+                    {
+                        value: "does not apply",
+                        text: "Does not apply"
+                    }
+                ]
+            }) }}
+
+            {{ govukButton({
+                text: "Continue"    
+            }) }}
+        </form>
     </div>
 </div>
 {% endblock %}
