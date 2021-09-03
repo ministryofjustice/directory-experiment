@@ -19,47 +19,28 @@
         <h1 class="govuk-heading-xl">Make a claim for unfair dismissal if you didn't resign</h1>
         <p class="govuk-body">You would be entitled to all the protections from unfair dismissal due to your length of service. As you have worked for over two years, your employer would need to show you have dismissed for a fair reason. It isn't black and white and will depend on your individual circumstances.</p>
         <p class="govuk-body">They would also be required to follow the correct dismissal process.</p>
-        <p class="govuk-body">Actions</p>
+        <h2 class="govuk-heading-m">Actions</h2>
         <ul class="govuk-list govuk-list--bullet">
             <li>Write a formal letter of grievance</li>
             <li>Contact ACAS to work with your employer to solve the problem</li>
             <li>Book an appointment with an advisor if you want to make an employment tribunal claim</li>
         </ul>
-        <form action="/option-two-route" id="resignation-letter-complete-form" accept-charset="UTF-8" method="post">
-          {{ govukRadios({
-            classes: "govuk-radios--small",
-            idPrefix: "option-two",
-            name: "option-two",
-            fieldset: {
-              legend: {
-                text: "Choose an option",
-                isPageHeading: false,
-                classes: "govuk-fieldset__legend--l"
-              }
-            },
-            items: [
-              {
-                value: "choose this option",
-                text: "Choose this option"
-              },
-              {
-                divider: "or"
-              },
-              {
-                value: "return to the previous option",
-                text: "Return to the previous option"
-              }
-            ]
-          }) }}
-          {{ govukButton({
-              text: "Continue"    
-          }) }}
-        </form>
-        <h3 class="govuk-heading-m">
-            Links:
-        </h3>
-        <p class="govuk-body"><a class="govuk-link" href="https://www.citizensadvice.org.uk/work/leaving-a-job/resigning/your-notice-period-when-resigning/">Citizens advice</a></p>
-        <p class="govuk-body"><a class="govuk-link" href="https://www.citizensadvice.org.uk/work/leaving-a-job/resigning/deciding-whether-to-resign">Citizens advice</a></p>
+        <h2 class="govuk-heading-m">
+          Get more information
+        </h2>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a class="govuk-link" href="https://www.citizensadvice.org.uk/work/leaving-a-job/resigning/your-notice-period-when-resigning/">Citizens advice</a>
+          </li>
+          <li>
+            <a class="govuk-link" href="https://www.citizensadvice.org.uk/work/leaving-a-job/resigning/deciding-whether-to-resign">Citizens advice</a>
+          </li>
+        </ul>
+        {{ uploadField('./resignation-upload')}}
+
+        {{ notesField ('./resignation-notes')}}
+          
+        {{ markAs('unfair-dismissal-form', 'unfair-dismissal', 'unfair-dismissal')}}
     </div>
 </div>
 {% endblock %}

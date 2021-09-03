@@ -9,7 +9,7 @@
 {% block beforeContent %}
     {{ govukBackLink({
         text: "Back",
-        href: "./home-v2"
+        href: "../home-v2"
     }) }}
 {% endblock %}
 
@@ -17,12 +17,13 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">Ask for follow up help</h1>
+        <p class="govuk-body">This message will be sent to the advice organisation that set up this action plan. They will be able to access any documents you uploaded, as well as any notes you’ve made.</p>
         {{ govukTextarea({
         name: "ask-for-help",
         id: "ask-for-help",
         label: {
             text: "What do you need help with?",
-            classes: "govuk-label--xl",
+            classes: "govuk-label--m",
             isPageHeading: false
         }
         }) }}
@@ -67,11 +68,12 @@
             {{ govukRadios({
             idPrefix: "contact",
             name: "contact",
+            classes: "govuk-radios--small",
             fieldset: {
                 legend: {
                 text: "How would you prefer to be contacted?",
                 isPageHeading: false,
-                classes: "govuk-fieldset__legend--l"
+                classes: "govuk-fieldset__legend--m"
                 }
             },
             hint: {

@@ -17,49 +17,26 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">Try other ways to resolve issues with your employer</h1>
+        {{ govukInsetText({
+          text: "Insert text here"
+        }) }}
+
         <p class="govuk-body">You should try other ways to address the problem if possible.</p>
-        {{ uploadField('./test') }}
-        {{ notesField('false') }}
-        <form action="./home-v2" id="resignation-letter-complete-form" accept-charset="UTF-8" method="post">
-          {{ govukRadios({
-            classes: "govuk-radios--small",
-            idPrefix: "mark-as",
-            name: "try-other-mark-as",
-            fieldset: {
-              legend: {
-                text: "Mark as",
-                isPageHeading: false,
-                classes: "govuk-fieldset__legend--m"
-              }
-            },
-            items: [
-              {
-                value: "started",
-                text: "Started"
-              },
-              {
-                value: "done",
-                text: "Done"
-              },
-              {
-                value: "not doing this",
-                text: "Not doing this"
-              },
-              {
-                value: "prefer not to say",
-                text: "Prefer not to say"
-              }
-            ]
-          }) }}
-          {{ govukButton({
-              text: "Continue"    
-            }) }}
-        </form>
+
         <h2 class="govuk-heading-m">
-            Links:
+          Get more information
         </h2>
-        <p class="govuk-body"><a class="govuk-link" href="https://www.citizensadvice.org.uk/work/problems-at-work/dealing-with-a-problem-at-work/">Dealing with problems at work</a></p>
-        
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a class="govuk-link" href="https://www.citizensadvice.org.uk/work/problems-at-work/dealing-with-a-problem-at-work/">Dealing with problems at work</a>
+          </li>
+        </ul>
+
+        {{ uploadField('./resignation-upload')}}
+
+        {{ notesField ('./resignation-notes')}}
+          
+        {{ markAs('try-other-ways-form', 'try-other-ways', 'try-other-ways')}}
       </div>
 </div>
 {% endblock %}

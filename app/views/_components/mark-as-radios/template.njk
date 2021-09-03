@@ -1,0 +1,35 @@
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+<form action="./home-v2" id="{{ markAsFormID }}" accept-charset="UTF-8" method="post">
+    {% from "govuk/components/radios/macro.njk" import govukRadios %}
+    {{ govukRadios({
+        classes: "govuk-radios--small",
+        idPrefix: "{{ markAsID }}",
+        name: "{{ markAsName }}",
+            fieldset: {
+            legend: {
+                text: "Have you done this task?",
+                isPageHeading: false,
+                classes: "govuk-fieldset__legend--m"
+            }
+        },
+        items: [
+            {
+                value: "started",
+                text: "Started"
+            },
+            {
+                value: "completed",
+                text: "Completed"
+            },
+            {
+                value: "does not apply",
+                text: "Does not apply"
+            }
+        ]
+    }) }}
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+    {{ govukButton({
+        text: "Continue"    
+    }) }}
+</form>

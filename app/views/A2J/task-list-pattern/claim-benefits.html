@@ -19,40 +19,19 @@
         <h1 class="govuk-heading-xl">Consider making a claim for benefits</h1>
         <p class="govuk-body">You should try other ways to address the problem if possible.</p>
         <h2 class="govuk-heading-m">
-            Links:
+            Get more information
         </h2>
-        <p class="govuk-body"><a class="govuk-link" href="https://www.citizensadvice.org.uk/benefits/benefits-introduction/what-benefits-can-i-get/">Claim benefits</a></p>
-        
-        <form action="./home" id="benefits-complete-form" accept-charset="UTF-8" method="post">
+        <ul class="govuk-list govuk-list--bullet">
+            <li>
+                <a class="govuk-link" href="https://www.citizensadvice.org.uk/benefits/benefits-introduction/what-benefits-can-i-get/">Claim benefits</a>
+            </li>
+        </ul>
 
-            {{ govukRadios({
-            classes: "govuk-radios--small",
-            idPrefix: "benefits-completed",
-            name: "benefits-completed",
-            fieldset: {
-                legend: {
-                text: "Have you completed this section?",
-                isPageHeading: false,
-                classes: "govuk-fieldset__legend--s"
-                }
-            },
-            items: [
-                {
-                value: "yes",
-                text: "Yes, I've completed this section"
-                },
-                {
-                value: "no",
-                text: "No, I'll come back later"
-                }
-            ]
-            }) }}
+        {{ uploadField('./resignation-upload')}}
 
-            {{ govukButton({
-                text: "Continue"    
-              }) }}
-
-        </form>
+        {{ notesField ('./resignation-notes')}}
+          
+        {{ markAs('claim-benefits-form', 'claim-benefits', 'claim-benefits')}}
     </div>
 </div>
 {% endblock %}

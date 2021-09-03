@@ -26,15 +26,16 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">Your legal action plan</h1>
+        <p class="govuk-body">Keep track of what you do by marking tasks as complete. You can also add notes and photos for reference.</p>
         <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Actions incomplete</h2>
         {% if data['try-other-mark-as'] == "done" and data['resignation-mark-as'] == "done" %}
-        <p class="govuk-body">You have completed 2 out of 4 sections.</p>
+        <p class="govuk-body">You have completed 2 tasks.</p>
         {% elif data['resignation-mark-as'] == "done" %}
-        <p class="govuk-body">You have completed 1 out of 4 sections.</p>
+        <p class="govuk-body">You have completed 1 tasks.</p>
         {% elif data['try-other-mark-as'] == "done" %}
-        <p class="govuk-body">You have completed 1 out of 4 sections.</p>
+        <p class="govuk-body">You have completed 1 tasks.</p>
         {% else %}
-        <p class="govuk-body">You have completed 0 out of 4 sections.</p>
+        <p class="govuk-body">You have completed no tasks yet.</p>
         {% endif %}
         <p class="govuk-body"><a class="govuk-link" href="#">View your completed tasks</a></p>
         <!-- Now section -->
@@ -86,6 +87,9 @@
                     </div>
                 </div>
                 {% endif %}
+                <div class="app-task-list__description">
+                    <p class="govuk-body">You should continue to work as this protects your income.  This means you should not agree to sign the resignation letter or do anything else that signals your intention to leave, eg. returning company equipment. </p>
+                </div>
               </li>
               <li class="app-task-list__item">
                 <span class="app-task-list__task-name">
@@ -115,17 +119,20 @@
                 <strong class="govuk-tag {{startedTaskTag}}">
                     Not started
                 </strong>
-            {% endif %}
-            {% if data['try-other-mark-as'] == "done" %}
-            <div class="done">
-                <div class="done__pictures">
-                    <p class="govuk-body">[3] pictures</p>
+                {% endif %}
+                {% if data['try-other-mark-as'] == "done" %}
+                <div class="done">
+                    <div class="done__pictures">
+                        <p class="govuk-body">[3] pictures</p>
+                    </div>
+                    <div class="done__notes">
+                        <p class="govuk-body">[2] notes</p>
+                    </div>
                 </div>
-                <div class="done__notes">
-                    <p class="govuk-body">[2] notes</p>
+                {% endif %}
+                <div class="app-task-list__description">
+                    <p class="govuk-body">Talk to your line manager, or someone else if you’d prefer - for example, someone from the HR department or another manager.</p>
                 </div>
-            </div>
-            {% endif %}
               </li>
             </ul>
           </li>
@@ -149,7 +156,8 @@
                             <a href="./constructive-dismissal-resign" aria-describedby="eligability-status">You could make a claim for constructive dismissal if you resigned</a>
                         </span>
                         <div class="app-task-list__description">
-                            <p class="govuk-body">You could make a claim for constructive dismissal to an employment tribunal if you resign because of a fundamental breach of your contract. Your employer may have breached an implied term of your contract.</p>
+                            <p class="govuk-body">You could make a claim for constructive dismissal to an employment tribunal if you resign because your employer broke an implied term of your contract. 
+                            </p>
                         </div>
                     </li>
                     <li class="app-task-list__item app-task-list__item--no-border-bottom">
@@ -160,7 +168,8 @@
                             <a href="./claim-unfair-dismissal" aria-describedby="eligability-status">Make a claim for unfair dismissal if you did not resign</a>
                         </span>
                         <div class="app-task-list__description">
-                            <p class="govuk-body">If you did not resign or you were told to resign or be dismissed, your employer dismissed you, you may have a claim for unfair dismissal.</p>
+                            <p class="govuk-body">If you clearly didn't resign or you were told to resign or be dismissed, you may have a claim for unfair dismissal.  
+                            </p>
                         </div>
                     </li>
                 </ul>
@@ -242,18 +251,14 @@
                         <strong class="govuk-tag govuk-tag--grey app-task-list__tag">
                            Not started
                         </strong>
+                        <div class="app-task-list__description">
+                            <p class="govuk-body">If you lose your income you may be entitled to benefits. </p>
+                        </div>
                     </li>
                 </ul>
             </li>
          </ol>
-      </div>
-      <!-- Help section -->
-      <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-m">
-            Contact an adviser
-        </h2>
-        <p class="govuk-body">You can <a class="govuk-link" href="./contact-an-adviser">contact an adviser</a> if you need further assistance.</p>
-      </div>
     </div>
+</div>
 
 {% endblock %}
