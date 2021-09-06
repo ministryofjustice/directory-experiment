@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% set serviceName = "Legal action plan" %}
+{% set nextConstructive = "true" %}
+
+{% block pageTitle %}
+  Find legal advice and support
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+    text: "Back",
+    href: "./home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">Consider applying for a Personal Independence Payment (PIP)
+    </h1>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body">You can make a new Personal Independence Payment (PIP) claim by calling the Department for Work and Pensions (DWP) on 0800 917 2222.</p>
+        <p class="govuk-body">Before you call, you will need:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>your contact details, for example telephone number</li>
+            <li>your date of birth</li>
+            <li>your National Insurance number - this is on letters about tax, pensions and benefits</li>
+            <li>your bank or building society account number and sort code</li>
+            <li>your doctor or health worker’s name, address and telephone number</li>
+            <li>dates and addresses for any time you have spent abroad, in a care home or hospital</li>
+        </ul>
+        <p class="govuk-body">You will receive an application form to complete. You can [Contact us] if you would like support with completing it.</p>
+          
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <form action="./home" id="personal-independence-payment-form" accept-charset="UTF-8" method="post">
+            {{ govukRadios({
+                classes: "govuk-radios--small",
+                idPrefix: "personal-independence-payment",
+                name: "personal-independence-payment",
+                    fieldset: {
+                    legend: {
+                        text: "Have you done this task?",
+                        isPageHeading: false,
+                        classes: "govuk-fieldset__legend--m"
+                    }
+                },
+                items: [
+                    {
+                        value: "started",
+                        text: "Started"
+                    },
+                    {
+                        value: "completed",
+                        text: "Completed"
+                    },
+                    {
+                        value: "does not apply",
+                        text: "Does not apply"
+                    }
+                ]
+            }) }}
+
+            {{ govukButton({
+                text: "Continue"    
+            }) }}
+        </form>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="app-related-items">
+          <h2 class="govuk-heading-m">Upload documents</h2>
+          <p class="govuk-body">Add photos or documents for your reference. An adviser will be able to view your documents too.</p>
+          {{ govukButton({
+            classes: "govuk-button--secondary",
+            text: "Upload documents",
+            href: "./resignation-upload"    
+          }) }}
+  
+          <h2 class="govuk-heading-m">Add notes</h2>
+          <p class="govuk-body">Record things you do and people you speak to. Your adviser will be able to view any notes you add.</p>
+            {{ govukButton({
+              text: "Add note",
+              classes: "govuk-button--secondary",
+              href: "./resignation-note"
+            }) }}
+        </div>
+    </div>
+</div>
+{% endblock %}

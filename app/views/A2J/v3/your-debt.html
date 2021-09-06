@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% set serviceName = "Legal action plan" %}
+{% set nextConstructive = "true" %}
+
+{% block pageTitle %}
+  Find legal advice and support
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+    text: "Back",
+    href: "./home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">Your priority debt is your rent arrears</h1>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body">As a first step it is important that you are able to differentiate between your priority and non-priority debts and bills. It is important to identify which debts are priorities because of the level of sanction they could invoke. A priority debt is where non-payment can result in being disconnected from fuel supplies, losing your home, being imprisoned or losing essential goods and services.</p>
+        <p class="govuk-body">We have helped you with an application for Discretionary Housing Payment. The application was submitted during the appointment and you have received a confirmation email from the council. You should be contacted in due course about any documents you may need to send them.</p>
+        <p class="govuk-body">You told us that you have a payment plan for the arrears. Universal Credit pays the rent directly to L&Q and you pay £60 fortnightly on top for the arrears and the rent shortfall (due to the bedroom tax).</p>
+        <p class="govuk-body">You find it difficult to make this payment, but you are keen to continue as you do not want the landlord to evict you. Your mother has helped you until now, but this becomes difficult for her as well.</p>  
+        <p class="govuk-body">We have highlighted the importance of maintaining an arranged payment plan as your landlord may decide to continue the process to repossess the property.</p>
+        <p class="govuk-body">The 4 stages to the process are:</p>
+        <ol class="govuk-list govuk-list--numbered">
+            <li>You get a notice</li>
+            <li>The landlord starts court action</li>
+            <li>A judge decides what happens at a review or hearing</li>
+            <li>Bailiffs can evict you if the court has ordered this</li>
+        </ol>
+        <p class="govuk-body">You will not always be evicted. The process takes time and there are things you can do at each stage to try and keep your home.</p>
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <form action="./home" id="your-debt-form" accept-charset="UTF-8" method="post">
+            {{ govukRadios({
+                classes: "govuk-radios--small",
+                idPrefix: "your-debt",
+                name: "your-debt",
+                    fieldset: {
+                    legend: {
+                        text: "Have you done this task?",
+                        isPageHeading: false,
+                        classes: "govuk-fieldset__legend--m"
+                    }
+                },
+                items: [
+                    {
+                        value: "started",
+                        text: "Started"
+                    },
+                    {
+                        value: "completed",
+                        text: "Completed"
+                    },
+                    {
+                        value: "does not apply",
+                        text: "Does not apply"
+                    }
+                ]
+            }) }}
+
+            {{ govukButton({
+                text: "Continue"    
+            }) }}
+        </form>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="app-related-items">
+          <h2 class="govuk-heading-m">Upload documents</h2>
+          <p class="govuk-body">Add photos or documents for your reference. An adviser will be able to view your documents too.</p>
+          {{ govukButton({
+            classes: "govuk-button--secondary",
+            text: "Upload documents",
+            href: "./resignation-upload"    
+          }) }}
+  
+          <h2 class="govuk-heading-m">Add notes</h2>
+          <p class="govuk-body">Record things you do and people you speak to. Your adviser will be able to view any notes you add.</p>
+            {{ govukButton({
+              text: "Add note",
+              classes: "govuk-button--secondary",
+              href: "./resignation-note"
+            }) }}
+        </div>
+    </div>
+</div>
+{% endblock %}

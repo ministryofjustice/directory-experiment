@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% set serviceName = "Legal action plan" %}
+{% set nextConstructive = "true" %}
+
+{% block pageTitle %}
+  Find legal advice and support
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+    text: "Back",
+    href: "./home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">Contact Thames Water and find out the amount of your debt and monthly bill</h1>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body">We have advised you about the new scheme Thames Water has in place to help customers pay their debt.</p>
+        <p class="govuk-body">The name of the scheme is Customer Assistance Fund and if you qualify, they will match any money you pay towards your water debt, pound for pound.</p>
+        <p class="govuk-body">You will need to pay your current water bills, as well as making an affordable payment towards your debt each month.</p>
+        <p class="govuk-body">If you maintain regular payments for two years, they will pay off any remaining outstanding debt at the end of the scheme. It is a long-term commitment on both sides, but they hope that by making smaller regular contributions, you will be free of water debt after two years and your water bills will be more affordable going forward.</p>
+        <p class="govuk-body">To qualify, you will need to:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>have at least £120 outstanding debt on previous bills (dated before 1 April 2020)</li>
+            <li>be responsible for your own water bills rather than them being paid by a landlord, housing association or someone else</li>
+            <li>have an active Thames Water account, receiving bills from them on an ongoing basis</li>
+            <li>be able to afford your current and future bills and pay them by Direct Debit</li>
+            <li>commit to making contributions of at least £5 per month towards your debt over the next two years</li>
+            <li>be willing to share your income and outgoings so they can assess your ability to pay</li>
+            <li>consent to your data being used for checks or to place you on other financial schemes that help reduce bills.</li>
+        </ul>
+        <p class="govuk-body">We will help you with making the application. Contact us to set up an appointment.</p>
+          
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <form action="./home-v2" id="thames-water-debt-form" accept-charset="UTF-8" method="post">
+            {{ govukRadios({
+                classes: "govuk-radios--small",
+                idPrefix: "thames-water-debt",
+                name: "thames-water-debt",
+                    fieldset: {
+                    legend: {
+                        text: "Have you done this task?",
+                        isPageHeading: false,
+                        classes: "govuk-fieldset__legend--m"
+                    }
+                },
+                items: [
+                    {
+                        value: "started",
+                        text: "Started"
+                    },
+                    {
+                        value: "completed",
+                        text: "Completed"
+                    },
+                    {
+                        value: "does not apply",
+                        text: "Does not apply"
+                    }
+                ]
+            }) }}
+
+            {{ govukButton({
+                text: "Continue"    
+            }) }}
+        </form>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="app-related-items">
+          <h2 class="govuk-heading-m">Upload documents</h2>
+          <p class="govuk-body">Add photos or documents for your reference. An adviser will be able to view your documents too.</p>
+          {{ govukButton({
+            classes: "govuk-button--secondary",
+            text: "Upload documents",
+            href: "./resignation-upload"    
+          }) }}
+  
+          <h2 class="govuk-heading-m">Add notes</h2>
+          <p class="govuk-body">Record things you do and people you speak to. Your adviser will be able to view any notes you add.</p>
+            {{ govukButton({
+              text: "Add note",
+              classes: "govuk-button--secondary",
+              href: "./resignation-note"
+            }) }}
+        </div>
+    </div>
+</div>
+{% endblock %}
