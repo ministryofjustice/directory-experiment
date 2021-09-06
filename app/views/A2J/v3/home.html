@@ -40,26 +40,27 @@
         <p class="govuk-body"><a class="govuk-link" href="#">View your completed tasks</a></p>
         <!-- Now section -->
         <ol class="app-task-list govuk-!-margin-top-8">
-          <li>
-            <h2 class="app-task-list__section">
-              Your tasks
-            </h2>
-            <ul class="app-task-list__items no-padding-left">
-              <li class="app-task-list__item">
-                <span class="app-task-list__task-name">
-                  <a href="./water-help-scheme" aria-describedby="eligability-status">Apply to the Water Help Scheme</a>
-                </span>
-                {% if data['water-help-scheme'] == "started" %}
+            <li>
+                <h2 class="app-task-list__section">
+                Your tasks
+                </h2>
+                <ul class="app-task-list__items no-padding-left">
+                    <li class="app-task-list__item">
+                        <span class="app-task-list__task-name">
+                        <a href="./water-help-scheme" aria-describedby="eligability-status">Apply to the Water Help Scheme</a>
+                        </span>
+                    </span>
+                    {% if data['water-help-scheme'] == "started" %}
                     <strong class="govuk-tag {{startedTaskTag}}">
                         Started
                     </strong>
 
-                    {% elif data['water-help-scheme'] == "completed" %}
-                    <strong class="govuk-tag  {{preferTaskTag}}">
-                        Completed
+                    {% elif data['water-help-scheme'] == "does not apply" %}
+                    <strong class="govuk-tag  {{notTaskTag}}">
+                        Does not apply
                     </strong>
 
-                    {% elif data['water-help-scheme'] == "does not apply" %}
+                    {% elif data['water-help-scheme'] == "completed" %}
                     <strong class="govuk-tag  {{doneTaskTag}}">
                         Completed
                     </strong>
@@ -68,71 +69,92 @@
                     <strong class="govuk-tag {{notStartedTaskTag}}">
                         Not started
                     </strong>
-
-                {% endif %}
-                {% if data['water-help-scheme'] == "completed" %}
-                <div class="done">
-                    <div class="done__pictures">
-                        <p class="govuk-body">[3] pictures</p>
+                    {% endif %}
+                    <div class="app-task-list__description">
+                        <p class="govuk-body">We discussed making an application for Water Help Scheme to get up to 50% reduction on your water bill.</p>
                     </div>
-                    <div class="done__notes">
-                        <p class="govuk-body">[2] notes</p>
-                    </div>
-                </div>
-                {% endif %}
-                <div class="app-task-list__description">
-                    <p class="govuk-body">We discussed making an application for Water Help Scheme to get up to 50% reduction on your water bill.</p>
-                </div>
-              </li>
-              <li class="app-task-list__item">
-                <span class="app-task-list__task-name">
-                  <a href="./thames-water-debt" aria-describedby="read-declaration-status">Contact Thames Water and find out the amount of your debt and monthly bill</a>
-                </span>
-                {% if data['thames-water-debt'] == "started" %}
-                <strong class="govuk-tag {{startedTaskTag}}">
-                    Started
-                </strong>
-
-                {% elif data['thames-water-debt'] == "does not apply" %}
-                <strong class="govuk-tag  {{doneTaskTag}}">
-                    Completed
-                </strong>
-
-                {% else %}
-                <strong class="govuk-tag {{notStartedTaskTag}}">
+                </li>
+                <li class="app-task-list__item">
+                    <span class="app-task-list__task-name">
+                    <a href="./thames-water-debt" aria-describedby="read-declaration-status">Contact Thames Water and find out the amount of your debt and monthly bill</a>
+                    </span>
+                    {% if data['thames-water-debt'] == "started" %}
+                    <strong class="govuk-tag {{startedTaskTag}}">
+                        Started
+                    </strong>
+                    {% elif data['thames-water-debt'] == "does not apply" %}
+                    <strong class="govuk-tag  {{notTaskTag}}">
+                        Does not apply
+                    </strong>
+                    {% elif data['thames-water-debt'] == "completed" %}
+                    <strong class="govuk-tag  {{doneTaskTag}}">
+                        Completed
+                    </strong>
+                    {% else %}
+                    <strong class="govuk-tag {{notStartedTaskTag}}">
                     Not started
-                </strong>
-                {% endif %}
-                {% if data['try-other-ways'] == "completed" %}
-                <div class="done">
-                    <div class="done__pictures">
-                        <p class="govuk-body">[3] pictures</p>
+                    </strong>
+                    {% endif %}
+                    <div class="app-task-list__description">
+                        <p class="govuk-body">We have advised you about the new scheme Thames Water has in place to help customers pay their debt.</p>
                     </div>
-                    <div class="done__notes">
-                        <p class="govuk-body">[2] notes</p>
+                </li>
+                <li class="app-task-list__item">
+                    <span class="app-task-list__task-name">
+                        <a href="./warm-home-discount" aria-describedby="eligability-status">Register interest for the Warm Home Discount scheme</a>
+                    </span>
+                    {% if data['warm-home-discount'] == "started" %}
+                    <strong class="govuk-tag {{startedTaskTag}}">
+                        Started
+                    </strong>
+
+                    {% elif data['warm-home-discount'] == "does not apply" %}
+                    <strong class="govuk-tag  {{notTaskTag}}">
+                        Does not apply
+                    </strong>
+
+                    {% elif data['warm-home-discount'] == "completed" %}
+                    <strong class="govuk-tag  {{doneTaskTag}}">
+                        Completed
+                    </strong>
+
+                    {% else %}
+                    <strong class="govuk-tag {{notStartedTaskTag}}">
+                        Not started
+                    </strong>
+                    {% endif %}
+                    <div class="app-task-list__description">
+                        <p class="govuk-body">Blank description</p>
                     </div>
-                </div>
-                {% endif %}
-                <div class="app-task-list__description">
-                    <p class="govuk-body">We have advised you about the new scheme Thames Water has in place to help customers pay their debt.</p>
-                </div>
-              </li>
-              <li class="app-task-list__item">
-                <span class="app-task-list__task-name">
-                    <a href="./warm-home-discount" aria-describedby="eligability-status">Register interest for the Warm Home Discount scheme</a>
-                </span>
-                <div class="app-task-list__description">
-                    <p class="govuk-body">Blank description</p>
-                </div>
-            </li>
-            <li class="app-task-list__item">
-                <span class="app-task-list__task-name">
-                    <a href="./personal-independent-payment" aria-describedby="eligability-status">Consider applying for a Personal Independence Payment (PIP)</a>
-                </span>
-                <div class="app-task-list__description">
-                    <p class="govuk-body">You told us that you have a health condition that affects your daily living.</p>
-                </div>
-            </li>
+                </li>
+                <li class="app-task-list__item">
+                    <span class="app-task-list__task-name">
+                        <a href="./personal-independent-payment" aria-describedby="eligability-status">Consider applying for a Personal Independence Payment (PIP)</a>
+                    </span>
+                    {% if data['personal-independent-payment'] == "started" %}
+                    <strong class="govuk-tag {{startedTaskTag}}">
+                        Started
+                    </strong>
+
+                    {% elif data['personal-independent-payment'] == "does not apply" %}
+                    <strong class="govuk-tag  {{notTaskTag}}">
+                        Does not apply
+                    </strong>
+
+                    {% elif data['personal-independent-payment'] == "completed" %}
+                    <strong class="govuk-tag  {{doneTaskTag}}">
+                        Completed
+                    </strong>
+
+                    {% else %}
+                    <strong class="govuk-tag {{notStartedTaskTag}}">
+                        Not started
+                    </strong>
+                    {% endif %}
+                    <div class="app-task-list__description">
+                        <p class="govuk-body">You told us that you have a health condition that affects your daily living.</p>
+                    </div>
+                </li>
             </ul>
           </li>
         </ol>
@@ -152,25 +174,20 @@
                             Started
                         </strong>
         
+                        {% elif data['your-debt'] == "does not apply" %}
+                        <strong class="govuk-tag  {{notTaskTag}}">
+                            Does not apply
+                        </strong>
+        
                         {% elif data['your-debt'] == "completed" %}
                         <strong class="govuk-tag  {{doneTaskTag}}">
                             Completed
                         </strong>
         
                         {% else %}
-                        <strong class="govuk-tag {{notTaskTag}}">
-                            Does not apply
+                        <strong class="govuk-tag {{notStartedTaskTag}}">
+                            Not started
                         </strong>
-                        {% endif %}
-                        {% if data['your-debt'] == "completed" %}
-                        <div class="done">
-                            <div class="done__pictures">
-                                <p class="govuk-body">[3] pictures</p>
-                            </div>
-                            <div class="done__notes">
-                                <p class="govuk-body">[2] notes</p>
-                            </div>
-                        </div>
                         {% endif %}
                         <div class="app-task-list__description">
                             <p class="govuk-body">We have helped you with an application for Discretionary Housing Payment.</p>
@@ -185,14 +202,19 @@
                             Started
                         </strong>
         
+                        {% elif data['water-arrears'] == "does not apply" %}
+                        <strong class="govuk-tag  {{notTaskTag}}">
+                            Does not apply
+                        </strong>
+        
                         {% elif data['water-arrears'] == "completed" %}
                         <strong class="govuk-tag  {{doneTaskTag}}">
                             Completed
                         </strong>
         
                         {% else %}
-                        <strong class="govuk-tag {{notTaskTag}}">
-                            Does not apply
+                        <strong class="govuk-tag {{notStartedTaskTag}}">
+                            Not started
                         </strong>
                         {% endif %}
                         {% if data['water-arrears'] == "completed" %}
