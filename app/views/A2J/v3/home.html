@@ -55,14 +55,20 @@
                     </strong>
 
                     {% elif data['water-help-scheme'] == "completed" %}
+                    <strong class="govuk-tag  {{preferTaskTag}}">
+                        Completed
+                    </strong>
+
+                    {% elif data['water-help-scheme'] == "does not apply" %}
                     <strong class="govuk-tag  {{doneTaskTag}}">
                         Completed
                     </strong>
 
                     {% else %}
-                    <strong class="govuk-tag {{notTaskTag}}">
-                        Does not apply
+                    <strong class="govuk-tag {{notStartedTaskTag}}">
+                        Not started
                     </strong>
+
                 {% endif %}
                 {% if data['water-help-scheme'] == "completed" %}
                 <div class="done">
@@ -87,14 +93,14 @@
                     Started
                 </strong>
 
-                {% elif data['thames-water-debt'] == "completed" %}
+                {% elif data['thames-water-debt'] == "does not apply" %}
                 <strong class="govuk-tag  {{doneTaskTag}}">
                     Completed
                 </strong>
 
                 {% else %}
-                <strong class="govuk-tag {{notTaskTag}}">
-                    Does not apply
+                <strong class="govuk-tag {{notStartedTaskTag}}">
+                    Not started
                 </strong>
                 {% endif %}
                 {% if data['try-other-ways'] == "completed" %}
