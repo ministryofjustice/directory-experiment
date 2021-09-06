@@ -16,7 +16,9 @@
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Don't sign the resignation letter</h1>
+      <h1 class="govuk-heading-xl">Don't sign the resignation letter</h1>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
         {{ govukInsetText({
           text: "You can keep track of your progress by marking this task as completed when it is done."
         }) }}
@@ -25,10 +27,6 @@
         <p class="govuk-body">As you don't have a written contract, you would only need to give one week's notice although your employer indicted you would get two weeks. Normally, constructive dismissal requires a resignation. Working your notice period may be detrimental to your claim. </p>
         <h2 class="govuk-heading-m">If you need more help with this task</h2>
         <p class="govuk-body">You can <a class="govuk-link" href="./contact-an-adviser/contact-an-adviser">contact the advice organisation that set up this plan</a> for you for more help.</p>
-        
-        {{ uploadField('./resignation-upload') }}
-
-        {{ notesField ('./resignation-notes') }}
           
         <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
@@ -64,7 +62,25 @@
                 text: "Continue"    
             }) }}
         </form>
-
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="app-related-items">
+          <h2 class="govuk-heading-m">Upload documents</h2>
+          <p class="govuk-body">Add photos or documents for your reference. An adviser will be able to view your documents too.</p>
+          {{ govukButton({
+            classes: "govuk-button--secondary",
+            text: "Upload documents",
+            href: "./resignation-upload"    
+          }) }}
+  
+          <h2 class="govuk-heading-m">Add notes</h2>
+          <p class="govuk-body">Record things you do and people you speak to. Your adviser will be able to view any notes you add.</p>
+            {{ govukButton({
+              text: "Add note",
+              classes: "govuk-button--secondary",
+              href: "./resignation-note"
+            }) }}
+        </div>
     </div>
 </div>
 {% endblock %}

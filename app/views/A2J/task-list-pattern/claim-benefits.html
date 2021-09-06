@@ -17,6 +17,8 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">Consider making a claim for benefits</h1>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
         <p class="govuk-body">You should try other ways to address the problem if possible.</p>
         <h2 class="govuk-heading-m">
             Get more information
@@ -26,11 +28,9 @@
                 <a class="govuk-link" href="https://www.citizensadvice.org.uk/benefits/benefits-introduction/what-benefits-can-i-get/">Claim benefits</a>
             </li>
         </ul>
-
-        {{ uploadField('./resignation-upload')}}
-
-        {{ notesField ('./resignation-notes')}}
           
+        <h2 class="govuk-heading-m">If you need more help with this task</h2>
+        <p class="govuk-body">You can <a class="govuk-link" href="#"> contact the advice organisation that set up this plan</a> for you for more help.</p>
         <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
         <form action="./home-v2" id="claim-benefits-form" accept-charset="UTF-8" method="post">
@@ -65,6 +65,26 @@
                 text: "Continue"    
             }) }}
         </form>
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+        <div class="app-related-items">
+            <h2 class="govuk-heading-m">Upload documents</h2>
+            <p class="govuk-body">Add photos or documents for your reference. An adviser will be able to view your documents too.</p>
+            {{ govukButton({
+              classes: "govuk-button--secondary",
+              text: "Upload documents",
+              href: "./resignation-upload"    
+            }) }}
+    
+            <h2 class="govuk-heading-m">Add notes</h2>
+            <p class="govuk-body">Record things you do and people you speak to. Your adviser will be able to view any notes you add.</p>
+              {{ govukButton({
+                text: "Add note",
+                classes: "govuk-button--secondary",
+                href: "./resignation-note"
+              }) }}
+        </div>
     </div>
 </div>
 {% endblock %}

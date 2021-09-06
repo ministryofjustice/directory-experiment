@@ -15,8 +15,10 @@
 
 {% block content %}
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full">
         <h1 class="govuk-heading-xl">Make a claim for unfair dismissal if you didn't resign</h1>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
         <p class="govuk-body">You would be entitled to all the protections from unfair dismissal due to your length of service. As you have worked for over two years, your employer would need to show you have dismissed for a fair reason. It isn't black and white and will depend on your individual circumstances.</p>
         <p class="govuk-body">They would also be required to follow the correct dismissal process.</p>
         <h2 class="govuk-heading-m">Actions</h2>
@@ -36,9 +38,6 @@
             <a class="govuk-link" href="https://www.citizensadvice.org.uk/work/leaving-a-job/resigning/deciding-whether-to-resign">Citizens advice</a>
           </li>
         </ul>
-        {{ uploadField('./resignation-upload')}}
-
-        {{ notesField ('./resignation-notes')}}
           
         <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
@@ -75,5 +74,24 @@
             }) }}
         </form>
     </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="app-related-items">
+          <h2 class="govuk-heading-m">Upload documents</h2>
+          <p class="govuk-body">Add photos or documents for your reference. An adviser will be able to view your documents too.</p>
+          {{ govukButton({
+            classes: "govuk-button--secondary",
+            text: "Upload documents",
+            href: "./resignation-upload"    
+          }) }}
+  
+          <h2 class="govuk-heading-m">Add notes</h2>
+          <p class="govuk-body">Record things you do and people you speak to. Your adviser will be able to view any notes you add.</p>
+            {{ govukButton({
+              text: "Add note",
+              classes: "govuk-button--secondary",
+              href: "./resignation-note"
+            }) }}
+      </div>
+  </div>
 </div>
 {% endblock %}
