@@ -27,7 +27,6 @@
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">Your legal action plan</h1>
         <p class="govuk-body">Keep track of what you do by marking tasks as complete. You can also add notes and photos for reference.</p>
-        <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Actions incomplete</h2>
         {% if data['try-other-mark-as'] == "done" and data['resignation-mark-as'] == "done" %}
         <p class="govuk-body">You have completed 2 tasks.</p>
         {% elif data['resignation-mark-as'] == "done" %}
