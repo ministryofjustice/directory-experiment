@@ -27,12 +27,20 @@
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">Your advice action plan</h1>
         <p class="govuk-body">Keep track of what you do by marking tasks as complete. You can also add notes and photos for reference.</p>
-        {% if data['try-other-mark-as'] == "done" and data['resignation-mark-as'] == "done" %}
-        <p class="govuk-body">You have completed 2 tasks.</p>
-        {% elif data['resignation-mark-as'] == "done" %}
-        <p class="govuk-body">You have completed 1 tasks.</p>
-        {% elif data['try-other-mark-as'] == "done" %}
-        <p class="govuk-body">You have completed 1 tasks.</p>
+        {% if data['small-claim'] == "completed" and data['home-choice'] == "completed" %}
+        <p class="govuk-body">You have <a class="govuk-link" href="#">completed 2 tasks</a>.</p>
+        {% elif data['small-claim'] == "completed" and data['apply-for-pip'] == "completed" %}
+        <p class="govuk-body">You have <a class="govuk-link" href="#">completed 2 tasks</a>.</p>
+        {% elif data['small-claim'] == "completed" and data['universal-credit'] == "completed" %}
+        <p class="govuk-body">You have <a class="govuk-link" href="#">completed 2 tasks</a>.</p>
+        {% elif data['small-claim'] == "completed" %}
+        <p class="govuk-body">You have <a class="govuk-link" href="#">completed 1 task</a>.</p>
+        {% elif data['home-choice'] == "completed" %}
+        <p class="govuk-body">You have <a class="govuk-link" href="#">completed 1 task</a>.</p>
+        {% elif data['apply-for-pip'] == "completed" %}
+        <p class="govuk-body">You have <a class="govuk-link" href="#">completed 1 task</a>.</p>
+        {% elif data['universal-credit'] == "completed" %}
+        <p class="govuk-body">You have <a class="govuk-link" href="#">completed 1 task</a>.</p>
         {% else %}
         <p class="govuk-body">You have completed no tasks yet.</p>
         {% endif %}
