@@ -19,9 +19,6 @@
       <h1 class="govuk-heading-xl">Try other ways to resolve issues with your employer</h1>
     </div>
     <div class="govuk-grid-column-two-thirds">
-        {{ govukInsetText({
-          text: "You can keep track of your progress by marking this task as completed when it is done."
-        }) }}
 
         <p class="govuk-body">Talk to your line manager, or someone else if you’d prefer - for example, someone from the HR department or another manager. Arrange a meeting with them so you won’t be disturbed.</p>
         <p class="govuk-body">You can ask if someone can go to the meeting with you if you don’t feel able to go on your own. This could be a friend, colleague or your union rep. Your employer doesn’t have to agree to this, though.</p>
@@ -52,6 +49,9 @@
                         isPageHeading: false,
                         classes: "govuk-fieldset__legend--m"
                     }
+                },
+                hint: {
+                text: "Mark it as completed, or remove it from your tasks if it does not apply to your situation."
                 },
                 items: [
                     {

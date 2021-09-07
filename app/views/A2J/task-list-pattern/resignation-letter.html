@@ -19,9 +19,6 @@
       <h1 class="govuk-heading-xl">Don't sign the resignation letter</h1>
     </div>
     <div class="govuk-grid-column-two-thirds">
-        {{ govukInsetText({
-          text: "You can keep track of your progress by marking this task as completed when it is done."
-        }) }}
         <p class="govuk-body">You should continue to work as this protects your income. This means you should not sign the resignation letter or do anything else that signals your intention to leave, e.g. returning company equipment.</p>
         <p class="govuk-body">If your employer has told you they'll dimiss you if you don't resign, this counts as a dismissal. If they're treating you badling in order to make you resign, it could be constructive dismissal.</p>
         <p class="govuk-body">As you don't have a written contract, you would only need to give one week's notice although your employer indicted you would get two weeks. Normally, constructive dismissal requires a resignation. Working your notice period may be detrimental to your claim. </p>
@@ -41,6 +38,9 @@
                         isPageHeading: false,
                         classes: "govuk-fieldset__legend--m"
                     }
+                },
+                hint: {
+                text: "Mark it as completed, or remove it from your tasks if it does not apply to your situation."
                 },
                 items: [
                     {
