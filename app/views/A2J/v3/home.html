@@ -4,7 +4,7 @@
 
 ## task list tag 
 {% set notStartedTaskTag = "govuk-tag--grey app-task-list__tag" %}
-{% set startedTaskTag = "govuk-tag--grey app-task-list__tag" %}
+{% set startedTaskTag = "govuk-tag--yellow app-task-list__tag" %}
 {% set doneTaskTag = "app-task-list__tag" %}
 {% set notTaskTag = "govuk-tag--red app-task-list__tag" %}
 {% set preferTaskTag = "govuk-tag--grey app-task-list__tag" %}
@@ -25,7 +25,7 @@
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Your legal action plan</h1>
+        <h1 class="govuk-heading-xl">Your advice action plan</h1>
         <p class="govuk-body">Keep track of what you do by marking tasks as complete. You can also add notes and photos for reference.</p>
         {% if data['try-other-mark-as'] == "done" and data['resignation-mark-as'] == "done" %}
         <p class="govuk-body">You have completed 2 tasks.</p>

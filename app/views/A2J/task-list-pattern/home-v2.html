@@ -4,7 +4,7 @@
 
 ## task list tag 
 {% set notStartedTaskTag = "govuk-tag--grey app-task-list__tag" %}
-{% set startedTaskTag = "govuk-tag--grey app-task-list__tag" %}
+{% set startedTaskTag = "govuk-tag--yellow app-task-list__tag" %}
 {% set doneTaskTag = "app-task-list__tag" %}
 {% set notTaskTag = "govuk-tag--red app-task-list__tag" %}
 {% set preferTaskTag = "govuk-tag--grey app-task-list__tag" %}
@@ -18,20 +18,27 @@
         text: "Back",
         href: "../you-told-us"
     }) }}
-
 {% endblock %}
 
 {% block content %}
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Your legal action plan</h1>
+        <h1 class="govuk-heading-xl">Your advice action plan</h1>
         <p class="govuk-body">Keep track of what you do by marking tasks as complete. You can also add notes and photos for reference.</p>
-        {% if data['try-other-mark-as'] == "done" and data['resignation-mark-as'] == "done" %}
+        {% if data['resignation-letter'] == "completed" and data['try-other-ways'] == "completed" %}
         <p class="govuk-body">You have completed 2 tasks.</p>
-        {% elif data['resignation-mark-as'] == "done" %}
+        {% elif data['resignation-letter'] == "completed" and data['constructive-dismissal'] == "completed" %}
+        <p class="govuk-body">You have completed 2 tasks.</p>
+        {% elif data['resignation-letter'] == "completed" and data['unfair-dismissal'] == "completed" %}
+        <p class="govuk-body">You have completed 2 tasks.</p>
+        {% elif data['resignation-letter'] == "completed" %}
         <p class="govuk-body">You have completed 1 tasks.</p>
-        {% elif data['try-other-mark-as'] == "done" %}
+        {% elif data['try-other-ways'] == "completed" %}
+        <p class="govuk-body">You have completed 1 tasks.</p>
+        {% elif data['constructive-dismissal'] == "completed" %}
+        <p class="govuk-body">You have completed 1 tasks.</p>
+        {% elif data['unfair-dismissal'] == "completed" %}
         <p class="govuk-body">You have completed 1 tasks.</p>
         {% else %}
         <p class="govuk-body">You have completed no tasks yet.</p>
