@@ -27,7 +27,6 @@
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">Your legal action plan</h1>
         <p class="govuk-body">Keep track of what you do by marking tasks as complete. You can also add notes and photos for reference.</p>
-        <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Actions incomplete</h2>
         {% if data['try-other-mark-as'] == "done" and data['resignation-mark-as'] == "done" %}
         <p class="govuk-body">You have completed 2 tasks.</p>
         {% elif data['resignation-mark-as'] == "done" %}
@@ -50,29 +49,24 @@
                   <a href="./resignation-letter" aria-describedby="eligability-status">Do not sign the resignation letter</a>
                 </span>
                 {% if data['resignation-letter'] == "started" %}
-                    <strong class="govuk-tag {{startedTaskTag}}">
-                        Started
-                    </strong>
+                <strong class="govuk-tag {{startedTaskTag}}">
+                    Started
+                </strong>
 
-                    {% elif data['resignation-letter'] == "completed" %}
-                    <strong class="govuk-tag  {{doneTaskTag}}">
-                        Completed
-                    </strong>
+                {% elif data['resignation-letter'] == "does not apply" %}
+                <strong class="govuk-tag  {{notTaskTag}}">
+                    Does not apply
+                </strong>
 
-                    {% else %}
-                    <strong class="govuk-tag {{notTaskTag}}">
-                        Does not apply
-                    </strong>
-                {% endif %}
-                {% if data['resignation-letter'] == "completed" %}
-                <div class="done">
-                    <div class="done__pictures">
-                        <p class="govuk-body">[3] pictures</p>
-                    </div>
-                    <div class="done__notes">
-                        <p class="govuk-body">[2] notes</p>
-                    </div>
-                </div>
+                {% elif data['resignation-letter'] == "completed" %}
+                <strong class="govuk-tag  {{doneTaskTag}}">
+                    Completed
+                </strong>
+
+                {% else %}
+                <strong class="govuk-tag {{notStartedTaskTag}}">
+                    Not started
+                </strong>
                 {% endif %}
                 <div class="app-task-list__description">
                     <p class="govuk-body">You should continue to work as this protects your income.  This means you should not agree to sign the resignation letter or do anything else that signals your intention to leave, eg. returning company equipment. </p>
@@ -87,25 +81,20 @@
                     Started
                 </strong>
 
+                {% elif data['try-other-ways'] == "does not apply" %}
+                <strong class="govuk-tag  {{notTaskTag}}">
+                    Does not apply
+                </strong>
+
                 {% elif data['try-other-ways'] == "completed" %}
                 <strong class="govuk-tag  {{doneTaskTag}}">
                     Completed
                 </strong>
 
                 {% else %}
-                <strong class="govuk-tag {{notTaskTag}}">
-                    Does not apply
+                <strong class="govuk-tag {{notStartedTaskTag}}">
+                    Not started
                 </strong>
-                {% endif %}
-                {% if data['try-other-ways'] == "completed" %}
-                <div class="done">
-                    <div class="done__pictures">
-                        <p class="govuk-body">[3] pictures</p>
-                    </div>
-                    <div class="done__notes">
-                        <p class="govuk-body">[2] notes</p>
-                    </div>
-                </div>
                 {% endif %}
                 <div class="app-task-list__description">
                     <p class="govuk-body">Talk to your line manager, or someone else if you’d prefer - for example, someone from the HR department or another manager.</p>
@@ -115,6 +104,26 @@
                 <span class="app-task-list__task-name">
                     <a href="./constructive-dismissal-resign" aria-describedby="eligability-status">Make a claim for constructive dismissal if you resign</a>
                 </span>
+                {% if data['constructive-dismissal'] == "started" %}
+                <strong class="govuk-tag {{startedTaskTag}}">
+                    Started
+                </strong>
+
+                {% elif data['constructive-dismissal'] == "does not apply" %}
+                <strong class="govuk-tag  {{notTaskTag}}">
+                    Does not apply
+                </strong>
+
+                {% elif data['constructive-dismissal'] == "completed" %}
+                <strong class="govuk-tag  {{doneTaskTag}}">
+                    Completed
+                </strong>
+
+                {% else %}
+                <strong class="govuk-tag {{notStartedTaskTag}}">
+                    Not started
+                </strong>
+                {% endif %}
                 <div class="app-task-list__description">
                     <p class="govuk-body">You could make a claim for constructive dismissal to an employment tribunal if you resign because your employer broke an implied term of your contract. 
                     </p>
@@ -182,16 +191,6 @@
                         <strong class="govuk-tag {{notStartedTaskTag}}">
                             Not started
                         </strong>
-                        {% endif %}
-                        {% if data['claim-benefits'] == "completed" %}
-                        <div class="done">
-                            <div class="done__pictures">
-                                <p class="govuk-body">[3] pictures</p>
-                            </div>
-                            <div class="done__notes">
-                                <p class="govuk-body">[2] notes</p>
-                            </div>
-                        </div>
                         {% endif %}
                         <div class="app-task-list__description">
                             <p class="govuk-body">If you lose your income you may be entitled to benefits. </p>
