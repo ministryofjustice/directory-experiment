@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% set serviceName = "Legal action plan" %}
+{% set serviceName = "Your advice action plan" %}
 {% set nextConstructive = "true" %}
 
 {% block pageTitle %}
@@ -26,11 +26,11 @@
           
         <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-        <form action="./home" id="personal-independence-payment-form" accept-charset="UTF-8" method="post">
+        <form action="./home" id="apply-for-pip-form" accept-charset="UTF-8" method="post">
             {{ govukRadios({
                 classes: "govuk-radios--small",
-                idPrefix: "personal-independence-payment",
-                name: "personal-independence-payment",
+                idPrefix: "apply-for-pip",
+                name: "apply-for-pip",
                     fieldset: {
                     legend: {
                         text: "Have you done this task?",
