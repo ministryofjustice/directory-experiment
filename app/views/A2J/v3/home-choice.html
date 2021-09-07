@@ -17,30 +17,19 @@
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      <h1 class="govuk-heading-xl">Your priority debt is your rent arrears</h1>
+      <h1 class="govuk-heading-xl">Contact North Yorkshire Homes Choice Team to find out about moving costs</h1>
     </div>
     <div class="govuk-grid-column-two-thirds">
-        <p class="govuk-body">As a first step it is important that you are able to differentiate between your priority and non-priority debts and bills. It is important to identify which debts are priorities because of the level of sanction they could invoke. A priority debt is where non-payment can result in being disconnected from fuel supplies, losing your home, being imprisoned or losing essential goods and services.</p>
-        <p class="govuk-body">We have helped you with an application for Discretionary Housing Payment. The application was submitted during the appointment and you have received a confirmation email from the council. You should be contacted in due course about any documents you may need to send them.</p>
-        <p class="govuk-body">You told us that you have a payment plan for the arrears. Universal Credit pays the rent directly to L&Q and you pay £60 fortnightly on top for the arrears and the rent shortfall (due to the bedroom tax).</p>
-        <p class="govuk-body">You find it difficult to make this payment, but you are keen to continue as you do not want the landlord to evict you. Your mother has helped you until now, but this becomes difficult for her as well.</p>  
-        <p class="govuk-body">We have highlighted the importance of maintaining an arranged payment plan as your landlord may decide to continue the process to repossess the property.</p>
-        <p class="govuk-body">The 4 stages to the process are:</p>
-        <ol class="govuk-list govuk-list--numbered">
-            <li>You get a notice</li>
-            <li>The landlord starts court action</li>
-            <li>A judge decides what happens at a review or hearing</li>
-            <li>Bailiffs can evict you if the court has ordered this</li>
-        </ol>
-        <p class="govuk-body">You will not always be evicted. The process takes time and there are things you can do at each stage to try and keep your home.</p>
-
+        <p class="govuk-body">You have completed an application for North Yorkshire Homes Choice. After your application is processed you should be allocated a banding based on your need. This determines the priority of your application. Should you be accepted, you will be able to search for and bid on properties.</p>
+        <p class="govuk-body">You queried whether there would be any associated moving costs such as a deposit or rent in advance. We advised that this will be dependent on the landlord or Housing Association which owns the property. We advise that you contact the Homes Choice Team through Broadacres on 01609 767 900 to discuss this.</p>
+        <p class="govuk-body">Some local authorities run a deposit bond scheme whereby they will pay the deposit on the property which is then repaid by the tenant over a period. Should you secure a property which requires a deposit you should speak to the relevant local authority about any schemes they offer.</p>
         <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-        <form action="./home" id="your-debt-form" accept-charset="UTF-8" method="post">
+        <form action="./home" id="home-choice-form" accept-charset="UTF-8" method="post">
             {{ govukRadios({
                 classes: "govuk-radios--small",
-                idPrefix: "your-debt",
-                name: "your-debt",
+                idPrefix: "home-choice",
+                name: "home-choice",
                     fieldset: {
                     legend: {
                         text: "Have you done this task?",

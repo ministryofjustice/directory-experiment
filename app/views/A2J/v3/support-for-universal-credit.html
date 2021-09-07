@@ -17,19 +17,21 @@
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      <h1 class="govuk-heading-xl">Register interest for the Warm Home Discount scheme</h1>
+      <h1 class="govuk-heading-xl">Understanding what support is available within Universal Credit should you start renting</h1>
     </div>
     <div class="govuk-grid-column-two-thirds">
-        <p class="govuk-body">Your supplier might be on this scheme to support their customers on low income to receive a credit of £140 on their bill for winter 2021-2022.</p>
-        <p class="govuk-body">Please visit their website to register your interest<./p>
-          
+        <p class="govuk-body">In social housing, the amount you receive is worked out based on how many bedrooms you are entitled to minus any deductions for non-dependents any over-occupancy (bedroom tax). As a single person, you would be entitled to 1 bedroom. You can be entitled to 2 bedrooms if you need the extra bedroom for an overnight carer if they say regularly overnight providing, they do not live there permanently. The person needing care usually must be receiving PIP. However, this is not mandatory.</p>
+        <p class="govuk-body">If you live in a 2-bedroom social housing bedroom property and are deemed to be allowed 2 bedrooms for benefit purposes, you will receive all your rent paid within Universal Credit property. You can ask this to be paid directly to your landlord through an alternative payment arrangement if you wish.</p>
+        <p class="govuk-body">Should you secure accommodation, you should report the change of circumstance on your Universal Credit account as soon as possible and before the next assessment period for Universal Credit starts. This will ensure you receive the maximum amount of help for your rent.</p>
+        <p class="govuk-body">If you require any further advice, please contact us. You can contact our Money and Benefits Service on 0300 3031 598 for benefit related enquiries. Alternatively, please contact our office number on 01609 776 551. You will then be referred for a call back as soon as possible.</p> 
+        
         <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-        <form action="./home" id="warm-home-discount-form" accept-charset="UTF-8" method="post">
+        <form action="./home" id="support-universal-credit-form" accept-charset="UTF-8" method="post">
             {{ govukRadios({
                 classes: "govuk-radios--small",
-                idPrefix: "warm-home-discount",
-                name: "warm-home-discount",
+                idPrefix: "support-universal-credit",
+                name: "support-universal-credit",
                     fieldset: {
                     legend: {
                         text: "Have you done this task?",

@@ -17,32 +17,22 @@
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      <h1 class="govuk-heading-xl">Contact Thames Water and find out the amount of your debt and monthly bill</h1>
+      <h1 class="govuk-heading-xl">Consider making a small claim against your employer</h1>
     </div>
     <div class="govuk-grid-column-two-thirds">
-        <p class="govuk-body">We have advised you about the new scheme Thames Water has in place to help customers pay their debt.</p>
-        <p class="govuk-body">The name of the scheme is Customer Assistance Fund and if you qualify, they will match any money you pay towards your water debt, pound for pound.</p>
-        <p class="govuk-body">You will need to pay your current water bills, as well as making an affordable payment towards your debt each month.</p>
-        <p class="govuk-body">If you maintain regular payments for two years, they will pay off any remaining outstanding debt at the end of the scheme. It is a long-term commitment on both sides, but they hope that by making smaller regular contributions, you will be free of water debt after two years and your water bills will be more affordable going forward.</p>
-        <p class="govuk-body">To qualify, you will need to:</p>
-        <ul class="govuk-list govuk-list--bullet">
-            <li>have at least £120 outstanding debt on previous bills (dated before 1 April 2020)</li>
-            <li>be responsible for your own water bills rather than them being paid by a landlord, housing association or someone else</li>
-            <li>have an active Thames Water account, receiving bills from them on an ongoing basis</li>
-            <li>be able to afford your current and future bills and pay them by Direct Debit</li>
-            <li>commit to making contributions of at least £5 per month towards your debt over the next two years</li>
-            <li>be willing to share your income and outgoings so they can assess your ability to pay</li>
-            <li>consent to your data being used for checks or to place you on other financial schemes that help reduce bills.</li>
-        </ul>
-        <p class="govuk-body">We will help you with making the application. Contact us to set up an appointment.</p>
+        <p class="govuk-body">We advised that whilst you are on sick leave, you are eligible to be furloughed. However, the decision to furlough you is at the discretion of your employer. If your employer agreed to furlough you for a period and did not pay you, this may constitute a breach of contract or unlawful deduction of wages.</p>
+        <p class="govuk-body">To resolve this situation, you would ordinarily start the procedure of taking your employer to a tribunal. This must be done within 3 months minus one day from the last date in the series of failures to pay you. As this deadline has passed, if you wished to recover wages owed, you would need to commence County Court action in the form of a small claim against your employer.</p>
+        <p class="govuk-body">We advise that you <a class="govuk-link" href="contact-an-adviser">contact us again</a> for further advice if this is something you wish to pursue further.</p>
+        <p class="govuk-body">If you cannot be furloughed due to eligibility reasons or your employer refuses to furlough you, you may be able to claim statutory sick pay.</p>
+        <p class="govuk-body">If you are sick for 4 full days or more in a row, earn on average £120 a week before tax and are not ineligible due to exhausting previous entitlement (received SSP for 28 weeks already which ended in the last 8 weeks) or for any of reason, you will be able to claim SSP from your employer.</p>
           
         <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-        <form action="./home" id="thames-water-debt-form" accept-charset="UTF-8" method="post">
+        <form action="./home" id="small-claim-form" accept-charset="UTF-8" method="post">
             {{ govukRadios({
                 classes: "govuk-radios--small",
-                idPrefix: "thames-water-debt",
-                name: "thames-water-debt",
+                idPrefix: "small-claim",
+                name: "small-claim",
                     fieldset: {
                     legend: {
                         text: "Have you done this task?",

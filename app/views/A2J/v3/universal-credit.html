@@ -17,20 +17,20 @@
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      <h1 class="govuk-heading-xl">Check the progress of you Personal Independence Payment (PIP) application</h1>
+      <h1 class="govuk-heading-xl">Get an update on your application for Limited Capability element within your Universal Credit award</h1>
     </div>
     <div class="govuk-grid-column-two-thirds">
-        <p class="govuk-body">You explained that you had applied for Personal Independence Payment (PIP). You have had a health assessment and are awaiting a decision.</p>
-        <p class="govuk-body">If you wish to check the progress of your decision, we advise you contact the PIP helpline on 0800 917 2222.</p>
-        <p class="govuk-body">Please note there are delays to processing claims and decisions due to Covid-19. Please be reassured that if you are entitled after the decision has been made, payments will be backdated to the date of claiming.</p>
-          
+        <p class="govuk-body">For a progress update, please either ask in your journal or contact the Universal Credit helpline on 0800 328 5644.</p>
+        <p class="govuk-body">We have also attached the descriptors which the DWP use to <a class="govuk-link" href="https://www.citizensadvice.org.uk/benefits/sick-or-disabled-people-and-carers/pip/help-with-your-claim/how-decisions-are-made">assess your eligibility to PIP and the Limited Capability Element</a>.</p>
+        <p class="govuk-body">You will only receive an additional amount within your Universal Credit award if you are deemed to have limited capability for work and work-related activity. This is where you are deemed unable to work or do any work preparation. It amounts to an extra £341.92 per month. You can normally not receive this element if you have earnings that are 16 the National Minimum Wage unless you are also receiving a benefit such as PIP. Employment of a certain nature may also be indicative of fitness for work regardless of whether you receive PIP.</p>
+
         <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-        <form action="./home" id="personal-independence-payment-form" accept-charset="UTF-8" method="post">
+        <form action="./home" id="universal-credit-form" accept-charset="UTF-8" method="post">
             {{ govukRadios({
                 classes: "govuk-radios--small",
-                idPrefix: "personal-independence-payment",
-                name: "personal-independence-payment",
+                idPrefix: "universal-credit",
+                name: "universal-credit",
                     fieldset: {
                     legend: {
                         text: "Have you done this task?",

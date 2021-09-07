@@ -27,7 +27,6 @@
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">Your legal action plan</h1>
         <p class="govuk-body">Keep track of what you do by marking tasks as complete. You can also add notes and photos for reference.</p>
-        <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Actions incomplete</h2>
         {% if data['try-other-mark-as'] == "done" and data['resignation-mark-as'] == "done" %}
         <p class="govuk-body">You have completed 2 tasks.</p>
         {% elif data['resignation-mark-as'] == "done" %}
@@ -47,139 +46,166 @@
                 <ul class="app-task-list__items no-padding-left">
                     <li class="app-task-list__item">
                         <span class="app-task-list__task-name">
-                        <a href="./water-help-scheme" aria-describedby="eligability-status">Apply to the Water Help Scheme</a>
+                            <a href="./small-claim" aria-describedby="eligability-status">Consider making a small claim against your employer</a>
                         </span>
-                    </span>
-                    {% if data['water-help-scheme'] == "started" %}
-                    <strong class="govuk-tag {{startedTaskTag}}">
-                        Started
-                    </strong>
+                        {% if data['small-claim'] == "started" %}
+                        <strong class="govuk-tag {{startedTaskTag}}">
+                            Started
+                        </strong>
 
-                    {% elif data['water-help-scheme'] == "does not apply" %}
-                    <strong class="govuk-tag  {{notTaskTag}}">
-                        Does not apply
-                    </strong>
+                        {% elif data['small-claim'] == "does not apply" %}
+                        <strong class="govuk-tag  {{notTaskTag}}">
+                            Does not apply
+                        </strong>
 
-                    {% elif data['water-help-scheme'] == "completed" %}
-                    <strong class="govuk-tag  {{doneTaskTag}}">
-                        Completed
-                    </strong>
+                        {% elif data['small-claim'] == "completed" %}
+                        <strong class="govuk-tag  {{doneTaskTag}}">
+                            Completed
+                        </strong>
 
-                    {% else %}
-                    <strong class="govuk-tag {{notStartedTaskTag}}">
+                        {% else %}
+                        <strong class="govuk-tag {{notStartedTaskTag}}">
+                            Not started
+                        </strong>
+                        {% endif %}
+                        <div class="app-task-list__description">
+                            <p class="govuk-body">We advised that whilst you are on sick leave, you are eligible to be furloughed. However, the decision to furlough you is at the discretion of your employer. If your employer agreed to furlough you for a period and did not pay you, this may constitute a breach of contract or unlawful deduction of wages.</p>
+                        </div>
+                    </li>
+                    <li class="app-task-list__item">
+                        <span class="app-task-list__task-name">
+                            <a href="./home-choice" aria-describedby="read-declaration-status">Contact North Yorkshire Homes Choice Team to find out about moving costs</a>
+                        </span>
+                        {% if data['home-choice'] == "started" %}
+                        <strong class="govuk-tag {{startedTaskTag}}">
+                            Started
+                        </strong>
+                        {% elif data['home-choice'] == "does not apply" %}
+                        <strong class="govuk-tag  {{notTaskTag}}">
+                            Does not apply
+                        </strong>
+                        {% elif data['home-choice'] == "completed" %}
+                        <strong class="govuk-tag  {{doneTaskTag}}">
+                            Completed
+                        </strong>
+                        {% else %}
+                        <strong class="govuk-tag {{notStartedTaskTag}}">
                         Not started
-                    </strong>
-                    {% endif %}
-                    <div class="app-task-list__description">
-                        <p class="govuk-body">We discussed making an application for Water Help Scheme to get up to 50% reduction on your water bill.</p>
-                    </div>
-                </li>
-                <li class="app-task-list__item">
-                    <span class="app-task-list__task-name">
-                    <a href="./thames-water-debt" aria-describedby="read-declaration-status">Contact Thames Water and find out the amount of your debt and monthly bill</a>
-                    </span>
-                    {% if data['thames-water-debt'] == "started" %}
-                    <strong class="govuk-tag {{startedTaskTag}}">
-                        Started
-                    </strong>
-                    {% elif data['thames-water-debt'] == "does not apply" %}
-                    <strong class="govuk-tag  {{notTaskTag}}">
-                        Does not apply
-                    </strong>
-                    {% elif data['thames-water-debt'] == "completed" %}
-                    <strong class="govuk-tag  {{doneTaskTag}}">
-                        Completed
-                    </strong>
-                    {% else %}
-                    <strong class="govuk-tag {{notStartedTaskTag}}">
-                    Not started
-                    </strong>
-                    {% endif %}
-                    <div class="app-task-list__description">
-                        <p class="govuk-body">We have advised you about the new scheme Thames Water has in place to help customers pay their debt.</p>
-                    </div>
-                </li>
-                <li class="app-task-list__item">
-                    <span class="app-task-list__task-name">
-                        <a href="./warm-home-discount" aria-describedby="eligability-status">Register interest for the Warm Home Discount scheme</a>
-                    </span>
-                    {% if data['warm-home-discount'] == "started" %}
-                    <strong class="govuk-tag {{startedTaskTag}}">
-                        Started
-                    </strong>
+                        </strong>
+                        {% endif %}
+                        <div class="app-task-list__description">
+                            <p class="govuk-body">You queried whether there would be any associated moving costs such as a deposit or rent in advance. We advised that this will be dependent on the landlord or Housing Association which owns the property.</p>
+                        </div>
+                    </li>
+                    <li class="app-task-list__item">
+                        <span class="app-task-list__task-name">
+                            <a href="./personal-independent-payment" aria-describedby="eligability-status">Consider applying for a Personal Independence Payment (PIP)</a>
+                        </span>
+                        {% if data['apply-for-pip'] == "started" %}
+                        <strong class="govuk-tag {{startedTaskTag}}">
+                            Started
+                        </strong>
 
-                    {% elif data['warm-home-discount'] == "does not apply" %}
-                    <strong class="govuk-tag  {{notTaskTag}}">
-                        Does not apply
-                    </strong>
+                        {% elif data['apply-for-pip'] == "does not apply" %}
+                        <strong class="govuk-tag  {{notTaskTag}}">
+                            Does not apply
+                        </strong>
 
-                    {% elif data['warm-home-discount'] == "completed" %}
-                    <strong class="govuk-tag  {{doneTaskTag}}">
-                        Completed
-                    </strong>
+                        {% elif data['apply-for-pip'] == "completed" %}
+                        <strong class="govuk-tag  {{doneTaskTag}}">
+                            Completed
+                        </strong>
 
-                    {% else %}
-                    <strong class="govuk-tag {{notStartedTaskTag}}">
-                        Not started
-                    </strong>
-                    {% endif %}
-                    <div class="app-task-list__description">
-                        <p class="govuk-body">Blank description</p>
-                    </div>
-                </li>
-                <li class="app-task-list__item">
-                    <span class="app-task-list__task-name">
-                        <a href="./personal-independent-payment" aria-describedby="eligability-status">Consider applying for a Personal Independence Payment (PIP)</a>
-                    </span>
-                    {% if data['personal-independent-payment'] == "started" %}
-                    <strong class="govuk-tag {{startedTaskTag}}">
-                        Started
-                    </strong>
+                        {% else %}
+                        <strong class="govuk-tag {{notStartedTaskTag}}">
+                            Not started
+                        </strong>
+                        {% endif %}
+                        <div class="app-task-list__description">
+                            <p class="govuk-body">You explained that you had applied for Personal Independence Payment (PIP). You have had a health assessment and are awaiting a decision.</p>
+                        </div>
+                    </li>
+                    <li class="app-task-list__item">
+                        <span class="app-task-list__task-name">
+                            <a href="./universal-credit" aria-describedby="eligability-status">Get an update on your application for Limited Capability element within your Universal Credit award</a>
+                        </span>
+                        {% if data['universal-credit'] == "started" %}
+                        <strong class="govuk-tag {{startedTaskTag}}">
+                            Started
+                        </strong>
 
-                    {% elif data['personal-independent-payment'] == "does not apply" %}
-                    <strong class="govuk-tag  {{notTaskTag}}">
-                        Does not apply
-                    </strong>
+                        {% elif data['universal-credit'] == "does not apply" %}
+                        <strong class="govuk-tag  {{notTaskTag}}">
+                            Does not apply
+                        </strong>
 
-                    {% elif data['personal-independent-payment'] == "completed" %}
-                    <strong class="govuk-tag  {{doneTaskTag}}">
-                        Completed
-                    </strong>
+                        {% elif data['universal-credit'] == "completed" %}
+                        <strong class="govuk-tag  {{doneTaskTag}}">
+                            Completed
+                        </strong>
 
-                    {% else %}
-                    <strong class="govuk-tag {{notStartedTaskTag}}">
-                        Not started
-                    </strong>
-                    {% endif %}
-                    <div class="app-task-list__description">
-                        <p class="govuk-body">You told us that you have a health condition that affects your daily living.</p>
-                    </div>
-                </li>
-            </ul>
-          </li>
+                        {% else %}
+                        <strong class="govuk-tag {{notStartedTaskTag}}">
+                            Not started
+                        </strong>
+                        {% endif %}
+                        <div class="app-task-list__description">
+                            <p class="govuk-body">For a progress update, please either ask in your journal or contact the Universal Credit helpline on 0800 328 5644.</p>
+                        </div>
+                    </li>
+                    <li class="app-task-list__item">
+                        <span class="app-task-list__task-name">
+                            <a href="./challenge-pip" aria-describedby="eligability-status">Consider challenging your PIP decision</a>
+                        </span>
+                        {% if data['challenge-pip'] == "started" %}
+                        <strong class="govuk-tag {{startedTaskTag}}">
+                            Started
+                        </strong>
+
+                        {% elif data['challenge-pip'] == "does not apply" %}
+                        <strong class="govuk-tag  {{notTaskTag}}">
+                            Does not apply
+                        </strong>
+
+                        {% elif data['challenge-pip'] == "completed" %}
+                        <strong class="govuk-tag  {{doneTaskTag}}">
+                            Completed
+                        </strong>
+
+                        {% else %}
+                        <strong class="govuk-tag {{notStartedTaskTag}}">
+                            Not started
+                        </strong>
+                        {% endif %}
+                        <div class="app-task-list__description">
+                            <p class="govuk-body">You mentioned you were unhappy with the award you received. You may want to consider challenging the decision by asking for a mandatory reconsideration.</p>
+                        </div>
+                    </li>
+                </ul>
+            </li>
         </ol>
         <!-- Take it further section -->
         <ol class="app-task-list">
             <li>
                 <h2 class="app-task-list__section">
-                    Your advice
+                    Other things to consider
                 </h2>
                 <ul class="app-task-list__items no-padding-left">
                     <li class="app-task-list__item">
                         <span class="app-task-list__task-name">
-                          <a href="./your-debt" aria-describedby="eligability-status">Your priority debt is your rent arrears</a>
+                          <a href="./support-for-universal-credit" aria-describedby="eligability-status">Understanding what support is available within Universal Credit should you start renting</a>
                         </span>
-                        {% if data['your-debt'] == "started" %}
+                        {% if data['support-universal-credit'] == "started" %}
                         <strong class="govuk-tag {{startedTaskTag}}">
                             Started
                         </strong>
         
-                        {% elif data['your-debt'] == "does not apply" %}
+                        {% elif data['support-universal-credit'] == "does not apply" %}
                         <strong class="govuk-tag  {{notTaskTag}}">
                             Does not apply
                         </strong>
         
-                        {% elif data['your-debt'] == "completed" %}
+                        {% elif data['support-universal-credit'] == "completed" %}
                         <strong class="govuk-tag  {{doneTaskTag}}">
                             Completed
                         </strong>
@@ -190,45 +216,7 @@
                         </strong>
                         {% endif %}
                         <div class="app-task-list__description">
-                            <p class="govuk-body">We have helped you with an application for Discretionary Housing Payment.</p>
-                        </div>
-                    </li>
-                    <li class="app-task-list__item">
-                        <span class="app-task-list__task-name">
-                          <a href="./water-arrears" aria-describedby="eligability-status">Your water arrears is your non-priority debt</a>
-                        </span>
-                        {% if data['water-arrears'] == "started" %}
-                        <strong class="govuk-tag {{startedTaskTag}}">
-                            Started
-                        </strong>
-        
-                        {% elif data['water-arrears'] == "does not apply" %}
-                        <strong class="govuk-tag  {{notTaskTag}}">
-                            Does not apply
-                        </strong>
-        
-                        {% elif data['water-arrears'] == "completed" %}
-                        <strong class="govuk-tag  {{doneTaskTag}}">
-                            Completed
-                        </strong>
-        
-                        {% else %}
-                        <strong class="govuk-tag {{notStartedTaskTag}}">
-                            Not started
-                        </strong>
-                        {% endif %}
-                        {% if data['water-arrears'] == "completed" %}
-                        <div class="done">
-                            <div class="done__pictures">
-                                <p class="govuk-body">[3] pictures</p>
-                            </div>
-                            <div class="done__notes">
-                                <p class="govuk-body">[2] notes</p>
-                            </div>
-                        </div>
-                        {% endif %}
-                        <div class="app-task-list__description">
-                            <p class="govuk-body">We have helped you with an application for Discretionary Housing Payment.</p>
+                            <p class="govuk-body">You also asked what help you would be eligible for within Universal Credit should you start renting. If you are renting, you can receive the Housing Cost element of Universal Credit.</p>
                         </div>
                     </li>
                 </ul>

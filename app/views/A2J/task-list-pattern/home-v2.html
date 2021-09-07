@@ -124,6 +124,26 @@
                 <span class="app-task-list__task-name">
                     <a href="./claim-unfair-dismissal" aria-describedby="eligability-status">Make a claim for unfair dismissal if you didn’t resign but have left work</a>
                 </span>
+                {% if data['unfair-dismissal'] == "started" %}
+                <strong class="govuk-tag {{startedTaskTag}}">
+                    Started
+                </strong>
+
+                {% elif data['unfair-dismissal'] == "does not apply" %}
+                <strong class="govuk-tag  {{notTaskTag}}">
+                    Does not apply
+                </strong>
+
+                {% elif data['unfair-dismissal'] == "completed" %}
+                <strong class="govuk-tag  {{doneTaskTag}}">
+                    Completed
+                </strong>
+
+                {% else %}
+                <strong class="govuk-tag {{notStartedTaskTag}}">
+                    Not started
+                </strong>
+                {% endif %}
                 <div class="app-task-list__description">
                     <p class="govuk-body">If you were told to resign or be dismissed, you may have a claim for unfair dismissal.  
                     </p>
@@ -148,14 +168,19 @@
                             Started
                         </strong>
         
+                        {% elif data['claim-benefits'] == "does not apply" %}
+                        <strong class="govuk-tag  {{notTaskTag}}">
+                            Does not apply
+                        </strong>
+        
                         {% elif data['claim-benefits'] == "completed" %}
                         <strong class="govuk-tag  {{doneTaskTag}}">
                             Completed
                         </strong>
         
                         {% else %}
-                        <strong class="govuk-tag {{notTaskTag}}">
-                            Does not apply
+                        <strong class="govuk-tag {{notStartedTaskTag}}">
+                            Not started
                         </strong>
                         {% endif %}
                         {% if data['claim-benefits'] == "completed" %}

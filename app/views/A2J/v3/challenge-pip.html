@@ -17,19 +17,21 @@
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      <h1 class="govuk-heading-xl">Apply to the Water Help Scheme</h1>
+      <h1 class="govuk-heading-xl">Consider challenging your PIP decision</h1>
     </div>
     <div class="govuk-grid-column-two-thirds">
-        <p class="govuk-body">We discussed making an application for Water Help Scheme to get up to 50% reduction on your water bill.</p>
-        <p class="govuk-body">You can make an application on the <a class="govuk-link" href="https://www.thameswater.co.uk/help/account-and-billing/financial-support/waterhelp">Thames Water website</a>.</p>
-          
+        <p class="govuk-body">You mentioned you were unhappy with the award you received. You may want to consider challenging the decision by asking for a mandatory reconsideration. This is where you ask the DWP to look at the decision again.</p>
+        <p class="govuk-body">You can submit additional evidence at this point. You should do this in writing preferably by <a class="govuk-link" href="https://www.gov.uk/government/publications/challenge-a-decision-made-by-the-department-for-work-and-pensions-dwp">completing theCRMR1 Form</a>within 1 month of the date on the decision letter you will receive. You should save a copy of the decision letter as you may need to refer to it.</p>
+        <p class="govuk-body">Should you receive PIP, your Universal Credit will not be reduced by any amount. If you need support with challenging the decision, please contact us further.</p>
+
+
         <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-        <form action="./home" id="water-help-scheme-form" accept-charset="UTF-8" method="post">
+        <form action="./home" id="challenge-pip-form" accept-charset="UTF-8" method="post">
             {{ govukRadios({
                 classes: "govuk-radios--small",
-                idPrefix: "water-help-scheme",
-                name: "water-help-scheme",
+                idPrefix: "challenge-pip",
+                name: "challenge-pip",
                     fieldset: {
                     legend: {
                         text: "Have you done this task?",
