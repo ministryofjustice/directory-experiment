@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% set serviceName = "Legal action plan" %}
+
+{% block pageTitle %}
+  Find legal advice and support
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">You told us</h1>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>You have been signed off work indefinitely since 2020</li>
+            <li>You are currently on furlough</li>
+            <li>In August and September 2020 your employer stated that you should not have been on furlough due to sickness</li>
+            <li>For those respective months you did not receive and of your wages</li>
+            <li>Company director hasn't spoken to you to stay that 'it isn't going to work'. They expressly stated that they expect you to sign a resignation letter and they will give you two weeks notice pay as a gesture of good will.</li>
+        </ul>
+        <h2 class="govuk-heading-m">If this summary is incorrect</h2>
+        <p class="govuk-body">This may affect the accuracy of your advice <a class="govuk-link" href="./contact-an-adviser/contact-an-adviser">Contact the advice organisation that set up this plan for you</a>.</p>
+        {{ govukButton({
+            text: "Continue",
+            classes: "govuk-button",
+            href: "./home"
+        }) }}
+    </div>
+</div>
+{% endblock %}

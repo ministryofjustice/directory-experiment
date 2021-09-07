@@ -1,0 +1,103 @@
+{% extends "layout.html" %}
+
+{% set serviceName = "Legal action plan" %}
+
+{% block pageTitle %}
+  Find legal advice and support
+{% endblock %}
+
+{% block beforeContent %}
+    {{ govukBackLink({
+        text: "Back",
+        href: "../home-v2"
+    }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Ask for follow up help</h1>
+        <p class="govuk-body">This message will be sent to the advice organisation that set up this action plan. They will be able to access any documents you uploaded, as well as any notes you’ve made.</p>
+        {{ govukTextarea({
+        name: "ask-for-help",
+        id: "ask-for-help",
+        label: {
+            text: "What do you need help with?",
+            classes: "govuk-label--m",
+            isPageHeading: false
+        }
+        }) }}
+
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+        <form id="send-advice" action="./sent">
+            {% set emailHtml %}
+
+            {{ govukInput({
+            id: "contact-by-email",
+            name: "contact-by-email",
+            type: "email",
+            autocomplete: "email",
+            spellcheck: false,
+            classes: "govuk-!-width-one-third",
+            label: {
+                text: "Email address"
+            }
+            }) }}
+    
+            {% endset -%}
+    
+            {% set phoneHtml %}
+    
+            {{ govukInput({
+            id: "contact-by-phone",
+            name: "contact-by-phone",
+            type: "tel",
+            autocomplete: "tel",
+            classes: "govuk-!-width-one-third",
+            label: {
+                text: "Phone number"
+            }
+            }) }}
+            
+            {% endset -%}
+    
+            {{ govukRadios({
+            idPrefix: "contact",
+            name: "contact",
+            classes: "govuk-radios--small",
+            fieldset: {
+                legend: {
+                text: "How would you prefer to be contacted?",
+                isPageHeading: false,
+                classes: "govuk-fieldset__legend--m"
+                }
+            },
+            hint: {
+                text: "Select one option."
+            },
+            items: [
+                {
+                value: "email",
+                text: "Email",
+                conditional: {
+                    html: emailHtml
+                }
+                },
+                {
+                value: "phone",
+                text: "Phone",
+                conditional: {
+                    html: phoneHtml
+                }
+                }
+            ]
+            }) }}
+    
+            {{ govukButton({
+                text: "Send"
+            }) }}
+        </form>
+    </div>
+</div>
+{% endblock %}
