@@ -15,6 +15,9 @@
       <h2 class="govuk-heading-l">GOV.UK ELSA taxonomy</h2>
       <p class="govuk-body">The project to tag and give an information hierarchy to existing ELSA-aligned content on gov.uk. Similar to <a class="govuk-link" href="https://www.gov.uk/education">existing taxonomies on gov.uk</a></p>
       <h3 class="govuk-heading-m">Prototypes</h3>
+      {{ govukInsetText({
+        text: "Version two is the most recent."
+      }) }}
       <ul class="govuk-list govuk-list--bullet">
         <li>
           <a class="govuk-link" href="https://taxonomy-directory.herokuapp.com/v1/taxonomy">Version 1</a>
@@ -23,29 +26,40 @@
           <a class="govuk-link" href="https://taxonomy-directory.herokuapp.com/v2/taxonomy">Version 2</a>
         </li>
       </ul>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
       
       <h2 class="govuk-heading-l">Content only directry</h2>
-      <p class="govuk-body">A one-page directory, potentially using drop-downs to categorise organisations at national level. Similar to <a class="govuk-link" href="https://www.mygov.scot/legal-advice">Scottish gov page</a></p>
+      <p class="govuk-body">This is a prototype to rework content that sites on GOV.UK Find a legal adviser page.</p>
       <h3 class="govuk-heading-m">Prototypes</h3>
+      {{ govukInsetText({
+        text: "GDS Find a legal adviser prototype is the most recent."
+      }) }}
       <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a class="govuk-link" href="https://elsa-prototypes.herokuapp.com/content-only/fala-v1">Version 1</a>
-        </li>
-        <li>
-          <a class="govuk-link" href="https://elsa-prototypes.herokuapp.com/content-only/fala-v2">Version 2</a>
-        </li>
         <li>
           <a class="govuk-link" href="https://elsa-prototypes.herokuapp.com/content-only/gds/find-legal-help-and-support">GDS Find legal help and support</a>
         </li>
+        <li>
+          <a class="govuk-link" href="https://elsa-prototypes.herokuapp.com/content-only/fala-v1">Flat content version 1</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="https://elsa-prototypes.herokuapp.com/content-only/fala-v2"> Flat content version 2</a>
+        </li>
       </ul>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
       <h2 class="govuk-heading-l">List directory</h2>
       <p class="govuk-body">Similar to the content-only directory but with individual pages for each organisational entity at LOCAL (contact point) level. More likely to require build, could include simple search functionality.</p>
       <h3 class="govuk-heading-m">Prototypes</h3>
 
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
       <h2 class="govuk-heading-l">Search directory</h2>
       <p class="govuk-body">More like the functionality that we have on <a class="govuk-link" href="https://www.gov.uk/find-a-legal-adviser">Find a Legal Aid Advisor</a>. Here we have a front end to a rigorous, structured dataset at LOCAL (contact point) level that can be sliced and diced for users.</p>
       <h3 class="govuk-heading-m">Prototypes</h3>    
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
       <h2 class="govuk-heading-l">Government badge of honour</h2>
       <p class="govuk-body">Explicit endorsement of trusted advisors included in our directories. Think “superhosts” feature on AirBnb or “Top reviewer” tags on Google Maps.      </p>
@@ -53,22 +67,37 @@
         text: "This hasn't been worked on yet"
       }) }}
 
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
       <h2 class="govuk-heading-l">Reliable information search</h2>
       <p class="govuk-body">A search tool that is wider than gov.uk and includes information within the ELSA taxonomy and also from all ‘trusted advisor’ organisations. No ads and no less trustworthy sites - like this prototype minus ads.</p>
       <h3 class="govuk-heading-m">Prototypes</h3>
+      {{ govukInsetText({
+        text: "Version 2 is the most recent"
+      }) }}
       <ul class="govuk-list govuk-list--bullet">
         <li>
           <a class="govuk-link" href="https://cse.google.com/cse?cx=35494a494c787b70b">Version 1</a>
         </li>
+        <li>
+          <a class="govuk-link" href="https://elsa-search-prototype.herokuapp.com/google/v2#gsc.tab=0">Version 1</a>
+        </li>
       </ul>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
       <h2 class="govuk-heading-l">Original content</h2>
       <p class="govuk-body">this is to describe static content that covers e.g. landing pages for our wider project, explanation of legal pathways (legal map), dispute resolution options etc. It will be broken into smaller components over time.      </p>
       <h3 class="govuk-heading-m">Prototypes</h3>
+      
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
       <h2 class="govuk-heading-l">Platforms</h2>
       <p class="govuk-body">Any feature that would require an Advisor login in order to make it work. Think booking, government-vetted lists, case management, triage services, web/live chat and a National Legal Advice Service.</p>
       <h3 class="govuk-heading-m">Prototypes</h3>
+      {{ govukInsetText({
+        text: "These prototypes are both for the same platform concept. They show two ways of displaying the same information."
+      }) }}
       <ul class="govuk-list govuk-list--bullet">
         <li>
           <a class="govuk-link" href="https://elsa-search-prototype.herokuapp.com/v1">Version 1</a>
@@ -77,8 +106,13 @@
           <a class="govuk-link" href="https://elsa-search-prototype.herokuapp.com/v2">Version 2</a>
         </li>
       </ul>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      
       <h2 class="govuk-heading-l">Access to Justice team</h2>
-      <p class="govuk-body"></p>
+      {{ govukInsetText({
+        text: "Both scenarios are going through user testing."
+      }) }}
       <h3 class="govuk-heading-m">My legal action plan</h3>
       <ul class="govuk-list govuk-list--bullet">
         <li>
