@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% set serviceName = "Legal action plan" %}
+{% set serviceName = "Your advice action plan" %}
 
 ## task list tag 
 {% set notStartedTaskTag = "govuk-tag--grey app-task-list__tag" %}
@@ -27,19 +27,19 @@
         <h1 class="govuk-heading-xl">Your advice action plan</h1>
         <p class="govuk-body">Keep track of what you do by marking tasks as complete. You can also add notes and photos for reference.</p>
         {% if data['resignation-letter'] == "completed" and data['try-other-ways'] == "completed" %}
-        <p class="govuk-body">You have <a class="govuk-link" href="#">completed 2 tasks</a>.</p>
+        <p class="govuk-body">You have completed 2 tasks.</p>
         {% elif data['resignation-letter'] == "completed" and data['constructive-dismissal'] == "completed" %}
-        <p class="govuk-body">You have <a class="govuk-link" href="#">completed 2 tasks</a>.</p>
+        <p class="govuk-body">You have completed 2 tasks.</p>
         {% elif data['resignation-letter'] == "completed" and data['unfair-dismissal'] == "completed" %}
-        <p class="govuk-body">You have <a class="govuk-link" href="#">completed 2 tasks</a>.</p>
+        <p class="govuk-body">You have completed 2 tasks.</p>
         {% elif data['resignation-letter'] == "completed" %}
-        <p class="govuk-body">You have <a class="govuk-link" href="#">completed 1 task</a>.</p>
+        <p class="govuk-body">You have completed 1 task.</p>
         {% elif data['try-other-ways'] == "completed" %}
-        <p class="govuk-body">You have <a class="govuk-link" href="#">completed 1 task</a>.</p>
+        <p class="govuk-body">You have completed 1 task.</p>
         {% elif data['constructive-dismissal'] == "completed" %}
-        <p class="govuk-body">You have <a class="govuk-link" href="#">completed 1 task</a>.</p>
+        <p class="govuk-body">You have completed 1 task.</p>
         {% elif data['unfair-dismissal'] == "completed" %}
-        <p class="govuk-body">You have <a class="govuk-link" href="#">completed 1 task</a>.</p>
+        <p class="govuk-body">You have completed 1 task.</p>
         {% else %}
         <p class="govuk-body">You have completed no tasks yet.</p>
         {% endif %}

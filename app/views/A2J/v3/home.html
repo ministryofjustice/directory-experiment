@@ -28,19 +28,19 @@
         <h1 class="govuk-heading-xl">Your advice action plan</h1>
         <p class="govuk-body">Keep track of what you do by marking tasks as complete. You can also add notes and photos for reference.</p>
         {% if data['small-claim'] == "completed" and data['home-choice'] == "completed" %}
-        <p class="govuk-body">You have <a class="govuk-link" href="#">completed 2 tasks</a>.</p>
+        <p class="govuk-body">You have completed 2 tasks.</p>
         {% elif data['small-claim'] == "completed" and data['apply-for-pip'] == "completed" %}
-        <p class="govuk-body">You have <a class="govuk-link" href="#">completed 2 tasks</a>.</p>
+        <p class="govuk-body">You have completed 2 tasks.</p>
         {% elif data['small-claim'] == "completed" and data['universal-credit'] == "completed" %}
-        <p class="govuk-body">You have <a class="govuk-link" href="#">completed 2 tasks</a>.</p>
+        <p class="govuk-body">You have completed 2 tasks.</p>
         {% elif data['small-claim'] == "completed" %}
-        <p class="govuk-body">You have <a class="govuk-link" href="#">completed 1 task</a>.</p>
+        <p class="govuk-body">You have completed 1 task.</p>
         {% elif data['home-choice'] == "completed" %}
-        <p class="govuk-body">You have <a class="govuk-link" href="#">completed 1 task</a>.</p>
+        <p class="govuk-body">You have completed 1 task.</p>
         {% elif data['apply-for-pip'] == "completed" %}
-        <p class="govuk-body">You have <a class="govuk-link" href="#">completed 1 task</a>.</p>
+        <p class="govuk-body">You have completed 1 task.</p>
         {% elif data['universal-credit'] == "completed" %}
-        <p class="govuk-body">You have <a class="govuk-link" href="#">completed 1 task</a>.</p>
+        <p class="govuk-body">You have completed 1 task.</p>
         {% else %}
         <p class="govuk-body">You have completed no tasks yet.</p>
         {% endif %}
@@ -106,7 +106,7 @@
                     </li>
                     <li class="app-task-list__item">
                         <span class="app-task-list__task-name">
-                            <a href="./personal-independent-payment" aria-describedby="eligability-status">Consider applying for a Personal Independence Payment (PIP)</a>
+                            <a href="./personal-independent-payment" aria-describedby="eligability-status">Check the progress of your Personal Independence Payment (PIP) application</a>
                         </span>
                         {% if data['apply-for-pip'] == "started" %}
                         <strong class="govuk-tag {{startedTaskTag}}">
@@ -185,7 +185,7 @@
                         </strong>
                         {% endif %}
                         <div class="app-task-list__description">
-                            <p class="govuk-body">You mentioned you were unhappy with the award you received. You may want to consider challenging the decision by asking for a mandatory reconsideration.</p>
+                            <p class="govuk-body">If you are unhappy with the PIP award you receive you may want to consider challenging the decision by asking for a mandatory reconsideration.</p>
                         </div>
                     </li>
                 </ul>
