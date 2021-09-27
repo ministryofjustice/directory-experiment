@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% set serviceName = "" %}
+{% set pageTitle = "Find legal advice and support" %}
+
+{% block pageTitle %}
+  Find legal advice and support - GOV.UK
+{% endblock %}
+
+
+{% block beforeContent %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="gem-c-title govuk-!-margin-top-8 govuk-!-margin-bottom-8">
+            <h1 class="gem-c-title__text govuk-heading-xl">
+              {{ pageTitle }}
+            </h1>
+          </div>
+          <a class="gem-c-skip-link govuk-skip-link govuk-!-display-none-print" href="#guide-contents">Skip to contents of guide</a>
+          
+          <aside class="part-navigation-container">
+              <nav class="gem-c-contents-list" aria-label="pages in this guide" role="complementary">
+                  <h2 class="gem-c-contents-list__title">
+                      Contents
+                  </h2>
+                  <ol class="gem-c-contents-list__list">
+                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active">
+                      Find a legal adviser              
+                    </li>
+                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                      <a class="gem-c-contents-list__link govuk-link" href="./resolve-problems-outside-of-court">Resolve problems out of court</a>               
+                    </li>
+                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                      <a class="gem-c-contents-list__link govuk-link" href="./going-to-court">Going to court</a>
+                    </li>
+                </ol>
+              </nav>
+          </aside>
+    </div>
+{% endblock %}
+
+
+
+{% block content %}
+
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="part-title">
+            Overview
+        </h1>
+        <div class="gem-c-govspeak govuk-govuspeak dectrion-ltr disable-youtube">
+            <p class="govuk-body">Getting legal advice and support is often the first step to solving common problems. For example:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>debts</li>
+              <li>decisions about benefits</li>
+              <li>employers discrimination</li>
+              <li>immigration status</li>
+              <li>disagreement with neighbours</li>
+            </ul>
+            <p class="govuk-body">Start by <a class="govuk-link" href="">searching for trusted information and legal advice</a>. It’s important to do this early so that problems don’t get worse.</p>
+
+            <p class="govuk-body">You may need to <a class="govuk-link" href="">speak to a legal adviser</a> with specialist training in the area of your problem. They could help you solve it, or give you advice about what to do next.</p>
+
+            <p class="govuk-body">If a problem does need to be addressed in court, you can find out how to <a class="govuk-link" href="">prepare for the court hearing</a>.</p> 
+          
+          </div>
+            {{ paginationNext('./resolve-problems-outside-of-court', 'Resolve problems out of court') }}    
+        </div> 
+
+</div>
+{% endblock %}
