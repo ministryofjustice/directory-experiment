@@ -18,21 +18,24 @@
             </h1>
           </div>
           <a class="gem-c-skip-link govuk-skip-link govuk-!-display-none-print" href="#guide-contents">Skip to contents of guide</a>
-          
+
           <aside class="part-navigation-container">
               <nav class="gem-c-contents-list" aria-label="pages in this guide" role="complementary">
                   <h2 class="gem-c-contents-list__title">
                       Contents
                   </h2>
                   <ol class="gem-c-contents-list__list">
+                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active" aria-current="true">
+                        <a class="gem-c-contents-list__link govuk-link" href="find-legal-help-and-support">Search trusted information for legal advice</a>
+                    </li>
                     <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active">
-                      Find a legal adviser              
+                      Find a legal adviser
                     </li>
                     <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-                      <a class="gem-c-contents-list__link govuk-link" href="./resolve-problems-outside-of-court">Resolve problems out of court</a>               
+                      <a class="gem-c-contents-list__link govuk-link" href="resolve-problems-outside-of-court">Resolve problems out of court</a>
                     </li>
                     <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-                      <a class="gem-c-contents-list__link govuk-link" href="./going-to-court">Going to court</a>
+                      <a class="gem-c-contents-list__link govuk-link" href="going-to-court">Going to court</a>
                     </li>
                 </ol>
               </nav>
@@ -51,7 +54,7 @@
         <div class="gem-c-govspeak govuk-govuspeak dectrion-ltr disable-youtube">
             <p class="govuk-body">Legal advisers can help with a wide variety of legal problems, depending on what they specialise in.</p>
             <p class="govuk-body">The information on this page only applies to England and Wales.</p>
-            
+
             <h2 class="govuk-heading-m">Free and affordable advice and support</h2>
             <p class="govuk-body">You can get free and affordable legal advice and support from many different government departments, charities and other organisatons.</p>
             <h3 class="govuk-heading-s">Legal Aid</h3>
@@ -78,7 +81,7 @@
               <li><a class="govuk-link" href="https://advicelocal.uk/">Advice Local</a> - a directory of independent advice organisations in your area that provide help with a variety of legal problems, like asylum and immigration, debt and money advice, disability and social care, employment and work issues, housing and homelessness, welfare benefits and tax credits</li>
               <li><a class="govuk-link" href="hhttps://www.lawworks.org.uk/legal-advice-individuals/find-legal-advice-clinic-near-you">LawWorks</a> - a directory of law clinics that provide free initial advice on various legal areas, such as employment, housing, consumer disputes, debt and welfare rights</li>
             </ul>
-            
+
             <h2 class="govuk-heading-m">Solicitors</h2>
             <p class="govuk-body">You can get advice from a solicitor, but their support is not always free.</p>
             <p class="govuk-body">A solicitor can help with:</p>
@@ -91,15 +94,15 @@
               <li>liaising with other legal professionals like barristers</li>
             </ul>
             <p class="govuk-body">Find a solicitor through <a class="govuk-link" href="https://solicitors.lawsociety.org.uk/?Pro=True">The Law Society</a> if you live in England or Wales</p>
-            
+
             <h2 class="govuk-heading-m">Barristers</h2>
             <p class="govuk-body">Barristers are usually hired by solicitors to represent a case in court and plead the case on behalf of the client and the client's solicitor.</p>
             <p class="govuk-body">You may be able to <a class="govuk-link" href="https://www.barcouncil.org.uk/bar-council-services/for-the-public/direct-access-portal.html">see a barrister without seeing a solicitor first</a> .</p>
             <p class="govuk-body"><a class="govuk-link" href="https://www.directaccessportal.co.uk/search/1/barrister">Find a barrister in your area through the Bar Council</a> if you live in England or Wales.</p>
-          
+
           </div>
-            {{ paginationNext('./resolve-problems-outside-of-court', 'Resolve problems out of court') }}    
-        </div> 
+            {{ paginationFull('./find-legal-help-and-support', 'Find legal help and support','./resolve-problems-outside-of-court','Resolve problems out of court') }}
+        </div>
 
 </div>
 {% endblock %}

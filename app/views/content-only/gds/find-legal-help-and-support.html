@@ -17,7 +17,7 @@
             </h1>
           </div>
           <a class="gem-c-skip-link govuk-skip-link govuk-!-display-none-print" href="#guide-contents">Skip to contents of guide</a>
-          
+
           <aside class="part-navigation-container">
               <nav class="gem-c-contents-list" aria-label="pages in this guide" role="complementary">
                   <h2 class="gem-c-contents-list__title">
@@ -25,16 +25,16 @@
                   </h2>
                   <ol class="gem-c-contents-list__list">
                     <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active" aria-current="true">
-                        Search trusted information for legal advice                        
+                        Search trusted information for legal advice
                     </li>
                     <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-                      <a class="gem-c-contents-list__link govuk-link" href="./find-a-legal-advisor">Find a legal adviser</a>               
+                      <a class="gem-c-contents-list__link govuk-link" href="find-a-legal-adviser">Find a legal adviser</a>
                     </li>
                     <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-                      <a class="gem-c-contents-list__link govuk-link" href="./resolve-problems-outside-of-court">Resolve problems outside of court</a>               
+                      <a class="gem-c-contents-list__link govuk-link" href="resolve-problems-outside-of-court">Resolve problems outside of court</a>
                     </li>
                     <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-                      <a class="gem-c-contents-list__link govuk-link" href="./going-to-court">Going to court</a>
+                      <a class="gem-c-contents-list__link govuk-link" href="going-to-court">Going to court</a>
                     </li>
                 </ol>
               </nav>
@@ -51,9 +51,11 @@
         <div class="gem-c-govspeak govuk-govuspeak dectrion-ltr disable-youtube">
           <p class="govuk-body">Getting trustworthy information and legal advice is important. Yet it can be difficult to assess the quality of information online. Particularly when search results include adverts.</p>
 
-           <p class="govuk-body">You can <a class="govuk-link" href="https://elsa-search-prototype.herokuapp.com/google/v2">search for advert-free, accurate information]</a>. Your results will only include reliable sources of information selected by the Ministry of Justice. </p>   
+           <p class="govuk-body">
+             You can <a class="govuk-link" href="https://elsa-search-prototype.herokuapp.com/google/v2">search for advert-free, accurate information</a>.
+             Your results will only include reliable sources of information selected by the Ministry of Justice. </p>
         </div>
-        {{ paginationNext('./find-a-legal-advisor', 'Find a legal adviser') }}    
+        {{ paginationNext('./find-a-legal-adviser', 'Find a legal adviser') }}
     </div>
 </div>
 {% endblock %}
