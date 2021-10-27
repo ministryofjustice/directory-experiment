@@ -1,3 +1,217 @@
+/*------------------------------------*\
+    CATEGORY ITEM
+    Navigation elements for different levels of category navigation. Includes classes for layout of these elements in a list.
+    https://designsystem.gov.scot/assets/css/patternlib.css?1626678968
+\*------------------------------------*/
+.ds_category-item {
+  display: block;
+  position: relative;
+  transition: background-color 0.2s, outline-color 0.2s;
+  z-index: 1;
+  outline: 0 !important;
+  /*
+      supports grid is a hack as a proxy for supports :focus-within
+  */
+  padding: 12px 16px 12px;
+  text-decoration: none;
+  transition: background-color 0.2s, border-color 0.2s;
+  width: 100%; }
+  .ds_category-item:focus {
+    background-color: #fdd522;
+    box-shadow: inset 0 -3px #333333, inset 0 -3px #333333;
+    color: #333333; }
+  .ds_category-item:hover:not(:focus) {
+    background-color: #d9effc; }
+  .ds_category-item .ds_category-item__link:focus:hover {
+    text-decoration: none; }
+  @supports (display: grid) {
+    .ds_category-item .ds_category-item__link {
+      background-color: transparent;
+      outline: none; }
+      .ds_category-item .ds_category-item__link::after {
+        content: "";
+        height: 100%;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        z-index: 0; }
+      .ds_category-item .ds_category-item__link:focus::after {
+        transition-duration: 0s; }
+    .ds_category-item:focus-within {
+      background-color: #fdd522 !important;
+      box-shadow: inset 0 -3px #333333, inset 0 -3px #333333;
+      transition-duration: 0s; }
+      .ds_category-item:focus-within .ds_category-item__link:focus {
+        box-shadow: none;
+        background-color: transparent; } }
+  .ds_category-item > *:last-child {
+    margin-bottom: 0; }
+  .ds_category-item__title {
+    font-size: 19px;
+    line-height: 28px;
+    margin: 0 0 16px; }
+    @media (min-width: 768px) {
+      .ds_category-item__title {
+        font-size: 24px; } }
+  .ds_category-item .ds_category-item__link::after {
+    left: -4px; }
+  .ds_category-item__link {
+    color: #0065bd; }
+    .ds_category-item__link::before {
+      background-color: #0065bd;
+      bottom: 0;
+      content: '';
+      left: -4px;
+      opacity: 0.3;
+      position: absolute;
+      top: 0;
+      width: 4px; }
+    .ds_category-item__link:focus::before {
+      content: none; }
+    .ds_category-item__link:hover::before {
+      background-color: #00437e;
+      opacity: 1; }
+    .ds_category-item__link::after {
+      background: transparent;
+      bottom: 0;
+      content: '';
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0; }
+  .ds_category-item__summary {
+    font-size: 14px;
+    color: #727272;
+    line-height: 24px;
+    margin: 0; }
+    @media (min-width: 768px) {
+      .ds_category-item__summary {
+        font-size: 16px; } }
+  .ds_category-item:hover .ds_category-item__summary {
+    color: #333333; }
+
+.ds_card > .ds_category-item {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  position: static; }
+.ds_card .ds_category-item__link::before {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 100%;
+  transition: top 0.2s;
+  width: 100%; }
+.ds_card .ds_category-item__link:hover::before {
+  top: calc(100% - 4px); }
+.ds_card .ds_category-item__link::after {
+  left: 0; }
+
+@media (min-width: 768px) {
+  .ds_category-item__title {
+    line-height: 32px; }
+
+  .ds_card > .ds_category-item {
+    min-height: 200px; } }
+
+/*------------------------------------*\
+    CATEGORY LIST
+    https://designsystem.gov.scot/assets/css/patternlib.css?1626678968
+\*------------------------------------*/
+.ds_category-list-container {
+  margin: 32px 0; }
+
+.ds_category-list {
+  margin-right: -32px;
+  overflow: hidden;
+  list-style-type: none;
+  margin-bottom: 32px;
+  margin-left: -8px;
+  margin-top: -8px;
+  padding: 8px; }
+  .ds_category-list > * {
+    margin-right: 32px; }
+  @supports (display: grid) {
+    .ds_category-list {
+      display: grid;
+      grid-gap: 0 32px;
+      margin-right: 0;
+      overflow: visible; }
+      .ds_category-list > * {
+        margin-left: 0;
+        margin-right: 0;
+        width: auto !important; } }
+  .ds_category-list > * {
+    margin-bottom: 32px; }
+  .ds_category-list--narrow > * {
+    margin-bottom: 12px; }
+
+.ds_category-list--narrow {
+  margin-right: -12px;
+  overflow: hidden; }
+  .ds_category-list--narrow > * {
+    margin-right: 12px; }
+  @supports (display: grid) {
+    .ds_category-list--narrow {
+      display: grid;
+      grid-gap: 0 12px;
+      margin-right: 0;
+      overflow: visible; }
+      .ds_category-list--narrow > * {
+        margin-left: 0;
+        margin-right: 0;
+        width: auto !important; } }
+
+@media (max-width: 767px) {
+  .ds_category-list--grid > * {
+    min-height: 0; } }
+@media (min-width: 768px) {
+  .ds_category-list--grid > * {
+    float: left;
+    width: calc(100% * 0.5 - 32px); }
+    .ds_category-list--grid > *:nth-child(2n+1) {
+      clear: left; }
+  .ds_category-list--grid.ds_category-list--narrow > * {
+    margin-bottom: 12px;
+    margin-right: 12px;
+    width: calc(100% * 0.5 - 12px); } }
+@media (min-width: 992px) {
+  .ds_category-list--grid > * {
+    width: calc(100% * 0.33333 - 32px); }
+    .ds_category-list--grid > *:nth-child(n) {
+      clear: none; }
+    .ds_category-list--grid > *:nth-child(3n+1) {
+      clear: left;
+      margin-left: 0; }
+  .ds_category-list--grid.ds_category-list--narrow > * {
+    width: calc(100% * 0.33333 - 12px); } }
+@supports (display: grid) {
+  .ds_category-list {
+    grid-row-gap: 32px;
+    margin-left: 0;
+    margin-top: 0;
+    padding: 0; }
+    .ds_category-list--narrow {
+      grid-gap: 12px 12px; }
+    .ds_category-list > *[class] {
+      display: grid;
+      margin: 0;
+      width: 100%; }
+
+  @media (min-width: 768px) {
+    .ds_category-list--grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 992px) {
+    .ds_category-list--grid {
+      grid-template-columns: 1fr 1fr 1fr; } } }
+
+
+/*------------------------------------*\
+    CATEGORY LIST
+\*------------------------------------*/
+
+
 .govuk-link, a, .app-step-nav-header__title, .app-step-nav-related__link {
   font-family: "GDS Transport", arial, sans-serif;
   -webkit-font-smoothing: antialiased;
