@@ -1,0 +1,290 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Housing
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({homepageUrl: "/", serviceName: serviceName, serviceUrl: "/", containerClasses: "govuk-width-container" }) }}
+
+  <link rel="stylesheet" href="https://designsystem.gov.scot/assets/css/patternlib.css?1626678968">
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/v1/taxonomy">Legal help directory</a>
+    </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Housing & Homelessness</h1>
+    <p class="govuk-body-l">
+      In danger of losing your home? Having problems with your landlord? Dealing with noisy neighbours? Read on for our advice.
+    </p>
+
+    <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-with-summary-sections">
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+              Buying and owning property
+            </span>
+          </h2>
+          <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+            [Buying and owning property description]
+          </div>
+        </div>
+        <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+            <nav aria-label="Category navigation">
+              <ol class="ds_category-list">
+                <li class="ds_category-item">
+                  <h2 class="ds_category-item__title">
+                    <a href="https://www.gov.uk/affordable-home-ownership-schemes" target="_blank" class="ds_category-item__link">Affordable home ownership schemes</a>
+                  </h2>
+                  <p class="ds_category-item__summary">You may be able to get financial help from the government to buy a home.</p>
+                </li>
+                <li class="ds_category-item">
+                  <h2 class="ds_category-item__title">
+                    <a href="https://www.gov.uk/government/collections/housing-how-to-guides" target="_blank" class="ds_category-item__link">Housing how to guides</a>
+                  </h2>
+                  <p class="ds_category-item__summary">These are 'how to' guides for the housing sector.</p>
+                </li>
+                <li class="ds_category-item">
+                  <h2 class="ds_category-item__title">
+                    <a href="https://www.gov.uk/government/publications/how-to-buy-a-home" target="_blank" class="ds_category-item__link">How to buy a home</a>
+                  </h2>
+                  <p class="ds_category-item__summary">A guide to buying a home in England and Wales.</p>
+                </li>
+                <li class="ds_category-item">
+                  <h2 class="ds_category-item__title">
+                    <a href="https://www.gov.uk/government/publications/how-to-lease" target="_blank" class="ds_category-item__link">How to lease</a>
+                  </h2>
+                  <p class="ds_category-item__summary">A guide is for anyone already living in a leasehold property or anyone thinking of buying one.</p>
+                </li>
+                <li class="ds_category-item">
+                  <h2 class="ds_category-item__title">
+                    <a href="https://www.gov.uk/government/publications/joint-shared-ownership-guidance" target="_blank" class="ds_category-item__link">Joint shared ownership guidance</a>
+                  </h2>
+                  <p class="ds_category-item__summary">Rules and requirements of grant funded shared ownership schemes in England.</p>
+                </li>
+                <li class="ds_category-item">
+                  <h2 class="ds_category-item__title">
+                    <a href="https://www.gov.uk/right-to-acquire-buying-housing-association-home" target="_blank" class="ds_category-item__link">Right to Acquire: buying housing association home</a>
+                  </h2>
+                  <p class="ds_category-item__summary">Right to Acquire allows most housing association tenants to buy their home at a discount</p>
+                </li>
+                <li class="ds_category-item">
+                  <h2 class="ds_category-item__title">
+                    <a href="https://www.gov.uk/right-to-buy-buying-your-council-home" target="_blank" class="ds_category-item__link">Right to Buy: buying your council home</a>
+                  </h2>
+                  <p class="ds_category-item__summary">Right to Buy allows most council tenants to buy their council home at a discount</p>
+                </li>
+              </ol>
+            </nav>
+        </div>
+      </div>
+
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+              Council housing and housing benefits
+            </span>
+          </h2>
+          <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+            [Council housing and housing benefits description]
+          </div>
+        </div>
+        <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+          <nav aria-label="Category navigation">
+            <ol class="ds_category-list">
+              <li class="ds_category-item">
+                <h2 class="ds_category-item__title">
+                  <a href="https://www.gov.uk/apply-for-council-housing" target="_blank" class="ds_category-item__link">Apply for council housing</a>
+                </h2>
+                <p class="ds_category-item__summary">You can apply for council housing through your local council.</p>
+              </li>
+
+
+<!--
+
+Structure:
+
+<nav aria-label="Category navigation">
+  <ol class="ds_category-list">
+    <li class="ds_category-item">
+      <h2 class="ds_category-item__title">
+        <a href="" target="_blank" class="ds_category-item__link"></a>
+      </h2>
+      <p class="ds_category-item__summary"></p>
+    </li>
+  </ol>
+</nav>
+
+
+
+https://www.gov.uk/apply-for-sheltered-housing
+https://www.gov.uk/apply-housing-benefit-from-council
+https://www.gov.uk/apply-swap-homes-council
+https://www.gov.uk/council-housing
+https://www.gov.uk/government/news/no-council-should-end-a-tenants-right-to-buy
+https://www.gov.uk/government/publications/current-registered-providers-of-social-housing
+https://www.gov.uk/government/publications/how-to-rent-a-safe-home
+https://www.gov.uk/guidance/apply-for-affordable-housing-funding
+https://www.gov.uk/guidance/housing-for-older-and-disabled-people
+https://www.gov.uk/guidance/housing-needs-of-different-groups
+https://www.gov.uk/guidance/local-housing-allowance
+https://www.gov.uk/housing-and-universal-credit
+https://www.gov.uk/housing-association-homes
+https://www.gov.uk/housing-benefit
+https://www.gov.uk/housing-benefit/how-to-claim
+https://www.gov.uk/right-to-acquire-buying-housing-association-home
+https://www.gov.uk/right-to-buy-buying-your-council-home
+https://www.gov.uk/topic/housing
+https://www.gov.uk/your-rights-to-housing-if-youre-under-18 -->
+
+            </ol>
+          </nav>
+        </div>
+      </div>
+
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+              Eviction and repossession
+            </span>
+          </h2>
+          <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+            What to do if your landlord asks you to leave your home, or you are in danger of having your home repossessed.
+          </div>
+        </div>
+        <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a class="govuk-link" target="_blank" href="https://www.gov.uk/private-renting-evictions">Private renting for tenants: evictions</a></li>
+            <li><a class="govuk-link" target="_blank" href="https://www.gov.uk/council-housing-association-evictions">Council and housing association evictions</a></li>
+            <li><a class="govuk-link" target="_blank" href="https://www.gov.uk/evicting-tenants">Evicting tenants (England and Wales)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+              Housing benefits
+            </span>
+          </h2>
+          <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+            Benefits for help with your housing costs. Includes information on housing benefit, council tax benefit and mortgage payments from income support.
+          </div>
+        </div>
+        <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a class="govuk-link" target="_blank" href="https://www.gov.uk/housing-benefit">Housing benefit</a></li>
+            <li><a class="govuk-link" target="_blank" href="https://www.gov.uk/appeal-housing-benefit-decision">Appeal a Housing Benefit decision</a></li>
+            <li><a class="govuk-link" target="_blank" href="https://www.gov.uk/council-housing">Council housing</a></li>
+            <li><a class="govuk-link" target="_blank" href="https://www.gov.uk/apply-for-council-housing">Apply for council housing</a></li>
+            <li><a class="govuk-link" target="_blank" href="https://www.mygov.scot/apply-for-housing">Apply for housing (Scotland)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+              Harassment
+            </span>
+          </h2>
+          <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+            Your rights if your landlord is intimidating you, or interfering with services, in order to get you to move out.
+          </div>
+        </div>
+        <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a class="govuk-link" target="_blank" href="https://www.gov.uk/evicting-tenants/harassment-and-illegal-evictions">Evicting Tenants: Harassment and illegal evictions</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+              Housing conditions and disrepair
+            </span>
+          </h2>
+          <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+            What to do if your accommodation needs repair work.
+          </div>
+        </div>
+        <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a class="govuk-link" target="_blank" href="https://check-how-to-get-repairs-done-in-your-rented-home.form.service.justice.gov.uk">Check how to get repairs done in your rented home</a></li>
+            <li><a class="govuk-link" target="_blank" href="https://england.shelter.org.uk/housing_advice/repairs">Housing repairs advice</a></li>
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+              Tenancies and licences
+            </span>
+          </h2>
+          <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+            Your rights if you live in rented property. Covers what type of tenancy you might have.
+          </div>
+        </div>
+        <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a class="govuk-link" target="_blank" href="https://www.gov.uk/private-renting">Private renting</a></li>
+            <li><a class="govuk-link" target="_blank" href="https://www.gov.uk/private-renting-evictions">Private renting for tenants: evictions</a></li>
+            <li><a class="govuk-link" target="_blank" href="https://www.gov.uk/private-renting-tenancy-agreements">Private renting for tenants: tenancy agreements</a></li>
+            <li><a class="govuk-link" target="_blank" href="https://www.gov.uk/check-tenant-right-to-rent-documents">Check your tenant's right to rent</a></li>
+            <li><a class="govuk-link" target="_blank" href="https://www.gov.uk/tenancy-agreements-a-guide-for-landlords">Tenancy agreements: a guide for landlords (England and Wales)</a></li>
+            <li><a class="govuk-link" target="_blank" href="https://www.gov.uk/deposit-protection-schemes-and-landlords">Deposit protection schemes and landlords</a></li>
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+              Neighbour disputes
+            </span>
+          </h2>
+          <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+            What you can do if you are having disagreements with your neighbours, including boundary and hedge disputes, or problems with noise and trespass.
+          </div>
+        </div>
+        <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a class="govuk-link" target="_blank" href="https://www.gov.uk/how-to-resolve-neighbour-disputes">Resolving neighbour disputes</a></li>
+            <li><a class="govuk-link" target="_blank" href="https://england.shelter.org.uk/professional_resources/legal/housing_conditions/nuisance_and_asb/neighbour_disputes">Neighbour disputes</a></li>
+            <li><a class="govuk-link" target="_blank" href="https://england.shelter.org.uk/professional_resources/legal/housing_conditions/nuisance_and_asb">Nuisance, noise and antisocial behaviour</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+{% endblock %}
