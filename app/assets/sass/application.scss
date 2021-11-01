@@ -18,3 +18,14 @@ $govuk-assets-path: '/govuk/assets/';
 @import "patterns/category-list";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+// Scot gov overrides
+
+.ds_category-list {
+    grid-row-gap: 15px !important;
+}
+
+.ds_category-item__title {
+    font-size:22px !important;
+    margin: 0 0 8px !important;
+}
