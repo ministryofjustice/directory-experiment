@@ -1,0 +1,629 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Legal help directory
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({homepageUrl: "/", serviceName: serviceName, serviceUrl: "/", containerClasses: "govuk-width-container" }) }}
+
+  <!-- https://service-manual.nhs.uk/design-system/components/card -->
+  <link rel="stylesheet" href="https://service-manual.nhs.uk/css/main.css">
+  <script src="https://service-manual.nhs.uk/js/main.min.js" defer=""></script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <div class="gem-c-title govuk-!-margin-top-8 govuk-!-margin-bottom-8">
+                <h1 class="gem-c-title__text govuk-heading-xl">
+                  Find legal advice and support
+                </h1>
+              </div>
+              <a class="gem-c-skip-link govuk-skip-link govuk-!-display-none-print" href="#guide-contents">Skip to contents of guide</a>
+              <aside class="part-navigation-container">
+                <nav class="gem-c-contents-list" aria-label="pages in this guide" role="complementary">
+                    <h2 class="gem-c-contents-list__title">
+                        Contents
+                    </h2>
+                    <ol class="gem-c-contents-list__list">
+                      <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <a class="gem-c-contents-list__link govuk-link" href="overview">
+                            Overview
+                        </a>
+                      </li>
+                      <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active">
+                        <a class="gem-c-contents-list__link govuk-link" href="find-a-legal-adviser">
+                            Find a legal adviser
+                        </a>
+                      </li>
+                      <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        Find information about legal problems
+                        </a>
+                      </li>
+                      <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <a class="gem-c-contents-list__link govuk-link" href="solve-problems-outside-of-court">Solve problems out of court</a>
+                      </li>
+                      <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <a class="gem-c-contents-list__link govuk-link" href="going-to-court">Going to court</a>
+                      </li>
+                    </ol>
+                </nav>
+            </aside>
+        </div>
+
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-column-two-thirds">
+    <h1 class="part-title">
+        Find information about legal problems
+    </h1>
+    <div class="gem-c-govspeak govuk-govuspeak dectrion-ltr disable-youtube">
+        <div class="gem-c-govspeak govuk-govspeak direction-ltr disable-youtube" data-module="govspeak">
+
+            <p class="govuk-body">Intro paragraph</p>
+            
+            <h2 class="govuk-heading-m">
+                Housing and homelessness
+            </h2>
+
+            <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-with-summary-sections">
+                <div class="govuk-accordion__section ">
+                  <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                      <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+                        Option 1
+                      </span>
+                    </h2>
+                    <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+                      Accordion introduction
+                    </div>
+                  </div>
+                  <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>
+                        <a class="govuk-link" href="#">Agile and government services: an introduction</a>
+                      </li>
+                      <li>
+                        <a class="govuk-link" href="#">Agile methods: an introduction</a>
+                      </li>
+                      <li>
+                        <a class="govuk-link" href="#">Core principles of agile</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                      <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+                          Option 2
+                        </span>
+                      </h2>
+                      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+                        Accordion introduction
+                      </div>
+                    </div>
+                    <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                          <a class="govuk-link" href="#">Agile and government services: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Agile methods: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Core principles of agile</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                      <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+                          Option 3
+                        </span>
+                      </h2>
+                      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+                        Accordion introduction
+                      </div>
+                    </div>
+                    <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                          <a class="govuk-link" href="#">Agile and government services: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Agile methods: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Core principles of agile</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                      <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+                          Option 4
+                        </span>
+                      </h2>
+                      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+                        Accordion introduction
+                      </div>
+                    </div>
+                    <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                          <a class="govuk-link" href="#">Agile and government services: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Agile methods: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Core principles of agile</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+            </div>
+            <h2 class="govuk-heading-m">
+                Crime and fines
+            </h2>
+            <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-with-summary-sections">
+                <div class="govuk-accordion__section ">
+                  <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                      <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+                        Option 1
+                      </span>
+                    </h2>
+                    <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+                      Accordion introduction
+                    </div>
+                  </div>
+                  <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>
+                        <a class="govuk-link" href="#">Agile and government services: an introduction</a>
+                      </li>
+                      <li>
+                        <a class="govuk-link" href="#">Agile methods: an introduction</a>
+                      </li>
+                      <li>
+                        <a class="govuk-link" href="#">Core principles of agile</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                      <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+                          Option 2
+                        </span>
+                      </h2>
+                      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+                        Accordion introduction
+                      </div>
+                    </div>
+                    <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                          <a class="govuk-link" href="#">Agile and government services: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Agile methods: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Core principles of agile</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                      <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+                          Option 3
+                        </span>
+                      </h2>
+                      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+                        Accordion introduction
+                      </div>
+                    </div>
+                    <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                          <a class="govuk-link" href="#">Agile and government services: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Agile methods: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Core principles of agile</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                      <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+                          Option 4
+                        </span>
+                      </h2>
+                      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+                        Accordion introduction
+                      </div>
+                    </div>
+                    <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                          <a class="govuk-link" href="#">Agile and government services: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Agile methods: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Core principles of agile</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+            </div>
+            <h2 class="govuk-heading-m">
+                Money
+            </h2>
+            <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-with-summary-sections">
+                <div class="govuk-accordion__section ">
+                  <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                      <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+                        Option 1
+                      </span>
+                    </h2>
+                    <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+                      Accordion introduction
+                    </div>
+                  </div>
+                  <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>
+                        <a class="govuk-link" href="#">Agile and government services: an introduction</a>
+                      </li>
+                      <li>
+                        <a class="govuk-link" href="#">Agile methods: an introduction</a>
+                      </li>
+                      <li>
+                        <a class="govuk-link" href="#">Core principles of agile</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                      <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+                          Option 2
+                        </span>
+                      </h2>
+                      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+                        Accordion introduction
+                      </div>
+                    </div>
+                    <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                          <a class="govuk-link" href="#">Agile and government services: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Agile methods: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Core principles of agile</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                      <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+                          Option 3
+                        </span>
+                      </h2>
+                      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+                        Accordion introduction
+                      </div>
+                    </div>
+                    <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                          <a class="govuk-link" href="#">Agile and government services: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Agile methods: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Core principles of agile</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                      <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+                          Option 4
+                        </span>
+                      </h2>
+                      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+                        Accordion introduction
+                      </div>
+                    </div>
+                    <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                          <a class="govuk-link" href="#">Agile and government services: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Agile methods: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Core principles of agile</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+            </div>
+            <h2 class="govuk-heading-m">
+                Employment
+            </h2>
+            <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-with-summary-sections">
+                <div class="govuk-accordion__section ">
+                  <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                      <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+                        Option 1
+                      </span>
+                    </h2>
+                    <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+                      Accordion introduction
+                    </div>
+                  </div>
+                  <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>
+                        <a class="govuk-link" href="#">Agile and government services: an introduction</a>
+                      </li>
+                      <li>
+                        <a class="govuk-link" href="#">Agile methods: an introduction</a>
+                      </li>
+                      <li>
+                        <a class="govuk-link" href="#">Core principles of agile</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                      <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+                          Option 2
+                        </span>
+                      </h2>
+                      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+                        Accordion introduction
+                      </div>
+                    </div>
+                    <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                          <a class="govuk-link" href="#">Agile and government services: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Agile methods: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Core principles of agile</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                      <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+                          Option 3
+                        </span>
+                      </h2>
+                      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+                        Accordion introduction
+                      </div>
+                    </div>
+                    <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                          <a class="govuk-link" href="#">Agile and government services: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Agile methods: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Core principles of agile</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                      <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+                          Option 4
+                        </span>
+                      </h2>
+                      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+                        Accordion introduction
+                      </div>
+                    </div>
+                    <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                          <a class="govuk-link" href="#">Agile and government services: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Agile methods: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Core principles of agile</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+            </div>
+            <h2 class="govuk-heading-m">
+                Health and social care
+            </h2>
+            <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-with-summary-sections">
+                <div class="govuk-accordion__section ">
+                  <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                      <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+                        Option 1
+                      </span>
+                    </h2>
+                    <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+                      Accordion introduction
+                    </div>
+                  </div>
+                  <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>
+                        <a class="govuk-link" href="#">Agile and government services: an introduction</a>
+                      </li>
+                      <li>
+                        <a class="govuk-link" href="#">Agile methods: an introduction</a>
+                      </li>
+                      <li>
+                        <a class="govuk-link" href="#">Core principles of agile</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                      <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+                          Option 2
+                        </span>
+                      </h2>
+                      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+                        Accordion introduction
+                      </div>
+                    </div>
+                    <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                          <a class="govuk-link" href="#">Agile and government services: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Agile methods: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Core principles of agile</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                      <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+                          Option 3
+                        </span>
+                      </h2>
+                      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+                        Accordion introduction
+                      </div>
+                    </div>
+                    <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                          <a class="govuk-link" href="#">Agile and government services: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Agile methods: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Core principles of agile</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                      <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+                          Option 4
+                        </span>
+                      </h2>
+                      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+                        Accordion introduction
+                      </div>
+                    </div>
+                    <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                          <a class="govuk-link" href="#">Agile and government services: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Agile methods: an introduction</a>
+                        </li>
+                        <li>
+                          <a class="govuk-link" href="#">Core principles of agile</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <nav class="gem-c-pagination" role="navigation" aria-label="Pagination">
+            <ul class="gem-c-pagination__list" data-module="gem-track-click">
+                <li class="gem-c-pagination__item gem-c-pagination__item--previous">
+                  <a href="find-a-legal-adviser.html" class="govuk-link gem-c-pagination__link" rel="prev">
+                    <span class="gem-c-pagination__link-title">
+                      <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                        <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                      </svg>
+                      <span class="gem-c-pagination__link-text">Previous</span>
+                    </span>
+                      <span class="gem-c-pagination__link-divider visually-hidden">:</span>
+                      <span class="gem-c-pagination__link-label">Find a legal adviser</span>
+                  </a>
+                </li>
+                <li class="gem-c-pagination__item gem-c-pagination__item--next">
+                  <a href="solve-problems-outside-of-court" class="govuk-link gem-c-pagination__link" rel="next">
+                    <span class="gem-c-pagination__link-title">
+                      <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                        <path d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                      </svg>
+                      <span class="gem-c-pagination__link-text">Next</span>
+                    </span>
+                      <span class="gem-c-pagination__link-divider visually-hidden">:</span>
+                      <span class="gem-c-pagination__link-label">Solve problems out of court</span>
+                  </a>
+                </li>
+            </ul>
+          </nav>
+    </div>
+</div>
+</div>
+</div>
+{% endblock %}

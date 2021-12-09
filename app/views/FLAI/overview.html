@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Legal help directory
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({homepageUrl: "/", serviceName: serviceName, serviceUrl: "/", containerClasses: "govuk-width-container" }) }}
+
+  <!-- https://service-manual.nhs.uk/design-system/components/card -->
+  <link rel="stylesheet" href="https://service-manual.nhs.uk/css/main.css">
+  <script src="https://service-manual.nhs.uk/js/main.min.js" defer=""></script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <div class="gem-c-title govuk-!-margin-top-8 govuk-!-margin-bottom-8">
+                <h1 class="gem-c-title__text govuk-heading-xl">
+                  Find legal advice and support
+                </h1>
+              </div>
+              <a class="gem-c-skip-link govuk-skip-link govuk-!-display-none-print" href="#guide-contents">Skip to contents of guide</a>
+              <aside class="part-navigation-container">
+                <nav class="gem-c-contents-list" aria-label="pages in this guide" role="complementary">
+                    <h2 class="gem-c-contents-list__title">
+                        Contents
+                    </h2>
+                    <ol class="gem-c-contents-list__list">
+                      <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active">
+                        Overview
+                      </li>
+                      <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <a class="gem-c-contents-list__link govuk-link" href="find-a-legal-adviser">
+                          Find a legal adviser
+                        </a>
+                      </li>
+                      <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <a class="gem-c-contents-list__link govuk-link" href="find-information-about-legal-problems">
+                        Find information about legal problems
+                        </a>
+                      </li>
+                      <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <a class="gem-c-contents-list__link govuk-link" href="solve-problems-outside-of-court">Solve problems out of court</a>
+                      </li>
+                      <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <a class="gem-c-contents-list__link govuk-link" href="going-to-court">Going to court</a>
+                      </li>
+                    </ol>
+                </nav>
+            </aside>
+        </div>
+
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-column-two-thirds">
+    <h1 class="part-title">
+        Overview
+    </h1>
+    <div class="gem-c-govspeak govuk-govuspeak dectrion-ltr disable-youtube">
+        <div class="gem-c-govspeak govuk-govspeak direction-ltr disable-youtube" data-module="govspeak">
+            <p>You can get legal advice and information to solve common problems, for example about:</p>
+            <ul class="govuk-list govuk-list--bullet ">
+                <li>debts</li>
+                <li>decisions about benefits</li>
+                <li>employer discrimination</li>
+                <li>immigration statuses</li>
+                <li>disagreements with neighbours</li>
+            </ul>
+            
+            <p>Get advice and information as early as you can. It might stop a problem from getting worse.</p>
+            
+            <p>You may need to <a href="/find-legal-advice/find-legal-adviser">find a legal adviser</a> with specialist training in the area of your problem. They could help you solve it, or give you advice about what to do next.</p>
+            
+            <p>You might be able to <a href="/find-legal-advice/solve-problems-out-of-court">solve the problem without going to court</a>, for example by working with a mediator.</p>
+            
+            <p>If you need to go to court to solve the problem, you can find out <a href="/find-legal-advice/going-to-court">how to prepare for a court hearing</a>.</p>
+
+      </div>
+      </div>
+      <nav class="gem-c-pagination" role="navigation" aria-label="Pagination">
+        <ul class="gem-c-pagination__list" data-module="gem-track-click">
+            <li class="gem-c-pagination__item gem-c-pagination__item--next">
+              <a href="find-a-legal-adviser" class="govuk-link gem-c-pagination__link" rel="next">
+                <span class="gem-c-pagination__link-title">
+                  <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                    <path d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                  </svg>
+                  <span class="gem-c-pagination__link-text">Next</span>
+                </span>
+                  <span class="gem-c-pagination__link-divider visually-hidden">:</span>
+                  <span class="gem-c-pagination__link-label">Find a legal adviser</span>
+              </a>
+            </li>
+        </ul>
+      </nav>
+</div>
+</div>
+</div>
+{% endblock %}

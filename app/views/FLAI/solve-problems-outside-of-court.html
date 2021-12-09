@@ -1,0 +1,116 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Legal help directory
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({homepageUrl: "/", serviceName: serviceName, serviceUrl: "/", containerClasses: "govuk-width-container" }) }}
+
+  <!-- https://service-manual.nhs.uk/design-system/components/card -->
+  <link rel="stylesheet" href="https://service-manual.nhs.uk/css/main.css">
+  <script src="https://service-manual.nhs.uk/js/main.min.js" defer=""></script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <div class="gem-c-title govuk-!-margin-top-8 govuk-!-margin-bottom-8">
+                <h1 class="gem-c-title__text govuk-heading-xl">
+                  Find legal advice and support
+                </h1>
+              </div>
+              <a class="gem-c-skip-link govuk-skip-link govuk-!-display-none-print" href="#guide-contents">Skip to contents of guide</a>
+              <aside class="part-navigation-container">
+                <nav class="gem-c-contents-list" aria-label="pages in this guide" role="complementary">
+                    <h2 class="gem-c-contents-list__title">
+                        Contents
+                    </h2>
+                    <ol class="gem-c-contents-list__list">
+                      <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <a class="gem-c-contents-list__link govuk-link" href="overview">Overview</a>
+                      </li>
+                      <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <a class="gem-c-contents-list__link govuk-link" href="find-a-legal-adviser">
+                          Find a legal adviser
+                        </a>
+                      </li>
+                      <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <a class="gem-c-contents-list__link govuk-link" href="find-information-about-legal-problems">
+                        Find information about legal problems
+                        </a>
+                      </li>
+                      <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active">
+                        Solve problems out of court
+                      </li>
+                      <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <a class="gem-c-contents-list__link govuk-link" href="going-to-court">Going to court</a>
+                      </li>
+                    </ol>
+                </nav>
+            </aside>
+        </div>
+
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-column-two-thirds">
+    <h1 class="part-title">
+        Solve problems outside of court
+    </h1>
+    <div class="gem-c-govspeak govuk-govuspeak dectrion-ltr disable-youtube">
+        <div class="gem-c-govspeak govuk-govspeak direction-ltr disable-youtube" data-module="govspeak">
+    
+            <p>Solving issues without having to go to court could save you time and money.</p>
+    
+            <p><a rel="external" href="https://www.advicenow.org.uk/guides/sort-out-your-legal-problem-or-instead-going-court">Read Advicenow’s guide to solving legal problems before or instead of going to court</a>.</p>
+            
+            <p>For example, you may be able to come to an agreement or get an explanation or apology from the person you’re having a problem with.</p>
+            
+            <p>You could also work with a mediator to try to get compensation.</p>
+            
+            <p>A mediator is an independent professional who will help you and the person you’re having a problem with talk through the issues and come to an agreement.</p>
+            
+            <p><a href="https://www.gov.uk/guidance/a-guide-to-civil-mediation">Find out more about mediation and how to find a mediator</a>.</p>
+            
+            <div role="note" aria-label="Information" class="application-notice info-notice">
+            <p>You might be able to get help with the costs of family mediation through legal aid. <a href="/legal-aid">Find out if you’re eligible for legal aid</a>.</p>
+
+
+      </div>
+      </div>
+      <nav class="gem-c-pagination" role="navigation" aria-label="Pagination">
+        <ul class="gem-c-pagination__list" data-module="gem-track-click">
+            <li class="gem-c-pagination__item gem-c-pagination__item--previous">
+              <a href="find-information-about-legal-problems" class="govuk-link gem-c-pagination__link" rel="prev">
+                <span class="gem-c-pagination__link-title">
+                  <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                    <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                  </svg>
+                  <span class="gem-c-pagination__link-text">Previous</span>
+                </span>
+                  <span class="gem-c-pagination__link-divider visually-hidden">:</span>
+                  <span class="gem-c-pagination__link-label">Find information about legal problems</span>
+              </a>
+            </li>
+            <li class="gem-c-pagination__item gem-c-pagination__item--next">
+              <a href="going-to-court" class="govuk-link gem-c-pagination__link" rel="next">
+                <span class="gem-c-pagination__link-title">
+                  <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                    <path d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                  </svg>
+                  <span class="gem-c-pagination__link-text">Next</span>
+                </span>
+                  <span class="gem-c-pagination__link-divider visually-hidden">:</span>
+                  <span class="gem-c-pagination__link-label">Going to court</span>
+              </a>
+            </li>
+        </ul>
+      </nav>
+</div>
+</div>
+</div>
+{% endblock %}
