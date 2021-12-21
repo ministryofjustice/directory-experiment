@@ -20,8 +20,8 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-decoration: underline;
-    text-decoration-thickness: max(1px, .0625rem);
-    text-underline-offset: .1em;
+    //text-decoration-thickness: max(1px, .0625rem);
+    //text-underline-offset: .1em;
     font-family: "GDS Transport",arial,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -42,11 +42,11 @@
 }
 
 .browse__link:hover {
-    text-decoration-thickness: max(3px, .1875rem, .12em);
-    -webkit-text-decoration-skip-ink: none;
-    text-decoration-skip-ink: none;
+    //text-decoration-thickness: max(3px, .1875rem, .12em);
+    //-webkit-text-decoration-skip-ink: none;
+    //text-decoration-skip-ink: none;
     -webkit-text-decoration-skip: none;
-    text-decoration-skip: none
+    //text-decoration-skip: none
 }
 
 .browse__link:focus {
@@ -473,16 +473,16 @@
 
 .browse__section-pane .browse__link .browse__title {
     text-decoration: underline;
-    text-decoration-thickness: max(1px, .0625rem);
-    text-underline-offset: .1em
+    //text-decoration-thickness: max(1px, .0625rem);
+    //text-underline-offset: .1em
 }
 
 .browse__section-pane .browse__link:hover .browse__title {
-    text-decoration-thickness: max(3px, .1875rem, .12em);
+    //text-decoration-thickness: max(3px, .1875rem, .12em);
     -webkit-text-decoration-skip-ink: none;
-    text-decoration-skip-ink: none;
+    //text-decoration-skip-ink: none;
     -webkit-text-decoration-skip: none;
-    text-decoration-skip: none
+    //text-decoration-skip: none
 }
 
 @media (min-width: 40.0625em) {
