@@ -1,0 +1,134 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Citizenship and living in the UK - GOV.UK
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({homepageUrl: "/", containerClasses: "govuk-width-container" }) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+<div class="gem-c-layout-for-public__global-banner-wrapper">
+    <div id="user-satisfaction-survey-container"></div>
+    <!--[if gt IE 7]><!-->
+    <div id="global-bar" class="global-bar dont-print" data-module="global-bar" data-global-bar-permanent="true" data-nosnippet="">
+        <div class="global-bar-message govuk-width-container">
+            <div class="global-bar-covid-wrapper">
+                <div class="gem-c-action-link gem-c-action-link--light-text gem-c-action-link--simple-light gem-c-action-link--with-subtext govuk-!-margin-bottom-0">
+                    <span class="gem-c-action-link__contents-wrapper">      
+                        <span class="gem-c-action-link__link-wrapper">
+                            <a class="govuk-link gem-c-action-link__link js-call-to-action govuk-link--inverse" href="/coronavirus">Coronavirus (COVID-19)</a>
+                        </span>
+                        <span class="gem-c-action-link__subtext-wrapper">
+                            <span class="gem-c-action-link__subtext">Latest updates and guidance</span>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<![endif]-->
+</div>
+{% endblock %}
+
+{% block content %}
+
+    {{ govukBreadcrumbs({
+    items: [
+        {
+        text: "Home",
+        href: "#"
+        }
+    ]
+    }) }}
+
+    <div class="browse browse--two-columns" data-module="browse-columns gem-track-click" aria-busy="false">
+        <div id="subsection" class="browse__subsection-pane"></div>
+        <div id="section" class="browse__section-pane"><div class="browse__inner browse__inner--alphabetical">
+        <h2 tabindex="-1" class="browse__heading js-heading">Browse: Citizenship and living in the UK</h2>
+          <h3 class="browse__sort-order">A to Z</h3>
+        <ul class="browse__list">
+            <li>
+              <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="1" data-track-label="/browse/citizenship/citizenship" data-track-options="{&quot;dimension28&quot;:&quot;4&quot;,&quot;dimension29&quot;:&quot;British citizenship &quot;}" class="browse__link browse__link--inactive" href="/browse/citizenship/citizenship">
+                <h3 class="browse__title">British citizenship </h3>
+                <p class="browse__description">Becoming a citizen, Life in the UK test and getting a passport</p>
+      </a>      </li>
+            <li>
+              <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="2" data-track-label="/browse/citizenship/charities-honours" data-track-options="{&quot;dimension28&quot;:&quot;4&quot;,&quot;dimension29&quot;:&quot;Charities, volunteering and honours&quot;}" class="browse__link browse__link--inactive" href="/browse/citizenship/charities-honours">
+                <h3 class="browse__title">Charities, volunteering and honours</h3>
+                <p class="browse__description">Nominating someone for an honour, setting up a charity, community participation</p>
+      </a>      </li>
+            <li>
+              <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="3" data-track-label="/browse/citizenship/government" data-track-options="{&quot;dimension28&quot;:&quot;4&quot;,&quot;dimension29&quot;:&quot;Living in the UK, government and democracy&quot;}" class="browse__link browse__link--inactive" href="/browse/citizenship/government">
+                <h3 class="browse__title">Living in the UK, government and democracy</h3>
+                <p class="browse__description">Petitioning the government, government statistics, national emergencies and terrorism</p>
+      </a>      </li>
+            <li>
+              <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="4" data-track-label="/browse/citizenship/voting" data-track-options="{&quot;dimension28&quot;:&quot;4&quot;,&quot;dimension29&quot;:&quot;Voting&quot;}" class="browse__link browse__link--inactive" href="/browse/citizenship/voting">
+                <h3 class="browse__title">Voting</h3>
+                <p class="browse__description">Register to vote, getting on the electoral register and voting by proxy</p>
+      </a>      </li>
+        </ul>
+      </div>
+      </div>
+        <div id="root" class="browse__root-pane">
+        <h2 class="govuk-visually-hidden" tabindex="-1">All categories</h2>
+        <ul class="browse__list">
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="1" data-track-label="/browse/benefits" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Benefits&quot;}" class="browse__link browse__link--inactive" href="/browse/benefits">Benefits</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="2" data-track-label="/browse/births-deaths-marriages" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Births, deaths, marriages and care&quot;}" class="browse__link browse__link--inactive" href="/browse/births-deaths-marriages">Births, deaths, marriages and care</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="3" data-track-label="/browse/business" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Business and self-employed&quot;}" class="browse__link browse__link--inactive" href="/browse/business">Business and self-employed</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="4" data-track-label="/browse/childcare-parenting" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Childcare and parenting&quot;}" class="browse__link browse__link--inactive" href="/browse/childcare-parenting">Childcare and parenting</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="5" data-track-label="/browse/citizenship" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Citizenship and living in the UK&quot;}" class="browse__link browse__link--active" href="/browse/citizenship">Citizenship and living in the UK</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="6" data-track-label="/browse/justice" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Crime, justice and the law&quot;}" class="browse__link browse__link--inactive" href="/browse/justice">Crime, justice and the law</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="7" data-track-label="/browse/disabilities" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Disabled people&quot;}" class="browse__link browse__link--inactive" href="/browse/disabilities">Disabled people</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="8" data-track-label="/browse/driving" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Driving and transport&quot;}" class="browse__link browse__link--inactive" href="/browse/driving">Driving and transport</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="9" data-track-label="/browse/education" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Education and learning&quot;}" class="browse__link browse__link--inactive" href="/browse/education">Education and learning</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="10" data-track-label="/browse/employing-people" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Employing people&quot;}" class="browse__link browse__link--inactive" href="/browse/employing-people">Employing people</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="11" data-track-label="/browse/environment-countryside" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Environment and countryside&quot;}" class="browse__link browse__link--inactive" href="/browse/environment-countryside">Environment and countryside</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="12" data-track-label="/browse/housing-local-services" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Housing and local services&quot;}" class="browse__link browse__link--inactive" href="/browse/housing-local-services">Housing and local services</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="13" data-track-label="/browse/tax" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Money and tax&quot;}" class="browse__link browse__link--inactive" href="/browse/tax">Money and tax</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="14" data-track-label="/browse/abroad" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Passports, travel and living abroad&quot;}" class="browse__link browse__link--inactive" href="/browse/abroad">Passports, travel and living abroad</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="15" data-track-label="/browse/visas-immigration" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Visas and immigration&quot;}" class="browse__link browse__link--inactive" href="/browse/visas-immigration">Visas and immigration</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="16" data-track-label="/browse/working" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Working, jobs and pensions&quot;}" class="browse__link browse__link--inactive" href="/browse/working">Working, jobs and pensions</a>
+            </li>
+        </ul>
+      </div>
+      
+      </div>
+
+{% endblock %}
+
+

@@ -1,0 +1,217 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Business and self-employed people - GOV.UK
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({homepageUrl: "/", containerClasses: "govuk-width-container" }) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+<div class="gem-c-layout-for-public__global-banner-wrapper">
+    <div id="user-satisfaction-survey-container"></div>
+    <!--[if gt IE 7]><!-->
+    <div id="global-bar" class="global-bar dont-print" data-module="global-bar" data-global-bar-permanent="true" data-nosnippet="">
+        <div class="global-bar-message govuk-width-container">
+            <div class="global-bar-covid-wrapper">
+                <div class="gem-c-action-link gem-c-action-link--light-text gem-c-action-link--simple-light gem-c-action-link--with-subtext govuk-!-margin-bottom-0">
+                    <span class="gem-c-action-link__contents-wrapper">      
+                        <span class="gem-c-action-link__link-wrapper">
+                            <a class="govuk-link gem-c-action-link__link js-call-to-action govuk-link--inverse" href="/coronavirus">Coronavirus (COVID-19)</a>
+                        </span>
+                        <span class="gem-c-action-link__subtext-wrapper">
+                            <span class="gem-c-action-link__subtext">Latest updates and guidance</span>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<![endif]-->
+</div>
+{% endblock %}
+
+{% block content %}
+
+    {{ govukBreadcrumbs({
+    items: [
+        {
+        text: "Home",
+        href: "#"
+        }
+    ]
+    }) }}
+
+    <div class="browse browse--two-columns" data-module="browse-columns gem-track-click" aria-busy="false">
+        <div id="subsection" class="browse__subsection-pane"></div>
+        <div id="section" class="browse__section-pane"><div class="browse__inner browse__inner--curated">
+        <h2 tabindex="-1" class="browse__heading js-heading">Browse: Business and self-employed</h2>
+        <ul class="browse__list">
+            <li>
+              <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="1" data-track-label="/browse/business/setting-up" data-track-options="{&quot;dimension28&quot;:&quot;21&quot;,&quot;dimension29&quot;:&quot;Setting up&quot;}" class="browse__link browse__link--inactive" href="/browse/business/setting-up">
+                <h3 class="browse__title">Setting up</h3>
+                <p class="browse__description">Includes self-employment and starting a business</p>
+      </a>      </li>
+            <li>
+              <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="2" data-track-label="/browse/business/business-tax" data-track-options="{&quot;dimension28&quot;:&quot;21&quot;,&quot;dimension29&quot;:&quot;Business tax&quot;}" class="browse__link browse__link--inactive" href="/browse/business/business-tax">
+                <h3 class="browse__title">Business tax</h3>
+                <p class="browse__description">Includes Corporation Tax, Capital Gains Tax, Construction Industry Scheme (CIS) and VAT</p>
+      </a>      </li>
+            <li>
+              <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="3" data-track-label="/browse/business/finance-support" data-track-options="{&quot;dimension28&quot;:&quot;21&quot;,&quot;dimension29&quot;:&quot;Business finance and support&quot;}" class="browse__link browse__link--inactive" href="/browse/business/finance-support">
+                <h3 class="browse__title">Business finance and support</h3>
+                <p class="browse__description">Finding finance, business support, writing a business plan</p>
+      </a>      </li>
+            <li>
+              <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="4" data-track-label="/browse/business/limited-company" data-track-options="{&quot;dimension28&quot;:&quot;21&quot;,&quot;dimension29&quot;:&quot;Running a limited company&quot;}" class="browse__link browse__link--inactive" href="/browse/business/limited-company">
+                <h3 class="browse__title">Running a limited company</h3>
+                <p class="browse__description">Includes registering, setting up, company accounts and tax returns</p>
+      </a>      </li>
+            <li>
+              <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="5" data-track-label="/browse/business/expenses-employee-benefits" data-track-options="{&quot;dimension28&quot;:&quot;21&quot;,&quot;dimension29&quot;:&quot;Expenses and employee benefits&quot;}" class="browse__link browse__link--inactive" href="/browse/business/expenses-employee-benefits">
+                <h3 class="browse__title">Expenses and employee benefits</h3>
+                <p class="browse__description">Includes company cars and paying tax on employee benefits</p>
+      </a>      </li>
+            <li>
+              <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="6" data-track-label="/browse/business/funding-debt" data-track-options="{&quot;dimension28&quot;:&quot;21&quot;,&quot;dimension29&quot;:&quot;Business debt and bankruptcy&quot;}" class="browse__link browse__link--inactive" href="/browse/business/funding-debt">
+                <h3 class="browse__title">Business debt and bankruptcy</h3>
+                <p class="browse__description">Includes bankruptcy, insolvency and recovering debt</p>
+      </a>      </li>
+            <li>
+              <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="7" data-track-label="/browse/business/premises-rates" data-track-options="{&quot;dimension28&quot;:&quot;21&quot;,&quot;dimension29&quot;:&quot;Business premises and business rates&quot;}" class="browse__link browse__link--inactive" href="/browse/business/premises-rates">
+                <h3 class="browse__title">Business premises and business rates</h3>
+                <p class="browse__description">Includes leases, renting, planning permission, waste and appeals</p>
+      </a>      </li>
+            <li>
+              <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="8" data-track-label="/browse/business/food" data-track-options="{&quot;dimension28&quot;:&quot;21&quot;,&quot;dimension29&quot;:&quot;Food, catering and retail&quot;}" class="browse__link browse__link--inactive" href="/browse/business/food">
+                <h3 class="browse__title">Food, catering and retail</h3>
+                <p class="browse__description">Labelling and handling food, transporting, food safety</p>
+      </a>      </li>
+            <li>
+              <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="9" data-track-label="/browse/business/imports" data-track-options="{&quot;dimension28&quot;:&quot;21&quot;,&quot;dimension29&quot;:&quot;Importing&quot;}" class="browse__link browse__link--inactive" href="/browse/business/imports">
+                <h3 class="browse__title">Importing</h3>
+                <p class="browse__description">Includes moving goods in the EU and commodity codes</p>
+      </a>      </li>
+            <li>
+              <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="10" data-track-label="/browse/business/exports" data-track-options="{&quot;dimension28&quot;:&quot;21&quot;,&quot;dimension29&quot;:&quot;Exporting and doing business abroad&quot;}" class="browse__link browse__link--inactive" href="/browse/business/exports">
+                <h3 class="browse__title">Exporting and doing business abroad</h3>
+                <p class="browse__description">Includes moving goods in the EU and commodity codes</p>
+      </a>      </li>
+            <li>
+              <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="11" data-track-label="/browse/business/licences" data-track-options="{&quot;dimension28&quot;:&quot;21&quot;,&quot;dimension29&quot;:&quot;Licences and licence applications&quot;}" class="browse__link browse__link--inactive" href="/browse/business/licences">
+                <h3 class="browse__title">Licences and licence applications</h3>
+                <p class="browse__description">Applying for licences for events and businesses</p>
+      </a>      </li>
+            <li>
+              <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="12" data-track-label="/browse/business/selling-closing" data-track-options="{&quot;dimension28&quot;:&quot;21&quot;,&quot;dimension29&quot;:&quot;Selling your business and closing down&quot;}" class="browse__link browse__link--inactive" href="/browse/business/selling-closing">
+                <h3 class="browse__title">Selling your business and closing down</h3>
+                <p class="browse__description">Stopping self-employment, winding up or liquidating a limited company</p>
+      </a>      </li>
+            <li>
+              <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="13" data-track-label="/browse/business/sale-goods-services-data" data-track-options="{&quot;dimension28&quot;:&quot;21&quot;,&quot;dimension29&quot;:&quot;Sale of goods and services and data protection&quot;}" class="browse__link browse__link--inactive" href="/browse/business/sale-goods-services-data">
+                <h3 class="browse__title">Sale of goods and services and data protection</h3>
+                <p class="browse__description">Includes regulations for online retailers, offering credit and Trading Standards</p>
+      </a>      </li>
+            <li>
+              <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="14" data-track-label="/browse/business/childcare-providers" data-track-options="{&quot;dimension28&quot;:&quot;21&quot;,&quot;dimension29&quot;:&quot;Childcare providers&quot;}" class="browse__link browse__link--inactive" href="/browse/business/childcare-providers">
+                <h3 class="browse__title">Childcare providers</h3>
+                <p class="browse__description">Includes registering as a childcare provider</p>
+      </a>      </li>
+            <li>
+              <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="15" data-track-label="/browse/business/farming" data-track-options="{&quot;dimension28&quot;:&quot;21&quot;,&quot;dimension29&quot;:&quot;Farming business&quot;}" class="browse__link browse__link--inactive" href="/browse/business/farming">
+                <h3 class="browse__title">Farming business</h3>
+                <p class="browse__description">Health and safety, registering and licensing animals, compliance tools, rights and pay</p>
+      </a>      </li>
+            <li>
+              <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="16" data-track-label="/browse/business/manufacturing" data-track-options="{&quot;dimension28&quot;:&quot;21&quot;,&quot;dimension29&quot;:&quot;Manufacturing&quot;}" class="browse__link browse__link--inactive" href="/browse/business/manufacturing">
+                <h3 class="browse__title">Manufacturing</h3>
+                <p class="browse__description">Managing waste, health and safety, regulations</p>
+      </a>      </li>
+            <li>
+              <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="17" data-track-label="/browse/business/intellectual-property" data-track-options="{&quot;dimension28&quot;:&quot;21&quot;,&quot;dimension29&quot;:&quot;Patents, trade marks, copyright and designs&quot;}" class="browse__link browse__link--inactive" href="/browse/business/intellectual-property">
+                <h3 class="browse__title">Patents, trade marks, copyright and designs</h3>
+                <p class="browse__description">Includes registering, protecting and applying for designs and patents</p>
+      </a>      </li>
+            <li>
+              <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="18" data-track-label="/browse/business/waste-environment" data-track-options="{&quot;dimension28&quot;:&quot;21&quot;,&quot;dimension29&quot;:&quot;Waste and environmental impact&quot;}" class="browse__link browse__link--inactive" href="/browse/business/waste-environment">
+                <h3 class="browse__title">Waste and environmental impact</h3>
+                <p class="browse__description">Includes waste management plans, hazardous waste and preventing pollution</p>
+      </a>      </li>
+            <li>
+              <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="19" data-track-label="/browse/business/science" data-track-options="{&quot;dimension28&quot;:&quot;21&quot;,&quot;dimension29&quot;:&quot;Scientific research and development&quot;}" class="browse__link browse__link--inactive" href="/browse/business/science">
+                <h3 class="browse__title">Scientific research and development</h3>
+                <p class="browse__description">Includes funding and support scheme guidance</p>
+      </a>      </li>
+            <li>
+              <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="20" data-track-label="/browse/business/generating-energy" data-track-options="{&quot;dimension28&quot;:&quot;21&quot;,&quot;dimension29&quot;:&quot;Generating energy&quot;}" class="browse__link browse__link--inactive" href="/browse/business/generating-energy">
+                <h3 class="browse__title">Generating energy</h3>
+                <p class="browse__description">Funding, regulations and guidance for energy providers and operators</p>
+      </a>      </li>
+            <li>
+              <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="21" data-track-label="/browse/business/maritime" data-track-options="{&quot;dimension28&quot;:&quot;21&quot;,&quot;dimension29&quot;:&quot;Maritime vessels and work at sea&quot;}" class="browse__link browse__link--inactive" href="/browse/business/maritime">
+                <h3 class="browse__title">Maritime vessels and work at sea</h3>
+                <p class="browse__description">Includes health and safety onboard, crew, registering vessels</p>
+      </a>      </li>
+        </ul>
+      </div>
+      </div>
+        <div id="root" class="browse__root-pane">
+        <h2 class="govuk-visually-hidden" tabindex="-1">All categories</h2>
+        <ul class="browse__list">
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="1" data-track-label="/browse/benefits" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Benefits&quot;}" class="browse__link browse__link--inactive" href="/browse/benefits">Benefits</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="2" data-track-label="/browse/births-deaths-marriages" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Births, deaths, marriages and care&quot;}" class="browse__link browse__link--inactive" href="/browse/births-deaths-marriages">Births, deaths, marriages and care</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="3" data-track-label="/browse/business" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Business and self-employed&quot;}" class="browse__link browse__link--active" href="/browse/business">Business and self-employed</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="4" data-track-label="/browse/childcare-parenting" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Childcare and parenting&quot;}" class="browse__link browse__link--inactive" href="/browse/childcare-parenting">Childcare and parenting</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="5" data-track-label="/browse/citizenship" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Citizenship and living in the UK&quot;}" class="browse__link browse__link--inactive" href="/browse/citizenship">Citizenship and living in the UK</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="6" data-track-label="/browse/justice" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Crime, justice and the law&quot;}" class="browse__link browse__link--inactive" href="/browse/justice">Crime, justice and the law</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="7" data-track-label="/browse/disabilities" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Disabled people&quot;}" class="browse__link browse__link--inactive" href="/browse/disabilities">Disabled people</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="8" data-track-label="/browse/driving" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Driving and transport&quot;}" class="browse__link browse__link--inactive" href="/browse/driving">Driving and transport</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="9" data-track-label="/browse/education" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Education and learning&quot;}" class="browse__link browse__link--inactive" href="/browse/education">Education and learning</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="10" data-track-label="/browse/employing-people" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Employing people&quot;}" class="browse__link browse__link--inactive" href="/browse/employing-people">Employing people</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="11" data-track-label="/browse/environment-countryside" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Environment and countryside&quot;}" class="browse__link browse__link--inactive" href="/browse/environment-countryside">Environment and countryside</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="12" data-track-label="/browse/housing-local-services" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Housing and local services&quot;}" class="browse__link browse__link--inactive" href="/browse/housing-local-services">Housing and local services</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="13" data-track-label="/browse/tax" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Money and tax&quot;}" class="browse__link browse__link--inactive" href="/browse/tax">Money and tax</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="14" data-track-label="/browse/abroad" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Passports, travel and living abroad&quot;}" class="browse__link browse__link--inactive" href="/browse/abroad">Passports, travel and living abroad</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="15" data-track-label="/browse/visas-immigration" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Visas and immigration&quot;}" class="browse__link browse__link--inactive" href="/browse/visas-immigration">Visas and immigration</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="16" data-track-label="/browse/working" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Working, jobs and pensions&quot;}" class="browse__link browse__link--inactive" href="/browse/working">Working, jobs and pensions</a>
+            </li>
+        </ul>
+      </div>
+      
+      </div>
+
+
+{% endblock %}

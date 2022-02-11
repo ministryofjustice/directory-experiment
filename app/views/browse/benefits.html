@@ -1,15 +1,12 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Gov.uk Browse
+  Benefits - GOV.UK
 {% endblock %}
 
 {% block header %}
 {{ govukHeader({homepageUrl: "/", containerClasses: "govuk-width-container" }) }}
 
-  <!-- https://service-manual.nhs.uk/design-system/components/card -->
-  <!--<link rel="stylesheet" href="https://service-manual.nhs.uk/css/main.css">-->
-  <!--<script src="https://service-manual.nhs.uk/js/main.min.js" defer=""></script>-->
 {% endblock %}
 
 {% block beforeContent %}
@@ -47,119 +44,194 @@
     ]
     }) }}
 
+
     <h1 class="govuk-visually-hidden">Browse GOV.UK</h1>
-    <div class="browse browse--two-columns" data-state="section" data-module="browse-columns gem-track-click">
-        <div id="subsection" class="browse__subsection-pane"></div>
-            <div id="section" class="browse__section-pane">
-                <div class="browse__inner browse__inner--curated">
-                    <h2 tabindex="-1" class="browse__heading js-heading">Browse:  Benefits</h2>
+    <div class="browse" data-module="browse-columns gem-track-click" aria-busy="false">
+        <!-- Column three -->
+        <div id="subsection" class="browse__subsection-pane">
+            <div id="subsection" class="browse__subsection-pane"></div>
+                <div class="browse__inner browse__inner--alphabetical">
+                    <h2 tabindex="-1" class="browse__heading js-heading">Browse: Child Benefit</h2>
+                    
+                    <section class="gem-c-intervention" role="region" aria-label="Intervention" data-module="intervention" hidden="">
+                        <p class="govuk-body">
+                            <span class="gem-c-intervention__textwrapper">Help improve GOV.UK</span>
+                            <a class="govuk-link gem-c-intervention__suggestion-link" href="https://gdsuserresearch.optimalworkshop.com/treejack/35gap0ij" data-track-category="interventionBanner" data-track-action="interventionClicked" data-track-dimension="Take part in user research" data-track-dimension-index="29" data-track-label="https://gdsuserresearch.optimalworkshop.com/treejack/35gap0ij" target="_blank" rel="noopener noreferrer external">Take part in user research (opens in a new tab)</a>
+                        </p>
+                    </section>
+                
+                    <h3 class="browse__sort-order">A to Z</h3>
+                
                     <ul class="browse__list">
                         <li>
-                            <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="1" data-track-label="/browse/benefits/manage-your-benefit" data-track-options="{&quot;dimension28&quot;:&quot;8&quot;,&quot;dimension29&quot;:&quot;Manage an existing benefit, payment or claim&quot;}" class="browse__link browse__link--inactive" href="/browse/benefits/manage-your-benefit">
-                                <h3 class="browse__title">Manage an existing benefit, payment or claim</h3>
-                                <p class="browse__description">Sign in to your account, report changes, find out about overpayments, or appeal a decision. Includes existing Universal Credit and tax credits claims. </p>
-                            </a>      
+                            <a data-track-category="thirdLevelBrowseLinkClicked" data-track-action="1.1" data-track-label="/child-benefit-complaints" data-track-options="{&quot;dimension28&quot;:&quot;15&quot;,&quot;dimension29&quot;:&quot;Child Benefit complaints&quot;}" class="browse__normal-link govuk-link" href="/child-benefit-complaints">Child Benefit complaints</a>
                         </li>
                         <li>
-                            <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="2" data-track-label="/browse/benefits/looking-for-work" data-track-options="{&quot;dimension28&quot;:&quot;8&quot;,&quot;dimension29&quot;:&quot;Benefits and financial support if you're looking for work&quot;}" class="browse__link browse__link--inactive" href="/browse/benefits/looking-for-work">
-                                <h3 class="browse__title">Benefits and financial support if you're looking for work</h3>
-                                <p class="browse__description">Help if you're looking for a new job, are out of work or affected by redundancy. Includes Universal Credit and Jobseeker’s Allowance (JSA).</p>
-                            </a>      
+                            <a data-track-category="thirdLevelBrowseLinkClicked" data-track-action="1.2" data-track-label="/child-benefit-for-children-in-hospital-or-care" data-track-options="{&quot;dimension28&quot;:&quot;15&quot;,&quot;dimension29&quot;:&quot;Child Benefit for children in hospital or care&quot;}" class="browse__normal-link govuk-link" href="/child-benefit-for-children-in-hospital-or-care">Child Benefit for children in hospital or care</a>
                         </li>
                         <li>
-                            <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="3" data-track-label="/browse/benefits/unable-to-work" data-track-options="{&quot;dimension28&quot;:&quot;8&quot;,&quot;dimension29&quot;:&quot;Benefits and financial support if you're temporarily unable to work&quot;}" class="browse__link browse__link--inactive" href="/browse/benefits/unable-to-work">
-                                <h3 class="browse__title">Benefits and financial support if you're temporarily unable to work</h3>
-                                <p class="browse__description">Help if you’re unable to work because you’re ill or self-isolating. Includes Universal Credit and Employment and Support Allowance (ESA).</p>
-                            </a>      
+                            <a data-track-category="thirdLevelBrowseLinkClicked" data-track-action="1.3" data-track-label="/child-benefit-child-parent-dies" data-track-options="{&quot;dimension28&quot;:&quot;15&quot;,&quot;dimension29&quot;:&quot;Child Benefit if a child or parent dies&quot;}" class="browse__normal-link govuk-link" href="/child-benefit-child-parent-dies">Child Benefit if a child or parent dies</a>
                         </li>
                         <li>
-                            <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="4" data-track-label="/browse/benefits/families" data-track-options="{&quot;dimension28&quot;:&quot;8&quot;,&quot;dimension29&quot;:&quot;Benefits and financial support for families&quot;}" class="browse__link browse__link--inactive" href="/browse/benefits/families">
-                                <h3 class="browse__title">Benefits and financial support for families</h3>
-                                <p class="browse__description">Help if you look after children or plan to have or adopt a child. Includes Child Benefit.</p>
-                            </a>      
+                            <a data-track-category="thirdLevelBrowseLinkClicked" data-track-action="1.4" data-track-label="/child-benefit-abroad" data-track-options="{&quot;dimension28&quot;:&quot;15&quot;,&quot;dimension29&quot;:&quot;Child Benefit if you leave the UK&quot;}" class="browse__normal-link govuk-link" href="/child-benefit-abroad">Child Benefit if you leave the UK</a>
                         </li>
                         <li>
-                            <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="5" data-track-label="/browse/benefits/disability" data-track-options="{&quot;dimension28&quot;:&quot;8&quot;,&quot;dimension29&quot;:&quot;Benefits and financial support if you're disabled or have a health condition&quot;}" class="browse__link browse__link--inactive" href="/browse/benefits/disability">
-                                <h3 class="browse__title">Benefits and financial support if you're disabled or have a health condition</h3>
-                                <p class="browse__description">Help if you're living with a health condition or disability. Includes Employment and Support Allowance (ESA).</p>
-                            </a>      
+                           <a data-track-category="thirdLevelBrowseLinkClicked" data-track-action="1.5" data-track-label="/child-benefit-move-to-uk" data-track-options="{&quot;dimension28&quot;:&quot;15&quot;,&quot;dimension29&quot;:&quot;Child Benefit if you move to the UK&quot;}" class="browse__normal-link govuk-link" href="/child-benefit-move-to-uk">Child Benefit if you move to the UK</a>
                         </li>
                         <li>
-                            <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="6" data-track-label="/browse/benefits/help-for-carers" data-track-options="{&quot;dimension28&quot;:&quot;8&quot;,&quot;dimension29&quot;:&quot;Benefits and financial support if you're caring for someone&quot;}" class="browse__link browse__link--inactive" href="/browse/benefits/help-for-carers">
-                                <h3 class="browse__title">Benefits and financial support if you're caring for someone</h3>
-                                <p class="browse__description">Help if you regularly spend time caring for someone. Includes Universal Credit.</p>
-                            </a>      
+                            <a data-track-category="thirdLevelBrowseLinkClicked" data-track-action="1.6" data-track-label="/child-benefit-child-lives-with-someone-else" data-track-options="{&quot;dimension28&quot;:&quot;15&quot;,&quot;dimension29&quot;:&quot;Child Benefit if your child lives with someone else&quot;}" class="browse__normal-link govuk-link" href="/child-benefit-child-lives-with-someone-else">Child Benefit if your child lives with someone else</a>
                         </li>
                         <li>
-                            <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="7" data-track-label="/browse/benefits/low-income" data-track-options="{&quot;dimension28&quot;:&quot;8&quot;,&quot;dimension29&quot;:&quot;Benefits and financial support if you're on a low income&quot;}" class="browse__link browse__link--inactive" href="/browse/benefits/low-income">
-                                <h3 class="browse__title">Benefits and financial support if you're on a low income</h3>
-                                <p class="browse__description">Help with heating, housing and other living costs. Includes Universal Credit.</p>
-                            </a>      
+                            <a data-track-category="thirdLevelBrowseLinkClicked" data-track-action="1.7" data-track-label="/child-benefit-payment-dates" data-track-options="{&quot;dimension28&quot;:&quot;15&quot;,&quot;dimension29&quot;:&quot;Child Benefit payment dates&quot;}" class="browse__normal-link govuk-link" href="/child-benefit-payment-dates">Child Benefit payment dates</a>
                         </li>
                         <li>
-                            <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="8" data-track-label="/browse/benefits/bereavement" data-track-options="{&quot;dimension28&quot;:&quot;8&quot;,&quot;dimension29&quot;:&quot;Benefits and financial support when someone dies&quot;}" class="browse__link browse__link--inactive" href="/browse/benefits/bereavement">
-                                <h3 class="browse__title">Benefits and financial support when someone dies</h3>
-                                <p class="browse__description">Help with costs and funeral expenses after someone has died. Includes Universal Credit.</p>
-                            </a>      
+                            <a data-track-category="thirdLevelBrowseLinkClicked" data-track-action="1.8" data-track-label="/child-benefit-tax-calculator" data-track-options="{&quot;dimension28&quot;:&quot;15&quot;,&quot;dimension29&quot;:&quot;Child Benefit tax calculator&quot;}" class="browse__normal-link govuk-link" href="/child-benefit-tax-calculator">Child Benefit tax calculator</a>
+                        </li>
+                        <li>
+                            <a data-track-category="thirdLevelBrowseLinkClicked" data-track-action="1.9" data-track-label="/child-benefit-16-19" data-track-options="{&quot;dimension28&quot;:&quot;15&quot;,&quot;dimension29&quot;:&quot;Child Benefit when your child turns 16&quot;}" class="browse__normal-link govuk-link" href="/child-benefit-16-19">Child Benefit when your child turns 16</a>
+                        </li>
+                        <li>
+                            <a data-track-category="thirdLevelBrowseLinkClicked" data-track-action="1.10" data-track-label="/child-benefit" data-track-options="{&quot;dimension28&quot;:&quot;15&quot;,&quot;dimension29&quot;:&quot;Claim Child Benefit&quot;}" class="browse__normal-link govuk-link" href="/child-benefit">Claim Child Benefit</a>
+                        </li>
+                        <li>
+                            <a data-track-category="thirdLevelBrowseLinkClicked" data-track-action="1.11" data-track-label="/claim-child-benefit-behalf-someone-else" data-track-options="{&quot;dimension28&quot;:&quot;15&quot;,&quot;dimension29&quot;:&quot;Claim and deal with Child Benefit for someone else&quot;}" class="browse__normal-link govuk-link" href="/claim-child-benefit-behalf-someone-else">Claim and deal with Child Benefit for someone else</a>
+                        </li>
+                        <li>
+                            <a data-track-category="thirdLevelBrowseLinkClicked" data-track-action="1.12" data-track-label="/guardians-allowance" data-track-options="{&quot;dimension28&quot;:&quot;15&quot;,&quot;dimension29&quot;:&quot;Guardian's Allowance&quot;}" class="browse__normal-link govuk-link" href="/guardians-allowance">Guardian's Allowance</a>
+                        </li>
+                        <li>
+                            <a data-track-category="thirdLevelBrowseLinkClicked" data-track-action="1.13" data-track-label="/child-benefit-tax-charge" data-track-options="{&quot;dimension28&quot;:&quot;15&quot;,&quot;dimension29&quot;:&quot;High Income Child Benefit Tax Charge&quot;}" class="browse__normal-link govuk-link" href="/child-benefit-tax-charge">High Income Child Benefit Tax Charge</a>
+                        </li>
+                        <li>
+                            <a data-track-category="thirdLevelBrowseLinkClicked" data-track-action="1.14" data-track-label="/child-benefit-proof" data-track-options="{&quot;dimension28&quot;:&quot;15&quot;,&quot;dimension29&quot;:&quot;Prove you qualify for Child Benefit&quot;}" class="browse__normal-link govuk-link" href="/child-benefit-proof">Prove you qualify for Child Benefit</a>
+                        </li>
+                        <li>
+                            <a data-track-category="thirdLevelBrowseLinkClicked" data-track-action="1.15" data-track-label="/report-changes-child-benefit" data-track-options="{&quot;dimension28&quot;:&quot;15&quot;,&quot;dimension29&quot;:&quot;Report changes that affect your Child Benefit&quot;}" class="browse__normal-link govuk-link" href="/report-changes-child-benefit">Report changes that affect your Child Benefit</a>
                         </li>
                     </ul>
+              
+                    <div class="browse__detailed-guidance">
+                        <h2 class="gem-c-heading gem-c-heading--font-size-27 govuk-!-margin-bottom-3">Detailed guidance</h2>
+                
+                        <ul class="browse__list">
+                            <li>
+                            <a data-track-category="thirdLevelBrowseLinkClicked" data-track-action="2.1" data-track-label="/topic/benefits-credits/child-benefit" data-track-options="{&quot;dimension28&quot;:&quot;1&quot;,&quot;dimension29&quot;:&quot;Child Benefit&quot;}" class="browse__normal-link govuk-link" href="/topic/benefits-credits/child-benefit">Child Benefit</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-      
-            <div id="root" class="browse__root-pane">
-                <h2 class="govuk-visually-hidden" tabindex="-1">All categories</h2>
+
+        <!-- Column two -->
+        <div id="section" class="browse__section-pane">
+            <div class="browse__inner browse__inner--curated">
+                <h2 tabindex="-1" class="browse__heading js-heading">Browse: Benefits</h2>
                 <ul class="browse__list">
                     <li>
-                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="1" data-track-label="/browse/benefits" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Benefits&quot;}" class="browse__link browse__link--active" href="/browse/benefits">Benefits</a>
+                        <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="1" data-track-label="/browse/benefits/manage-your-benefit" data-track-options="{&quot;dimension28&quot;:&quot;8&quot;,&quot;dimension29&quot;:&quot;Manage an existing benefit, payment or claim&quot;}" class="browse__link browse__link--inactive" href="/browse/benefits/manage-your-benefit">
+                            <h3 class="browse__title">Manage an existing benefit, payment or claim</h3>
+                            <p class="browse__description">Sign in to your account, report changes, find out about overpayments, or appeal a decision. Includes existing Universal Credit and tax credits claims. </p>
+                        </a>      
                     </li>
                     <li>
-                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="2" data-track-label="/browse/births-deaths-marriages" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Births, deaths, marriages and care&quot;}" class="browse__link browse__link--inactive" href="/browse/births-deaths-marriages">Births, deaths, marriages and care</a>
+                        <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="2" data-track-label="/browse/benefits/looking-for-work" data-track-options="{&quot;dimension28&quot;:&quot;8&quot;,&quot;dimension29&quot;:&quot;Benefits and financial support if you're looking for work&quot;}" class="browse__link browse__link--inactive" href="/browse/benefits/looking-for-work">
+                            <h3 class="browse__title">Benefits and financial support if you're looking for work</h3>
+                            <p class="browse__description">Help if you're looking for a new job, are out of work or affected by redundancy. Includes Universal Credit and Jobseeker’s Allowance (JSA).</p>
+                        </a>      
                     </li>
                     <li>
-                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="3" data-track-label="/browse/business" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Business and self-employed&quot;}" class="browse__link browse__link--inactive" href="/browse/business">Business and self-employed</a>
+                        <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="3" data-track-label="/browse/benefits/unable-to-work" data-track-options="{&quot;dimension28&quot;:&quot;8&quot;,&quot;dimension29&quot;:&quot;Benefits and financial support if you're temporarily unable to work&quot;}" class="browse__link browse__link--inactive" href="/browse/benefits/unable-to-work">
+                            <h3 class="browse__title">Benefits and financial support if you're temporarily unable to work</h3>
+                            <p class="browse__description">Help if you’re unable to work because you’re ill or self-isolating. Includes Universal Credit and Employment and Support Allowance (ESA).</p>
+                        </a>      
                     </li>
                     <li>
-                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="4" data-track-label="/browse/childcare-parenting" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Childcare and parenting&quot;}" class="browse__link browse__link--inactive" href="/browse/childcare-parenting">Childcare and parenting</a>
+                        <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="4" data-track-label="/browse/benefits/families" data-track-options="{&quot;dimension28&quot;:&quot;8&quot;,&quot;dimension29&quot;:&quot;Benefits and financial support for families&quot;}" class="browse__link browse__link--inactive" href="/browse/benefits/families">
+                            <h3 class="browse__title">Benefits and financial support for families</h3>
+                            <p class="browse__description">Help if you look after children or plan to have or adopt a child. Includes Child Benefit.</p>
+                        </a>      
                     </li>
                     <li>
-                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="5" data-track-label="/browse/citizenship" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Citizenship and living in the UK&quot;}" class="browse__link browse__link--inactive" href="/browse/citizenship">Citizenship and living in the UK</a>
+                        <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="5" data-track-label="/browse/benefits/disability" data-track-options="{&quot;dimension28&quot;:&quot;8&quot;,&quot;dimension29&quot;:&quot;Benefits and financial support if you're disabled or have a health condition&quot;}" class="browse__link browse__link--inactive" href="/browse/benefits/disability">
+                            <h3 class="browse__title">Benefits and financial support if you're disabled or have a health condition</h3>
+                            <p class="browse__description">Help if you're living with a health condition or disability. Includes Employment and Support Allowance (ESA).</p>
+                        </a>      
                     </li>
                     <li>
-                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="6" data-track-label="/browse/justice" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Crime, justice and the law&quot;}" class="browse__link browse__link--inactive" href="/browse/justice">Crime, justice and the law</a>
+                        <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="6" data-track-label="/browse/benefits/help-for-carers" data-track-options="{&quot;dimension28&quot;:&quot;8&quot;,&quot;dimension29&quot;:&quot;Benefits and financial support if you're caring for someone&quot;}" class="browse__link browse__link--inactive" href="/browse/benefits/help-for-carers">
+                            <h3 class="browse__title">Benefits and financial support if you're caring for someone</h3>
+                            <p class="browse__description">Help if you regularly spend time caring for someone. Includes Universal Credit.</p>
+                        </a>      
                     </li>
                     <li>
-                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="7" data-track-label="/browse/disabilities" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Disabled people&quot;}" class="browse__link browse__link--inactive" href="/browse/disabilities">Disabled people</a>
+                        <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="7" data-track-label="/browse/benefits/low-income" data-track-options="{&quot;dimension28&quot;:&quot;8&quot;,&quot;dimension29&quot;:&quot;Benefits and financial support if you're on a low income&quot;}" class="browse__link browse__link--inactive" href="/browse/benefits/low-income">
+                            <h3 class="browse__title">Benefits and financial support if you're on a low income</h3>
+                            <p class="browse__description">Help with heating, housing and other living costs. Includes Universal Credit.</p>
+                        </a>      
                     </li>
                     <li>
-                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="8" data-track-label="/browse/driving" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Driving and transport&quot;}" class="browse__link browse__link--inactive" href="/browse/driving">Driving and transport</a>
-                    </li>
-                    <li>
-                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="9" data-track-label="/browse/education" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Education and learning&quot;}" class="browse__link browse__link--inactive" href="/browse/education">Education and learning</a>
-                    </li>
-                    <li>
-                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="10" data-track-label="/browse/employing-people" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Employing people&quot;}" class="browse__link browse__link--inactive" href="/browse/employing-people">Employing people</a>
-                    </li>
-                    <li>
-                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="11" data-track-label="/browse/environment-countryside" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Environment and countryside&quot;}" class="browse__link browse__link--inactive" href="/browse/environment-countryside">Environment and countryside</a>
-                    </li>
-                    <li>
-                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="12" data-track-label="/browse/housing-local-services" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Housing and local services&quot;}" class="browse__link browse__link--inactive" href="/browse/housing-local-services">Housing and local services</a>
-                    </li>
-                    <li>
-                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="13" data-track-label="/browse/tax" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Money and tax&quot;}" class="browse__link browse__link--inactive" href="/browse/tax">Money and tax</a>
-                    </li>
-                    <li>
-                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="14" data-track-label="/browse/abroad" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Passports, travel and living abroad&quot;}" class="browse__link browse__link--inactive" href="/browse/abroad">Passports, travel and living abroad</a>
-                    </li>
-                    <li>
-                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="15" data-track-label="/browse/visas-immigration" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Visas and immigration&quot;}" class="browse__link browse__link--inactive" href="/browse/visas-immigration">Visas and immigration</a>
-                    </li>
-                    <li>
-                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="16" data-track-label="/browse/working" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Working, jobs and pensions&quot;}" class="browse__link browse__link--inactive" href="/browse/working">Working, jobs and pensions</a>
+                        <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="8" data-track-label="/browse/benefits/bereavement" data-track-options="{&quot;dimension28&quot;:&quot;8&quot;,&quot;dimension29&quot;:&quot;Benefits and financial support when someone dies&quot;}" class="browse__link browse__link--inactive" href="/browse/benefits/bereavement">
+                            <h3 class="browse__title">Benefits and financial support when someone dies</h3>
+                            <p class="browse__description">Help with costs and funeral expenses after someone has died. Includes Universal Credit.</p>
+                        </a>      
                     </li>
                 </ul>
             </div>
-      
+        </div>
+        <!-- Column one -->
+        <div id="root" class="browse__root-pane">
+            <h2 class="govuk-visually-hidden" tabindex="-1">All categories</h2>
+            <ul class="browse__list">
+                <li>
+                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="1" data-track-label="/browse/benefits" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Benefits&quot;}" class="browse__link browse__link--active" href="/browse/benefits">Benefits two</a>
+                </li>
+                <li>
+                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="2" data-track-label="/browse/births-deaths-marriages" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Births, deaths, marriages and care&quot;}" class="browse__link browse__link--inactive" href="/browse/births-deaths-marriages">Births, deaths, marriages and care</a>
+                </li>
+                <li>
+                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="3" data-track-label="/browse/business" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Business and self-employed&quot;}" class="browse__link browse__link--inactive" href="/browse/business">Business and self-employed</a>
+                </li>
+                <li>
+                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="4" data-track-label="/browse/childcare-parenting" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Childcare and parenting&quot;}" class="browse__link browse__link--inactive" href="/browse/childcare-parenting">Childcare and parenting</a>
+                </li>
+                <li>
+                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="5" data-track-label="/browse/citizenship" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Citizenship and living in the UK&quot;}" class="browse__link browse__link--inactive" href="/browse/citizenship">Citizenship and living in the UK</a>
+                </li>
+                <li>
+                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="6" data-track-label="/browse/justice" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Crime, justice and the law&quot;}" class="browse__link browse__link--inactive" href="/browse/justice">Crime, justice and the law</a>
+                </li>
+                <li>
+                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="7" data-track-label="/browse/disabilities" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Disabled people&quot;}" class="browse__link browse__link--inactive" href="/browse/disabilities">Disabled people</a>
+                </li>
+                <li>
+                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="8" data-track-label="/browse/driving" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Driving and transport&quot;}" class="browse__link browse__link--inactive" href="/browse/driving">Driving and transport</a>
+                </li>
+                <li>
+                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="9" data-track-label="/browse/education" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Education and learning&quot;}" class="browse__link browse__link--inactive" href="/browse/education">Education and learning</a>
+                </li>
+                <li>
+                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="10" data-track-label="/browse/employing-people" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Employing people&quot;}" class="browse__link browse__link--inactive" href="/browse/employing-people">Employing people</a>
+                </li>
+                <li>
+                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="11" data-track-label="/browse/environment-countryside" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Environment and countryside&quot;}" class="browse__link browse__link--inactive" href="/browse/environment-countryside">Environment and countryside</a>
+                </li>
+                <li>
+                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="12" data-track-label="/browse/housing-local-services" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Housing and local services&quot;}" class="browse__link browse__link--inactive" href="/browse/housing-local-services">Housing and local services</a>
+                </li>
+                <li>
+                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="13" data-track-label="/browse/tax" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Money and tax&quot;}" class="browse__link browse__link--inactive" href="/browse/tax">Money and tax</a>
+                </li>
+                <li>
+                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="14" data-track-label="/browse/abroad" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Passports, travel and living abroad&quot;}" class="browse__link browse__link--inactive" href="/browse/abroad">Passports, travel and living abroad</a>
+                </li>
+                <li>
+                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="15" data-track-label="/browse/visas-immigration" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Visas and immigration&quot;}" class="browse__link browse__link--inactive" href="/browse/visas-immigration">Visas and immigration</a>
+                </li>
+                <li>
+                    <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="16" data-track-label="/browse/working" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Working, jobs and pensions&quot;}" class="browse__link browse__link--inactive" href="/browse/working">Working, jobs and pensions</a>
+                </li>
+            </ul>
+        </div>
     </div>
 
 {% endblock %}
