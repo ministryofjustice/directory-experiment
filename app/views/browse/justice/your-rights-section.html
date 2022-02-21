@@ -1,0 +1,293 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Crime, justice and the law - GOV.UK
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({homepageUrl: "/", containerClasses: "govuk-width-container" }) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+<div class="gem-c-layout-for-public__global-banner-wrapper">
+    <div id="user-satisfaction-survey-container"></div>
+    <!--[if gt IE 7]><!-->
+    <div id="global-bar" class="global-bar dont-print" data-module="global-bar" data-global-bar-permanent="true" data-nosnippet="">
+        <div class="global-bar-message govuk-width-container">
+            <div class="global-bar-covid-wrapper">
+                <div class="gem-c-action-link gem-c-action-link--light-text gem-c-action-link--simple-light gem-c-action-link--with-subtext govuk-!-margin-bottom-0">
+                    <span class="gem-c-action-link__contents-wrapper">      
+                        <span class="gem-c-action-link__link-wrapper">
+                            <a class="govuk-link gem-c-action-link__link js-call-to-action govuk-link--inverse" href="/coronavirus">Coronavirus (COVID-19)</a>
+                        </span>
+                        <span class="gem-c-action-link__subtext-wrapper">
+                            <span class="gem-c-action-link__subtext">Latest updates and guidance</span>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<![endif]-->
+</div>
+{% endblock %}
+
+{% block content %}
+
+    {{ govukBreadcrumbs({
+    items: [
+        {
+        text: "Home",
+        href: "#"
+        }
+    ]
+    }) }}
+    <div class="browse browse--three-columns" data-state="section" data-module="browse-columns gem-track-click" aria-busy="false">
+        <div id="subsection" class="browse__subsection-pane">
+          <div class="browse__inner browse__inner--curated">
+        <h2 tabindex="-1" class="browse__heading js-heading">Browse: Your rights and getting support</h2>
+      
+        <h3 class="browse__list-header">Getting legal help</h3>
+      
+          <ul class="browse__list">
+              <li>
+                <a class="browse__normal-link govuk-link" href="https://www.gov.uk/civil-legal-advice">Civil Legal Advice (CLA)</a>
+              </li>
+              <li>
+                <a class="browse__normal-link govuk-link" href="https://www.gov.uk/check-legal-aid">Check if you can get legal aid</a>
+              </li>
+              <li>
+                <a class="browse__normal-link govuk-link" href="https://www.gov.uk/find-legal-advice">Find legal advice and information</a>
+              </li>
+          </ul>
+
+          <h3 class="browse__list-header">Your rights</h3>
+
+          <ul class="browse__list">
+            <li>
+              <a class="browse__normal-link govuk-link" href="https://www.gov.uk/discrimination-your-rights">Discrimination: your rights</a>
+            </li>
+            <li>
+              <a class="browse__normal-link govuk-link" href="https://www.gov.uk/definition-of-disability-under-equality-act-2010">Definition of disability under the Equality Act 2010</a>
+            </li>
+            <li>
+              <a class="browse__normal-link govuk-link" href="https://www.gov.uk/rights-disabled-person">Disability rights</a>
+            </li>
+            <li>
+                <a class="browse__normal-link govuk-link" href="https://www.gov.uk/charged-crime">Being charged with a crime</a>
+            </li>
+            <li>
+                <a class="browse__normal-link govuk-link" href="https://www.gov.uk/your-rights-after-crime">After a crime: your rights</a>
+            </li>
+          </ul>
+
+
+          <h3 class="browse__list-header">Your personal data</h3>
+
+          <ul class="browse__list">
+            <li>
+              <a class="browse__normal-link govuk-link" href="https://www.gov.uk/delete-historic-conviction">Delete a historic conviction</a>
+            </li>
+            <li>
+              <a class="browse__normal-link govuk-link" href="https://www.gov.uk/make-a-freedom-of-information-request">How to make a freedom of information (FOI) request</a>
+            </li>
+            <li>
+              <a class="browse__normal-link govuk-link" href="https://www.gov.uk/request-cctv-footage-of-yourself">Request CCTV footage of yourself</a>
+            </li>
+            <li>
+                <a class="browse__normal-link govuk-link" href="https://www.gov.uk/copy-of-police-records">Get a copy of your police records</a>
+            </li>
+            <li>
+                <a class="browse__normal-link govuk-link" href="https://www.gov.uk/data-protection">Data protection</a>
+            </li>
+            <li>
+                <a class="browse__normal-link govuk-link" href="https://www.gov.uk/biometric-data-records">Biometric data records</a>
+            </li>
+          </ul>
+
+          <h3 class="browse__list-header">Consumer rights</h3>
+
+          <ul class="browse__list">
+            <li>
+              <a class="browse__normal-link govuk-link" href="https://www.gov.uk/check-medicines-online#:~:text=All%20websites%20that%20sell%20medicines,the%20General%20Pharmaceutical%20Council%20instead.">Check if a website can legally sell medicines online in Northern Ireland</a>
+            </li>
+            <li>
+              <a class="browse__normal-link govuk-link" href="https://www.gov.uk/reporting-accessibility-problem-public-sector-website">Reporting an accessibility problem on a public sector website</a>
+            </li>
+            <li>
+              <a class="browse__normal-link govuk-link" href="https://www.gov.uk/consumer-protection-rights">Consumer rights</a>
+            </li>
+            <li>
+                <a class="browse__normal-link govuk-link" href="https://www.gov.uk/consumer-advice">Consumer advice</a>
+            </li>
+            <li>
+                <a class="browse__normal-link govuk-link" href="https://www.gov.uk/check-claims-company-registered">Check if a claims company is registered</a>
+            </li>
+            <li>
+                <a class="browse__normal-link govuk-link" href="https://www.gov.uk/report-problem-medicine-medical-device">Report a problem with a medicine or medical device</a>
+            </li>
+            <li>
+              <a class="browse__normal-link govuk-link" href="https://www.gov.uk/report-loan-shark">Report a loan shark</a>
+            </li>
+            <li>
+              <a class="browse__normal-link govuk-link" href="https://www.gov.uk/complain-financial-service">Complain about a financial service or product</a>
+            </li>
+            <li>
+              <a class="browse__normal-link govuk-link" href="https://www.gov.uk/complain-company">Complain about a limited company</a>
+            </li>
+            <li>
+                <a class="browse__normal-link govuk-link" href="https://www.gov.uk/complain-about-claims-company">Complain about a claims company</a>
+            </li>
+          </ul>
+
+          <h3 class="browse__list-header">Employment rights</h3>
+
+          <ul class="browse__list">
+            <li>
+              <a class="browse__normal-link govuk-link" href="https://www.gov.uk/tell-employer-or-college-about-criminal-record">Telling an employer, university or college about your criminal record</a>
+            </li>
+            <li>
+              <a class="browse__normal-link govuk-link" href="https://www.gov.uk/solve-workplace-dispute">Solve a workplace dispute</a>
+            </li>
+            <li>
+              <a class="browse__normal-link govuk-link" href="https://www.gov.uk/raise-grievance-at-work">Raise a grievance at work</a>
+            </li>
+            <li>
+                <a class="browse__normal-link govuk-link" href="https://www.gov.uk/workplace-bullying-and-harassment">Workplace bullying and harassment</a>
+            </li>
+            <li>
+                <a class="browse__normal-link govuk-link" href="https://www.gov.uk/disciplinary-procedures-and-action-at-work">Disciplinary procedures and action against you at work</a>
+            </li>
+            <li>
+                <a class="browse__normal-link govuk-link" href="https://www.gov.uk/police-check-someone-involved-with-child#:~:text=Call%20999%20if%20you%20think,a%20parent%2C%20guardian%20or%20carer">Get a police check on someone that has contact with a child</a>
+            </li>
+            <li>
+                <a class="browse__normal-link govuk-link" href="https://www.gov.uk/find-modern-slavery-statement">Find a modern slavery statement</a>
+            </li>
+          </ul>
+
+          <h3 class="browse__list-header">Housing disputes</h3>
+
+          <ul class="browse__list">
+            <li>
+              <a class="browse__normal-link govuk-link" href="https://www.gov.uk/housing-tribunals">Solve a residential property dispute</a>
+            </li>
+            <li>
+              <a class="browse__normal-link govuk-link" href="https://www.gov.uk/how-to-resolve-neighbour-disputes">Resolving neighbour disputes</a>
+            </li>
+            <li>
+              <a class="browse__normal-link govuk-link" href="https://www.gov.uk/your-rights-bailiffs">Bailiff powers when they visit your home</a>
+            </li>
+          </ul>
+
+      </div>
+      </div>
+        <div id="section" class="browse__section-pane">
+
+            <div class="browse__inner browse__inner--curated">
+                <h2 tabindex="-1" class="browse__heading js-heading">Browse: Crime, justice and the law</h2>
+                
+                <ul class="browse__list">
+                    <li>
+                        <a class="browse__link browse__link--inactive" href="/browse/justice/your-rights-section">
+                            <h3 class="browse__title">Your rights and getting support</h3>
+                            <p class="browse__description">Section description</p>
+                        </a>      
+                    </li>
+                    <li>
+                        <a class="browse__link browse__link--inactive" href="/browse/justice/courts-and-appeals-section">
+                            <h3 class="browse__title">Courts and appeals</h3>
+                            <p class="browse__description">Section description</p>
+                        </a>      
+                    </li>
+                    <li>
+                        <a class="browse__link browse__link--inactive" href="/browse/justice/reporting-crimes-section">
+                            <h3 class="browse__title">Reporting crimes</h3>
+                            <p class="browse__description">Section description</p>
+                        </a>      
+                    </li>
+                    <li>
+                        <a class="browse__link browse__link--inactive" href="/browse/justice/compensation-and-victim-support-section">
+                            <h3 class="browse__title">Compensation and victim support</h3>
+                            <p class="browse__description">Section description</p>
+                        </a>      
+                    </li>
+                    <li>
+                        <a class="browse__link browse__link--inactive" href="/browse/justice/punishments-and-sentences-section">
+                            <h3 class="browse__title">Punishments and sentences</h3>
+                            <p class="browse__description">Section description</p>
+                        </a>      
+                    </li>
+                    <li>
+                        <a class="browse__link browse__link--active" href="/browse/justice/prison-and-probation-section">
+                            <h3 class="browse__title">Prisons and probation</h3>
+                            <p class="browse__description">Section description</p>
+                        </a>      
+                    </li>
+                    <li>
+                        <a  class="browse__link browse__link--inactive" href="/browse/justice/young-people-and-the-law-section">
+                            <h3 class="browse__title">Young people and the law</h3>
+                            <p class="browse__description">Section description</p>
+                        </a>      
+                    </li>
+                </ul>
+            </div>
+        </div>
+      
+        <div id="root" class="browse__root-pane">
+        <h2 class="govuk-visually-hidden" tabindex="-1">All categories</h2>
+        <ul class="browse__list">
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="1" data-track-label="/browse/benefits" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Benefits&quot;}" class="browse__link browse__link--inactive" href="/browse/benefits">Benefits</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="2" data-track-label="/browse/births-deaths-marriages" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Births, deaths, marriages and care&quot;}" class="browse__link browse__link--inactive" href="/browse/births-deaths-marriages">Births, deaths, marriages and care</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="3" data-track-label="/browse/business" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Business and self-employed&quot;}" class="browse__link browse__link--inactive" href="/browse/business">Business and self-employed</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="4" data-track-label="/browse/childcare-parenting" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Childcare and parenting&quot;}" class="browse__link browse__link--inactive" href="/browse/childcare-parenting">Childcare and parenting</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="5" data-track-label="/browse/citizenship" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Citizenship and living in the UK&quot;}" class="browse__link browse__link--inactive" href="/browse/citizenship">Citizenship and living in the UK</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="6" data-track-label="/browse/justice" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Crime, justice and the law&quot;}" class="browse__link browse__link--active" href="/browse/justice">Crime, justice and the law</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="7" data-track-label="/browse/disabilities" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Disabled people&quot;}" class="browse__link browse__link--inactive" href="/browse/disabilities">Disabled people</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="8" data-track-label="/browse/driving" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Driving and transport&quot;}" class="browse__link browse__link--inactive" href="/browse/driving">Driving and transport</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="9" data-track-label="/browse/education" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Education and learning&quot;}" class="browse__link browse__link--inactive" href="/browse/education">Education and learning</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="10" data-track-label="/browse/employing-people" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Employing people&quot;}" class="browse__link browse__link--inactive" href="/browse/employing-people">Employing people</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="11" data-track-label="/browse/environment-countryside" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Environment and countryside&quot;}" class="browse__link browse__link--inactive" href="/browse/environment-countryside">Environment and countryside</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="12" data-track-label="/browse/housing-local-services" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Housing and local services&quot;}" class="browse__link browse__link--inactive" href="/browse/housing-local-services">Housing and local services</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="13" data-track-label="/browse/tax" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Money and tax&quot;}" class="browse__link browse__link--inactive" href="/browse/tax">Money and tax</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="14" data-track-label="/browse/abroad" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Passports, travel and living abroad&quot;}" class="browse__link browse__link--inactive" href="/browse/abroad">Passports, travel and living abroad</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="15" data-track-label="/browse/visas-immigration" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Visas and immigration&quot;}" class="browse__link browse__link--inactive" href="/browse/visas-immigration">Visas and immigration</a>
+            </li>
+            <li>
+              <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="16" data-track-label="/browse/working" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Working, jobs and pensions&quot;}" class="browse__link browse__link--inactive" href="/browse/working">Working, jobs and pensions</a>
+            </li>
+        </ul>
+      </div>
+      
+      </div>
+{% endblock %}
